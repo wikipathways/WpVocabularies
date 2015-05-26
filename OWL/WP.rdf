@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocabularies.wikipathways.org/wp">
+    <dc:title>WP</dc:title>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-26</dc:modified>
+    <vann:preferredNamespaceUri>http://vocabularies.wikipathways.org/wp#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>wp</vann:preferredNamespacePrefix>
+    <foaf:page rdf:resource="http://vocabularies.wikipathways.org/wp.html"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#andra"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#apico"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#mkutmon"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#susan"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#anwesha"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#andra">
+    <foaf:name>Andra Waagmeester</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/wp#Maastricht%20University">
+    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/wp#andra"/>
+    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/wp#mkutmon"/>
+    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/wp#susan"/>
+    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/wp#anwesha"/>
+    <foaf:name>Maastricht University</foaf:name>
+    <foaf:homepage rdf:resource="http://www.maastrichtuniversity.nl"/>
+    <foaf:homepage rdf:resource="http://www.bigcat.unimaas.nl"/>
+    <foaf:homepage>www.bigcat.unimaas.nl</foaf:homepage>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Organization>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#apico">
+    <foaf:name>Alexander Pico</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#mkutmon">
+    <foaf:name>Martina Kutmon</foaf:name>
+    <foaf:homepage></foaf:homepage>
+    <foaf:mbox rdf:resource="mailto:martina.kutmon@maastrichtuniversity.nl"/>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#susan">
+    <foaf:name>Susan Coort</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#anwesha">
+    <foaf:name>Anwesha Bohler</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#UtilityClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>UtilityClass</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Author</rdfs:label>
+    <rdfs:comment>Definition: An author is creator, editor, or curator of a pathway. The author is known by a unique WikiPathways username.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#DatasourceReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>DatasourceReference</rdfs:label>
+    <rdfs:comment>UnificationXref in BioPAX</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#PathwayVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>PathwayVersion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#GeneProduct">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>GeneProduct</rdfs:label>
+    <rdfs:comment>Superclass for the following BioPAX terms:&lt;br&gt;
+http://www.biopax.org/release/biopax-level3.owl#Dna&lt;br&gt;
+http://www.biopax.org/release/biopax-level3.owl#Gene&lt;br&gt;
+http://www.biopax.org/release/biopax-level3.owl#Rna&lt;br&gt;
+http://www.biopax.org/release/biopax-level3.owl#Protein&lt;br&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <owl:disjointWith rdf:resource="http://biomodels.net/SBO/SBO_0000299"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Unknown">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Unknown</rdfs:label>
+    <rdfs:comment>Value for gpml:Type for a gpml:DataNode. It indicates that the type is either not known to science or at least not known to the pathway author.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+    <owl:disjointWith rdf:resource="http://vocabularies.wikipathways.org/wp#GeneProduct"/>
+    <owl:disjointWith rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Rna"/>
+    <owl:disjointWith rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Pathway"/>
+    <owl:disjointWith rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Complex"/>
+    <owl:disjointWith rdf:resource="http://biomodels.net/SBO/SBO_0000299"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#PathwayAnnotation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>PathwayAnnotation</rdfs:label>
+    <rdfs:comment>no corresponding element in BioPAX</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#UtilityClass"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Label</rdfs:label>
+    <rdfs:comment>no corresponding element in BioPAX
+GPML:Label</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayAnnotation"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Compartment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Compartment</rdfs:label>
+    <rdfs:comment>no corresponding elements in BioPAX and GPML</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Entity"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Group">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Group</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Binding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Binding</rdfs:label>
+    <rdfs:comment>&lt;br&gt;&lt;b&gt;Description:&lt;/b&gt; A binding interaction between two physical entities resulting in the formation of an explicit complex that is reversible without an external factor (e.g. protein complexes). Binding subclass of Mimbinding
+&lt;br&gt;
+&lt;b&gt;Properties:&lt;/b&gt; &lt;br&gt;
+ - hasParticipant&lt;br&gt;
+&lt;b&gt;GPML:&lt;/b&gt; Line with both Points having a &quot;mim-binding&quot; arrowhead.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#DirectedInteraction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>BasicInteraction</rdfs:label>
+    <rdfs:comment>&lt;br&gt;&lt;b&gt;A BasicInteraction is a generic biological interaction between two or more pathway elements that is not identified with a MIM type.&lt;/b&gt;&lt;br&gt;
+* GPML: Line (ArrowHead = none, &quot;Line&quot;, &quot;Arrow&quot; or &quot;TBar&quot;)&lt;br&gt;
+* BioPAX: Interaction</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#CurationTag">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>CurationTag</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#UtilityClass"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#ControlledVocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>ControlledVocabulary</rdfs:label>
+    <rdfs:comment>&lt;br&gt;&lt;b&gt;Defintion: &lt;/b&gt;A controlled vocabulary is a vocabulary consisting of a prescribed list of terms or headings each one having an assigned meaning. ref: http://edutechwiki.unige.ch</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#UtilityClass"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#MetabolicProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Metabolic Process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayCategory"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#CellularProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Cellular Process</rdfs:label>
+    <rdfs:comment>&lt;br&gt;&lt;b&gt;Definition: &lt;/b&gt; Any process that is carried out at cellular level.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayCategory"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#MolecularFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Molecular Function</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayCategory"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#PhysiologicalProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Physiological Process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayCategory"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#PathwayCategory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>PathwayCategory</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Unspecified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Unspecified</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; indicates some relationship between the data nodes that are connected, but we do not know what that interaction is.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Type option &quot;Line&quot;&lt;/li&gt;
+&lt;li&gt;GPML: ArrowHead=&quot;Line&quot;, or no ArrowHead property present&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#DirectedInteraction"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#Activity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Activity</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; Any kind of conversion or other activity occurring between two data nodes.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Type option &quot;Arrow&quot;&lt;/li&gt;
+&lt;li&gt;GPML: ArrowHead=&quot;Arrow&quot;&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#DirectedInteraction"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#InhibitoryActivity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Inhibitory Activity</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; Any kind of inhibition or other inhibitory activity.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Type option &quot;TBar&quot;&lt;/li&gt;
+&lt;li&gt;GPML: ArrowHead=&quot;TBar&quot;&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#DirectedInteraction"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#CytosolRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>CytosolRegion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://vocabularies.wikipathways.org/wp#Compartment"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#username">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>username</rdfs:label>
+    <rdfs:comment>Links to FOAF, Sciencepeople</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Author"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#realName">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>realName</rdfs:label>
+    <rdfs:comment>Links to FOAF</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Author"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#email">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>email</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Author"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#revision">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>revision</rdfs:label>
+    <rdfs:comment>Equivalent to http://schema.org/version</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayVersion"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#hasIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>hasIdentfier</rdfs:label>
+    <rdfs:comment>DC.identifier</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayVersion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#hasPathway">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>hasPathway</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#PathwayVersion"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#indirect">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Indirect</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; Indicates there are one or more steps missing in the interaction from the first data node to the second data node connected by this interaction.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Style option &quot;Dashed&quot;&lt;/li&gt;
+&lt;li&gt;GPML: LineStyle=&quot;Broken&quot;&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#InhibitoryActivity"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Activity"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Unspecified"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#organism">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>organism</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.biopax.org/release/biopax-level3.owl#organism"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#category">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>category</rdfs:label>
+    <rdfs:comment>Indicates the pathway category to which a selected pathway adheres</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#pathwayOntology">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>pathwayOntology</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#hasParticipant">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>hasParticipant</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#interactionTarget">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>interactionTarget</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#unifiedIdentifier">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>unifiedIdentifier</rdfs:label>
+    <rdfs:comment>In WikiPathways curators have the liberty to use any identifier they like. We store a unified Identifier to enable integrative approaches recognizing similar object with different identifier patterns. The mapping between original identifiers and the unified Identifier is provided by the same bridgeDb framework as used in WikiPathways.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#bdbEnsembl">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>bdbEnsembl</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#bdbUniprot">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>bdbUniprot</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#bdbHmdb">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>bdbHmdb</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#bdbChemspider">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>bdbChemspider</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#bdbEntrezGene">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>bdbEntrezGene</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#interactsWith">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>interactsWith</rdfs:label>
+    <rdfs:comment>Pathway elements can interact among each other. wp:interactsWith is to express a basic interaction. </rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#direct">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>Direct</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; Indicates there are no steps missing in the interaction from the first data node to the second data node connected by this interaction.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Style option &quot;Solid&quot;&lt;/li&gt;
+&lt;li&gt;GPML: LineStyle=&quot;Solid&quot; or LineStyle not specified&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Unspecified"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#InhibitoryActivity"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#Activity"/>
+  </rdf:Property>
+
+</rdf:RDF>
