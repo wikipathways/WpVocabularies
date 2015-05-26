@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocabularies.wikipathways.org/gpml">
+    <dc:title>GPML</dc:title>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-04-24</dc:modified>
+    <vann:preferredNamespaceUri>http://vocabularies.wikipathways.org/gpml#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>gpml</vann:preferredNamespacePrefix>
+    <foaf:page rdf:resource="http://vocabularies.wikipathways.org/gpml.html"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/gpml#andra"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/gpml#andra">
+    <foaf:name>Andra Waagmeester</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/gpml#Maastricht%20University">
+    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/gpml#andra"/>
+    <foaf:name>Maastricht University</foaf:name>
+    <foaf:homepage rdf:resource="http://www.maastrichtuniversity.nl"/>
+  </foaf:Organization>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-covalent-bond">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-covalent-bond</rdfs:label>
+    <rdfs:comment>Equivalent to http://purl.bioontology.org/ontology/MIM#CovalentIrreversibleBinding</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-stimulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-stimulation</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000170</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-conversion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-conversion</rdfs:label>
+    <rdfs:comment>Presumably equivalent to http://identifiers.org/biomodels.sbo/SBO:0000182</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-necessary-stimulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-necessary-stimulation</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000171</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-modification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-modification</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000210</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-cleavage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-cleavage</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000178</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-inhibition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-inhibition</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000169</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-catalysis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-catalysis</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000172</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-degradation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-degradation</rdfs:label>
+    <rdfs:comment>Equivalent to http://identifiers.org/biomodels.sbo/SBO:0000179</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-transcription-translation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-transcription-translation</rdfs:label>
+    <rdfs:comment>Related to http://www.biopax.org/release/biopax-level3.owl#TemplateReaction</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#requiresCurationAttention">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>requiresCurationAttention</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Legend">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Legend</rdfs:label>
+    <rdfs:comment>An explanatory list of the colors used for visualizing data on the pathway. Currently just a placeholder element -- not used.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Pathway">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Pathway</rdfs:label>
+    <rdfs:comment>A graph diagram representing a biological process. Nodes of which represent genes, proteins, metabolites etc and the edges connecting two nodes represent the relationship between them, i.e how the two nodes interact. </rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Biopax">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Biopax</rdfs:label>
+    <rdfs:comment>Element used to embed &lt;a href=&quot;http://www.biopax.org/owldoc/Level3/&quot;&gt;Biopax&lt;/a&gt; (namespace: &lt;a href=&quot;http://www.biopax.org/release/biopax-level3.owl&quot;&gt;http://www.biopax.org/release/biopax-level3.owl&lt;/a&gt;) content in a GPML document.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#State">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>State</rdfs:label>
+    <rdfs:comment>The particular condition that biological entity is in at a specific time, e.g a protein may be phosphorylated or not, so phosphorylation is a state that a protein may have.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#InfoBox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>InfoBox</rdfs:label>
+    <rdfs:comment>Currently just a placeholder -- not used.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Label">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Label</rdfs:label>
+    <rdfs:comment>A label is a text box which can be used to describe the elements of a pathway. It is mostly used as a name tag, to describe datanodes, interactions or cellular compartments in a pathway.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Shape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Shape</rdfs:label>
+    <rdfs:comment>Shape can refer to two different things in GPML, both of which are associated with graphical elements.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Group">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Group</rdfs:label>
+    <rdfs:comment>A collection of structurally or functionally similar or related pathway elements.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#DataNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>DataNode</rdfs:label>
+    <rdfs:comment>denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see the range for &lt;a href=&quot;http://vocabularies.wikipathways.org/gpml#Type&quot;&gt;gpml:Type&lt;/a&gt;.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-branching-left">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-branching-left</rdfs:label>
+    <rdfs:comment>Deprecated in the GPML vocabulary. Equivalent to http://purl.bioontology.org/ontology/MIM#BranchingLeft</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Point">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Point</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Anchor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Anchor</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-gap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-gap</rdfs:label>
+    <rdfs:comment>Presumably equivalent to http://identifiers.org/go/GO:0005921</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Interaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Interaction</rdfs:label>
+    <rdfs:comment>defines the relationship between the two entities it connects. The entities can be DataNodes or Anchors.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Line">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Line</rdfs:label>
+    <rdfs:comment>A marker of type Line indicates an interaction input or of undirected interaction.  </rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Arrow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Arrow</rdfs:label>
+    <rdfs:comment>A marker of type Arrow indicates a directed interaction with no inhibiting function. </rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#TBar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>TBar</rdfs:label>
+    <rdfs:comment>A marker of type TBar indicates a directed interaction with inhibiting function.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#GraphicalLine">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Graphical Line</rdfs:label>
+    <rdfs:comment>A connector between graphical shapes or between a graphical shape and a biopax:Entity.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Elbow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Elbow</rdfs:label>
+    <rdfs:comment>Describes connectors composed of only horizontal and/or vertical segments.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Straight">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Straight</rdfs:label>
+    <rdfs:comment>Describes connectors with only two Points.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Curved">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Curved</rdfs:label>
+    <rdfs:comment>Describes connectors that follow a curve.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Segmented">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Segmented</rdfs:label>
+    <rdfs:comment>Describes connectors that are composed of one or more straight line segments.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-binding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-binding</rdfs:label>
+    <rdfs:comment>Equivalent to http://purl.bioontology.org/ontology/MIM#NonCovalentReversibleBinding</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#mim-branching-right">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>mim-branching-right</rdfs:label>
+    <rdfs:comment>Deprecated in the GPML vocabulary. Equivalent to http://purl.bioontology.org/ontology/MIM#BranchingRight</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontstyle">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontstyle</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontattributes">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontattributes</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#linethickness">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>linethickness</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#GroupRef">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>GroupRef</rdfs:label>
+    <rdfs:comment>A GroupRef indicates that its element is part of the gpml:Group with the specified GroupId.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Shape"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Label"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Group"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontsize">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontsize</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#version">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Version</rdfs:label>
+    <rdfs:comment>Deprecated. From GenMAPP.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#license">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>license</rdfs:label>
+    <rdfs:comment>Here comes the description on: license</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontname">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontname</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#GroupId">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>GroupId</rdfs:label>
+    <rdfs:comment>Uniquely identifies a gpml:Group in a gpml:Pathway. It has no purpose for existing in parallel with GraphId and should be replaced with GraphId.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Align">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>align</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Data-Source">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Data-Source</rdfs:label>
+    <rdfs:comment>See http://www.biopax.org/release/biopax-level3.owl#dataSource</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Pathway"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#GraphId">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Graph Identifier</rdfs:label>
+    <rdfs:comment>A GraphId is a unique (per Pathway) identifier for a pathway element, such as a DataNode, Interaction or Anchor.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Shape"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Label"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Group"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Anchor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#email">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>email</rdfs:label>
+    <rdfs:comment>Here comes the description on: email</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Organism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Organism</rdfs:label>
+    <rdfs:comment>See http://www.biopax.org/release/biopax-level3.owl#organism</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Pathway"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Color">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Color</rdfs:label>
+    <rdfs:comment>This would be easier to work with if it had a hash &quot;#&quot; at the beginning to be consistent with CSS.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#CenterY">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>CenterY</rdfs:label>
+    <rdfs:comment>Middle of a pathway element in the y-direction.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#maintainer">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>maintainer</rdfs:label>
+    <rdfs:comment>Here comes the description on: maintainer</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#valign">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>valign</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#last-modified">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>last-modified</rdfs:label>
+    <rdfs:comment>Here comes the description on: last-modified</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Author">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Author</rdfs:label>
+    <rdfs:comment>The person who created or edited the pathway in question.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontweight">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontweight</rdfs:label>
+    <rdfs:comment>Thickness of the font used, e.g a bold font would have more weight.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#BiopaxRef">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>BiopaxRef</rdfs:label>
+    <rdfs:comment>Refers to a biopax:PublicationXref.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Pathway"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Shape"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Label"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Group"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontdecoration">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontdecoration</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fontstrikethru">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fontstrikethru</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#fontattributes"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#height">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>height</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#href">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>href</rdfs:label>
+    <rdfs:comment>Here comes the description on: href</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#style">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>style</rdfs:label>
+    <rdfs:comment>Here comes the description on: style</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#linestyle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>linestyle</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Name</rdfs:label>
+    <rdfs:comment>Name is the title for a pathway.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Pathway"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#CenterX">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>CenterX</rdfs:label>
+    <rdfs:comment>Middle of a pathway element in the x-direction.</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#GraphRef">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Graph Ref</rdfs:label>
+    <rdfs:comment>A GraphRef indicates a &quot;depends on&quot; or child/parent relationship between two Pathway elements. The element with the GraphRef is the child, and the element referred to by the GraphRef is the parent. The parent's GraphId will be specified by the child's GraphRef.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#textlabel">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>textlabel</rdfs:label>
+    <rdfs:comment>Here comes the description on: textlabel</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#RelX">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>RelX</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#RelY">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>RelY</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>width</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#ID">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>ID</rdfs:label>
+    <rdfs:comment>Equivalent to http://www.biopax.org/release/biopax-level3.owl#id</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Xref"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Database">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Database</rdfs:label>
+    <rdfs:comment>Equivalent to http://www.biopax.org/release/biopax-level3.owl#db</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Xref"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Graphics">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Graphics</rdfs:label>
+    <rdfs:comment>Is Graphics a class or a property? In GPML, it's an element.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Pathway"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Shape"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Label"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#GraphicalLine"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#fillcolor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>fillcolor</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#zorder">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>zorder</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#Graphics"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#genmappNotes">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>gpml Notes</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#homologyConvert">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>homologyConvert</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#wikipathwaysDescription">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>wikiPathwaysDescription</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#genmappremarks">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>genmappremarks</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#arrowTowards">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>arrowTowards</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#ArrowHead">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>arrowHead</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Position">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>anchorPosition</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Anchor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#ShapeType">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Shape Type</rdfs:label>
+    <rdfs:comment>Currently: Specifies the glyph (graphical representation) to use for GPML elements, except Anchors.
+
+Proposed: Expand it to also describe Anchors. It should replace the term currently used to specify the graphical representation of an Anchor. The current term is &quot;Shape,&quot; which conflicts with the GPML element named &quot;Shape.&quot; See details for term &quot;Shape.&quot;</rdfs:comment>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#pointOrder">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>pointOrder</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#X">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>X</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Y">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Y</rdfs:label>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#ConnectorType">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Connector Type</rdfs:label>
+    <rdfs:comment>&lt;p&gt;
+&lt;b&gt;Definition:&lt;/b&gt; Specifies a set of rules to govern layout of Graphical Lines and Interactions.
+&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PathVisio (Java): Line Type&lt;/li&gt;
+&lt;li&gt;GPML: ConnectorType&lt;/li&gt;
+&lt;/ul&gt;</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/wp#DirectedInteraction"/>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#GraphicalLine"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/gpml#Curved"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/gpml#Straight"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/gpml#Elbow"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/gpml#Segmented"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Solid">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Solid</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#linestyle"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Broken">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Broken</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#linestyle"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Double">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Double</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://vocabularies.wikipathways.org/gpml#linestyle"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#Type">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
+    <rdfs:label>Type</rdfs:label>
+    <rdfs:comment>Specifies the biological role of a gpml:DataNode. See the Range for a list of gpml:Types supported at WikiPathways.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#DataNode"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/wp#GeneProduct"/>
+    <rdfs:range rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Rna"/>
+    <rdfs:range rdf:resource="http://vocabularies.wikipathways.org/wp#Unknown"/>
+    <rdfs:range rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Complex"/>
+    <rdfs:range rdf:resource="http://www.biopax.org/release/biopax-level3.owl#Protein"/>
+  </rdf:Property>
+
+</rdf:RDF>
