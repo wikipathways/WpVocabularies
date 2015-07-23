@@ -328,6 +328,12 @@ GPML:Label</rdfs:comment>
     <rdfs:label>organism</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.biopax.org/release/biopax-level3.owl#organism"/>
   </rdf:Property>
+  
+  <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#organismName">
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>organismName</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.biopax.org/release/biopax-level3.owl#organism"/>
+  </rdf:Property>
 
   <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#category">
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
@@ -339,6 +345,12 @@ GPML:Label</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
     <rdfs:label>pathwayOntology</rdfs:label>
   </rdf:Property>
+  
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#PublicationReference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
+    <rdfs:label>PublicationReference</rdfs:label>
+  </rdfs:Class>
 
   <rdf:Property rdf:about="http://vocabularies.wikipathways.org/wp#hasParticipant">
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/wp"/>
