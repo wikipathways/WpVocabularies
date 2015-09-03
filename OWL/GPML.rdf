@@ -32,10 +32,10 @@
     <rdfs:label>Attribute</rdfs:label>
   </rdfs:Class>
 
-  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#requiresCurationAttention">
+  <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#RequiresCurationAttention">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
-    <rdfs:label>requiresCurationAttention</rdfs:label>
+    <rdfs:label>RequiresCurationAttention</rdfs:label>
   </rdfs:Class>
 
   <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Legend">
