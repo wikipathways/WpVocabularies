@@ -138,7 +138,7 @@
   <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#GraphicalLine">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
-    <rdfs:label>Graphical Line</rdfs:label>
+    <rdfs:label>GraphicalLine</rdfs:label>
     <rdfs:comment>A connector between graphical shapes or between a graphical shape and a biopax:Entity.</rdfs:comment>
   </rdfs:Class>
 
@@ -624,7 +624,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
   <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#graphRef">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
-    <rdfs:label>graph Ref</rdfs:label>
+    <rdfs:label>graphRef</rdfs:label>
     <rdfs:comment>A GraphRef indicates a &quot;depends on&quot; or child/parent relationship between two Pathway elements. The element with the GraphRef is the child, and the element referred to by the GraphRef is the parent. The parent's GraphId will be specified by the child's GraphRef.</rdfs:comment>
     <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#State"/>
     <rdfs:domain rdf:resource="http://vocabularies.wikipathways.org/gpml#Point"/>
@@ -824,7 +824,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
   <rdf:Property rdf:about="http://vocabularies.wikipathways.org/gpml#connectorType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:isDefinedBy rdf:resource="http://vocabularies.wikipathways.org/gpml"/>
-    <rdfs:label>connector Type</rdfs:label>
+    <rdfs:label>connectorType</rdfs:label>
     <rdfs:comment>&lt;p&gt;
 &lt;b&gt;Definition:&lt;/b&gt; Specifies a set of rules to govern layout of Graphical Lines and Interactions.
 &lt;/p&gt;
