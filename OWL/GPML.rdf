@@ -17,7 +17,7 @@
 
   <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/gpml#WikiPathwaysTeam">
     <foaf:name>WikiPathwaysTeam</foaf:name>
-    <foaf:homepage rdf:resource="http://www.wikipathways.nl"/>
+    <foaf:homepage rdf:resource="http://www.wikipathways.org"/>
   </foaf:Organization>
 
   <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Comment">
