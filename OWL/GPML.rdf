@@ -7,33 +7,18 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
   <owl:Ontology rdf:about="http://vocabularies.wikipathways.org/gpml">
-    <dc:title>GPML</dc:title>
+    <dc:title>GPML Vocabulary</dc:title>
     <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-26</dc:modified>
     <vann:preferredNamespaceUri>http://vocabularies.wikipathways.org/gpml#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>gpml</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocabularies.wikipathways.org/gpml.html"/>
-    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/gpml#andra"/>
-    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/gpml#mkutmon"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/gpml#WikiPathwaysTeam"/>
   </owl:Ontology>
 
-  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/gpml#andra">
-    <foaf:name>Andra Waagmeester</foaf:name>
-    <foaf:homepage></foaf:homepage>
-  </foaf:Person>
-
-  <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/gpml#Maastricht%20University">
-    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/gpml#andra"/>
-    <foaf:member rdf:resource="http://vocabularies.wikipathways.org/gpml#mkutmon"/>
-    <foaf:name>Maastricht University</foaf:name>
-    <foaf:homepage rdf:resource="http://www.maastrichtuniversity.nl"/>
-    <foaf:homepage rdf:resource="http://www.bigcat.unimaas.nl"/>
+  <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/gpml#WikiPathwaysTeam">
+    <foaf:name>WikiPathwaysTeam</foaf:name>
+    <foaf:homepage rdf:resource="http://www.wikipathways.nl"/>
   </foaf:Organization>
-
-  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/gpml#mkutmon">
-    <foaf:name>Martina Kutmon</foaf:name>
-    <foaf:homepage></foaf:homepage>
-    <foaf:mbox rdf:resource="mailto:martina.kutmon@maastrichtuniversity.nl"/>
-  </foaf:Person>
 
   <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/gpml#Comment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
