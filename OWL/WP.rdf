@@ -7,24 +7,18 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
   <owl:Ontology rdf:about="http://vocabularies.wikipathways.org/wp">
-    <dc:title>Wp</dc:title>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-08-12</dc:modified>
+    <dc:title>WP Vocabulary</dc:title>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-04</dc:modified>
     <vann:preferredNamespaceUri>http://vocabularies.wikipathways.org/wp#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>wp</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocabularies.wikipathways.org/wp.html"/>
-    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#mkutmon"/>
-    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#ryan"/>
+    <dc:creator rdf:resource="http://vocabularies.wikipathways.org/wp#WikiPathwaysTeam"/>
   </owl:Ontology>
 
-  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#mkutmon">
-    <foaf:name>Martina Kutmon</foaf:name>
-    <foaf:homepage></foaf:homepage>
-  </foaf:Person>
-
-  <foaf:Person rdf:about="http://vocabularies.wikipathways.org/wp#ryan">
-    <foaf:name>Ryan Miller</foaf:name>
-    <foaf:homepage></foaf:homepage>
-  </foaf:Person>
+  <foaf:Organization rdf:about="http://vocabularies.wikipathways.org/wp#WikiPathwaysTeam">
+    <foaf:name>WikiPathwaysTeam</foaf:name>
+    <foaf:homepage rdf:resource="http://www.wikipathways.org"/>
+  </foaf:Organization>
 
   <rdfs:Class rdf:about="http://vocabularies.wikipathways.org/wp#DataNode">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
