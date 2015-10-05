@@ -1,0 +1,837 @@
+<html hola_ext_inject="disabled">
+<head>
+</head>
+<body>
+<pre style="word-wrap: break-word; white-space: pre-wrap;">
+@prefix dc: &lt;http://purl.org/dc/elements/1.1/> .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/> .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#> .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: &lt;http://purl.org/vocab/vann/> .
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Anchor> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Anchor" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Attribute> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Attribute" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Biopax> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Biopax" ;
+    rdfs:comment "Element used to embed <a href=\"http://www.biopax.org/owldoc/Level3/\">Biopax</a> (namespace: <a href=\"http://www.biopax.org/release/biopax-level3.owl\">http://www.biopax.org/release/biopax-level3.owl</a>) content in a GPML document." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Comment> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Comment" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#DataNode> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "DataNode" ;
+    rdfs:comment "denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see the range for <a href=\"http://vocabularies.wikipathways.org/gpml#Type\">gpml:Type</a>." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "GraphicalLine" ;
+    rdfs:comment "A connector between graphical shapes or between a graphical shape and a biopax:Entity." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Group> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Group" ;
+    rdfs:comment "A collection of structurally or functionally similar or related pathway elements." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#InfoBox> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "InfoBox" ;
+    rdfs:comment "Currently just a placeholder -- not used." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Interaction> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Interaction" ;
+    rdfs:comment "defines the relationship between the two entities it connects. The entities can be DataNodes or Anchors." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Label> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Label" ;
+    rdfs:comment "A label is a text box which can be used to describe the elements of a pathway. It is mostly used as a name tag, to describe datanodes, interactions or cellular compartments in a pathway." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Legend> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Legend" ;
+    rdfs:comment "An explanatory list of the colors used for visualizing data on the pathway. Currently just a placeholder element -- not used." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Pathway> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Pathway" ;
+    rdfs:comment "A graph diagram representing a biological process. Nodes of which represent genes, proteins, metabolites etc and the edges connecting two nodes represent the relationship between them, i.e how the two nodes interact. " ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Point> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#PublicationXref> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "PublicationXref" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#RequiresCurationAttention> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "RequiresCurationAttention" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Shape> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Shape" ;
+    rdfs:comment "Shape can refer to two different things in GPML, both of which are associated with graphical elements." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#State> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "The particular condition that biological entity is in at a specific time, e.g a protein may be phosphorylated or not, so phosphorylation is a state that a protein may have." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#Xref> a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Xref" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#align> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "align" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#arrowHead> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "arrowHead" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#author> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "author" ;
+    rdfs:comment "The person who created or edited the pathway in question." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#biopaxRef> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "biopaxRef" ;
+    rdfs:comment "Refers to a biopax:PublicationXref." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Pathway>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#boardHeight> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "boardHeight" ;
+    rdfs:comment "Range minimum is zero" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#boardWidth> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "boardWidth" ;
+    rdfs:comment "Range minimum is zero" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#centerX> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "centerX" ;
+    rdfs:comment "Middle of a pathway element in the x-direction." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#InfoBox>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Legend>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#rectAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#centerY> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "centerY" ;
+    rdfs:comment "Middle of a pathway element in the y-direction." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#InfoBox>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Legend>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#rectAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#color> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "color" ;
+    rdfs:comment "This would be easier to work with if it had a hash \"#\" at the beginning to be consistent with CSS." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:hexBinary ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics>,
+        &lt;http://vocabularies.wikipathways.org/gpml#shapeStyleAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#connectorType> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "connectorType" ;
+    rdfs:comment """<p>
+<b>Definition:</b> Specifies a set of rules to govern layout of Graphical Lines and Interactions.
+</p>
+
+<ul>
+<li>PathVisio (Java): Line Type</li>
+<li>GPML: ConnectorType</li>
+</ul>""";
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#data-Source> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "data-Source" ;
+    rdfs:comment "See http://www.biopax.org/release/biopax-level3.owl#dataSource" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#database> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "database" ;
+    rdfs:comment "Equivalent to http://www.biopax.org/release/biopax-level3.owl#db" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#PublicationXref>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Xref> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#email> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "email" ;
+    rdfs:comment "Here comes the description on: email" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fillColor> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fillColor" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:hexBinary ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontDecoration> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontDecoration" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontName> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontName" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontSize> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontSize" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:nonNegativeInteger ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontStrikethru> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontStrikethru" ;
+    rdfs:comment "Font Strikethru of the objects (DataNode, Label, Shape)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontStyle> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontStyle" ;
+    rdfs:comment "The font style of the pathway element (DataNode, Label, Shape)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontWeight> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "fontWeight" ;
+    rdfs:comment "Thickness of the font used, e.g a bold font would have more weight. Used for DataNodes, Labels and Shapes." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#graphId> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "graphId" ;
+    rdfs:comment "A GraphId is a unique (per Pathway) identifier for a pathway element, such as DataNode, Interaction, GraphicalLine, Label, Point, Group, Shape, State and Anchor." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Anchor>,
+        &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Point>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#graphRef> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "graphRef" ;
+    rdfs:comment "A GraphRef indicates a \"depends on\" or child/parent relationship between two Pathway elements. The element with the GraphRef is the child, and the element referred to by the GraphRef is the parent. The parent's GraphId will be specified by the child's GraphRef." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#groupId> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "groupId" ;
+    rdfs:comment "Uniquely identifies a gpml:Group in a gpml:Pathway. " ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Group> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#groupRef> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "groupRef" ;
+    rdfs:comment """A GroupRef indicates that its element is part of the gpml:Group with the specified GroupId.
+DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a group.""";
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasAnchor> a rdf:Property ;
+    rdfs:label "hasAnchor" ;
+    rdfs:comment "An interaction or graphicalLine that has an anchor." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Anchor> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasAttribute> a rdf:Property ;
+    rdfs:label "hasAttribute" ;
+    rdfs:comment "Links the attribute to the parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State)" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Pathway>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Attribute> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasBiopax> a rdf:Property ;
+    rdfs:label "hasBiopax" ;
+    rdfs:comment "A pathway linking to a BioPAX object." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Biopax> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasComment> a rdf:Property ;
+    rdfs:label "hasComment" ;
+    rdfs:comment "Links a comment to its parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State)" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Pathway>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Comment> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasDataNode> a rdf:Property ;
+    rdfs:label "hasDataNode" ;
+    rdfs:comment "Links the dataNode to the parent pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#DataNode> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasGraphicalLine> a rdf:Property ;
+    rdfs:label "hasGraphicalLine" ;
+    rdfs:comment "Links the graphicalLine to the parent pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasGroup> a rdf:Property ;
+    rdfs:label "hasGroup" ;
+    rdfs:comment "Links the groups to the pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Group> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasInfoBox> a rdf:Property ;
+    rdfs:label "hasInfoBox" ;
+    rdfs:comment "Links an InfoBox object to a Pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#InfoBox> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasInteraction> a rdf:Property ;
+    rdfs:label "hasInteraction" ;
+    rdfs:comment "Links the interaction to the parent pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Interaction> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasLabel> a rdf:Property ;
+    rdfs:label "hasLabel" ;
+    rdfs:comment "Links the labels to the pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Label> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasLegend> a rdf:Property ;
+    rdfs:label "hasLegend" ;
+    rdfs:comment "Links a Legend to the Pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Legend> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasPoint> a rdf:Property ;
+    rdfs:label "hasPoint" ;
+    rdfs:comment "An interaction or graphical line that has a point." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Point> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasPublicationXref> a rdf:Property ;
+    rdfs:label "hasPublicationXref" ;
+    rdfs:comment "Links a publicationXref to its parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State)" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Pathway>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#PublicationXref> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasShape> a rdf:Property ;
+    rdfs:label "hasShape" ;
+    rdfs:comment "Links a shape to the pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Shape> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasState> a rdf:Property ;
+    rdfs:label "hasState" ;
+    rdfs:comment "Links the state object to the parent pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#State> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#hasXref> a rdf:Property ;
+    rdfs:label "hasXref" ;
+    rdfs:comment "Links a Xref to its parent object (DataNode, Interaction, State)" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range &lt;http://vocabularies.wikipathways.org/gpml#Xref> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#height> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "height" ;
+    rdfs:comment "The height of a DataNode, Label, Shape or State object" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics>,
+        &lt;http://vocabularies.wikipathways.org/gpml#rectAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#href> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "href" ;
+    rdfs:comment "The possible hyperlink in a Label in a pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Label> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#id> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:comment "The identifier of a PublicationXref or Xref object." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#PublicationXref>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Xref> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#key> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "key" ;
+    rdfs:comment "Key of the key/value pair in the Attribute class." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Attribute> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#last-Modified> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "last-Modified" ;
+    rdfs:comment "The date of the last modification of the pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#license> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "license" ;
+    rdfs:comment "The license of a pathway. " ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#lineStyle> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "lineStyle" ;
+    rdfs:comment """The line style of a GraphicalLine or Interaction as well as the line style of a border of a DataNode, Label, Shape or State.
+""";
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics>,
+        &lt;http://vocabularies.wikipathways.org/gpml#shapeStyleAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#lineThickness> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "lineThickness" ;
+    rdfs:comment "The thickness of a GraphicalLine or Interaction as well as the border thickness for DataNodes, Labels, Shapes and States." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics>,
+        &lt;http://vocabularies.wikipathways.org/gpml#shapeStyleAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#maintainer> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "maintainer" ;
+    rdfs:comment "The maintainer of the pathway. Currently not used in WP." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#name> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of a pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#organism> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "organism" ;
+    rdfs:comment "The organism of the pathway. Latin name usually provided by BridgeDb." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#position> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "position" ;
+    rdfs:comment "Position of an anchor on the line it belongs to." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Anchor> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float .
+
+&lt;http://vocabularies.wikipathways.org/gpml#relX> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "relX" ;
+    rdfs:comment "relX – RelX is the x-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#relY> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "relY" ;
+    rdfs:comment "RelY is the y-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#rotation> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "rotation" ;
+    rdfs:comment "Rotation of a shape." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#shape> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "shape" ;
+    rdfs:comment "Shape of an anchor." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Anchor> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#shapeType> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "shapeType" ;
+    rdfs:comment """Currently: Specifies the glyph (graphical representation) to use for GPML elements (DataNode, Label, Shape, State)
+
+Proposed: Expand it to also describe Anchors. It should replace the term currently used to specify the graphical representation of an Anchor. The current term is "Shape," which conflicts with the GPML element named "Shape." See details for term "Shape.\"""" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#source> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "source" ;
+    rdfs:comment "The source of a comment. " ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Comment> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#stateType> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "stateType" ;
+    rdfs:comment "The type of a State." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#style> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "style" ;
+    rdfs:comment "The style of a group." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Group> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#textlabel> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "textlabel" ;
+    rdfs:comment "TextLabel of an object (DataNode, Group, Label, Shape, State)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Group>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#type> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "type" ;
+    rdfs:comment "Specifies the type of an object (DataNode, GraphicalLine, Interaction)" ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#valign> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "valign" ;
+    rdfs:comment "Vertical alignment of a datanode, shape or label." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#value> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "value" ;
+    rdfs:comment "Value of the key/value pair in the Attribute class." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Attribute> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#version> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "version" ;
+    rdfs:comment "The version of a Pathway (currently not used in WP)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Pathway> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:string .
+
+&lt;http://vocabularies.wikipathways.org/gpml#width> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "width" ;
+    rdfs:comment "The width of an object (DataNode, Label, Shape, State)." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics>,
+        &lt;http://vocabularies.wikipathways.org/gpml#rectAttributes> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#x> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "x" ;
+    rdfs:comment "The x-coordinate of a point in the 2-dimensional plane in which a pathway is drawn." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float .
+
+&lt;http://vocabularies.wikipathways.org/gpml#y> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "y" ;
+    rdfs:comment "The y-coordinate of a point in the 2-dimensional plane a pathway is drawn." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#Point> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:float .
+
+&lt;http://vocabularies.wikipathways.org/gpml#zorder> a rdf:Property,
+        owl:DatatypeProperty ;
+    rdfs:label "zorder" ;
+    rdfs:comment "Indicates the zorder of the object in the pathway." ;
+    rdfs:domain &lt;http://vocabularies.wikipathways.org/gpml#DataNode>,
+        &lt;http://vocabularies.wikipathways.org/gpml#GraphicalLine>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Interaction>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Label>,
+        &lt;http://vocabularies.wikipathways.org/gpml#Shape>,
+        &lt;http://vocabularies.wikipathways.org/gpml#State> ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#WikiPathwaysTeam> a foaf:Organization ;
+    foaf:homepage &lt;http://www.wikipathways.org> ;
+    foaf:name "WikiPathwaysTeam" .
+
+&lt;http://vocabularies.wikipathways.org/gpml#shapeStyleAttributes> a rdf:Property ;
+    rdfs:label "shapeStyleAttributes" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#rectAttributes> a rdf:Property ;
+    rdfs:label "rectAttributes" ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#fontAttributes> a rdf:Property ;
+    rdfs:label "fontAttributes" ;
+    rdfs:comment "Collection of different font attributes." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> ;
+    rdfs:subPropertyOf &lt;http://vocabularies.wikipathways.org/gpml#graphics> .
+
+&lt;http://vocabularies.wikipathways.org/gpml#graphics> a rdf:Property ;
+    rdfs:label "graphics" ;
+    rdfs:comment "Graphics is a collection of properties. We think the elements should specify the subproperties directly but it is still good to keep the superproperty in as well." ;
+    rdfs:isDefinedBy &lt;http://vocabularies.wikipathways.org/gpml> .
+
+&lt;http://vocabularies.wikipathways.org/gpml> a owl:Ontology ;
+    dc:creator &lt;http://vocabularies.wikipathways.org/gpml#WikiPathwaysTeam> ;
+    dc:modified "2015-09-03"^^xsd:date ;
+    dc:title "GPML Vocabulary" ;
+    vann:preferredNamespacePrefix "gpml" ;
+    vann:preferredNamespaceUri "http://vocabularies.wikipathways.org/gpml#" ;
+    foaf:page &lt;http://vocabularies.wikipathways.org/gpml.html> .
+
+
+
+</pre>
+</body>
+</html>
+
