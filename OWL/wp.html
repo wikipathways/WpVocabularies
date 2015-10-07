@@ -1,29 +1,41 @@
-
-
 <!DOCTYPE html>
 <html prefix="wp: http://vocabularies.wikipathways.org/wp# skos: http://www.w3.org/2004/02/skos/core# void: http://rdfs.org/ns/void# rdfs: http://www.w3.org/2000/01/rdf-schema# rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns# xsd: http://www.w3.org/2001/XMLSchema# "  lang="en">
 <head>
-  <title>WikiPathways WP Ontology ontology</title>
+  <title>WikiPathways WP Ontology</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
 </head>
 <body>
 <!--<img src="http://www.bridgedb.org/bdb-logo.png" alt="The BridgeDb logo: the name in black with a white bridge crossing the characters." /><br /> -->
-<div about="http://vocabularies.bridgedb.org/ops#" typeof="owl:Ontology">
+<div about="http://vocabularies.wikipathways.org/wp#" typeof="owl:Ontology">
 <h1>The <span property="rdfs:label">WikiPathways WP Ontology</span> </h1>
 <p>
-This page describes the WP ontology for WikiPathways. Make sure to visit our <a rel="rdfs:seeAlso" href="http://www.wikipathways.org/">homepage</a>!
+This page describes the WP ontology for WikiPathways (<code>http://vocabularies.wikipathways.org/wp#</code>). Make sure to visit our <a rel="rdfs:seeAlso" href="http://www.wikipathways.org/">homepage</a>!
 </p>
 </div>
+
+<h2>Namespaces</h2>
+<pre>
+@prefix wp: &lt;http://vocabularies.wikipathways.org/wp#&gt; .
+
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd:&lt; http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+</pre>
+
+
 <h2>Classes</h2>
-<div id="DataSource" about="http://vocabularies.wikipathways.org/wp#Binding" typeof="owl:Class">
+<div id="Binding" about="http://vocabularies.wikipathways.org/wp#Binding" typeof="owl:Class">
 <h3 property="rdfs:label">Binding</h3>
 <p>Binding <a href="http://vocabularies.wikipathways.org/wp#Interaction" property="rdfs:subClassOf">URI Pattern</a>.</p>
 </div>
-<div id="Organism" about="http://vocabularies.wikipathways.org/wp#Catalysis" typeof="owl:Class">
+<div id="Catalysis" about="http://vocabularies.wikipathways.org/wp#Catalysis" typeof="owl:Class">
 <h3 property="rdfs:label">Catalysis</h3>
 <p><span property="dc:description">A catalysis.</span>
 </div>
-<div about="http://vocabularies.wikipathways.org/wp#Complex" typeof="owl:Class">
+<div id="Complex" about="http://vocabularies.wikipathways.org/wp#Complex" typeof="owl:Class">
 <h3 property="rdfs:label">Complex</h3>
 <p>A Complex of compounds</p>
 </div>
@@ -49,20 +61,12 @@ This property has
 </div>	-->
 
 
-
-
-
-<!-- need to decide what to use here
 <h1>Technical notes</h1>
-<p about="http://vocabularies.bridgedb.org/ops#">
+<p about="http://vocabularies.wikipathways.org/wp#">
 The conversion of ops#foo to index.html#foo is done with .htaccess and a RewriteRule.
-The source code is available from the <a href="https://github.com/bridgedb/vocabulary/">vocabulary</a>
+The source code is available from the <a href="https://github.com/wikipathways/WpVocabularies/">WpVocabularies</a>
 repository at GitHub. The OWL ontology can be extracted <a property="owl:versionIRI" 
-href="http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.bridgedb.org/ops#">here</a>.
-The Open PHACTS specification on <a property="rdf:seeAlso" href="http://www.openphacts.org/specs/2013/WD-datadesc-20130912/#bridgedb">Dataset Descriptions</a> is 
-also 
-useful.
--->
+href="http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/wp#">here</a>.
 </p>
 </body>
 
