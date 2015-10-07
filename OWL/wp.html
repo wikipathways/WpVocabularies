@@ -62,7 +62,7 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#_namespaces">Namespaces</a></li>
           <li><a href="#_classes">Classes</a></li>
-          <!--li><a href="#_object_properties">Object Properties</a></li -->
+          <li><a href="#_object_properties">Object Properties</a></li>
           <li><a href="#_data_properties">Data Properties</a></li>
           <li><a href="#_technical">Technical</a></li>
         </ul>
@@ -187,11 +187,83 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
 
 </section>
 
-<section id="_data_properties">
+<section id="_object_properties">
 
-<h2>Data Properties</h2>
+<h2>Object Properties</h2>
 
-<div id="celltypeOntologyTag" about="http://vocabularies.wikipathways.org/wp#celltypeOntologyTag" typeof="owl:DatatypeProperty">
+<div id="bdbChEBI" about="http://vocabularies.wikipathways.org/wp#bdbChEBI" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb ChEBI link</h3>
+<code>wp:bdbChEBI</code>
+<p>This property has
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbChemspider" about="http://vocabularies.wikipathways.org/wp#bdbChemspider" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb ChemSpider link</h3>
+<code>wp:bdbChemspider</code>
+<p>This property has
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbEnsembl" about="http://vocabularies.wikipathways.org/wp#bdbEnsembl" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb Ensembl link</h3>
+<code>wp:bdbEnsembl</code>
+<p>This property has
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbEntrezGene" about="http://vocabularies.wikipathways.org/wp#bdbEntrezGene" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb Entrez Gene link</h3>
+<code>wp:bdbEntrezGene</code>
+<p>This property has
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbHmdb" about="http://vocabularies.wikipathways.org/wp#bdbHmdb" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb HMDB link</h3>
+<code>wp:bdbHmdb</code>
+<p>This property has
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbHgncSymbol" about="http://vocabularies.wikipathways.org/wp#bdbHgncSymbol" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb HGNC link</h3>
+<code>wp:bdbHgncSymbol</code>
+<p>This property has
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbPubChem" about="http://vocabularies.wikipathways.org/wp#bdbPubChem" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb PubChem link</h3>
+<code>wp:bdbPubChem</code>
+<p>This property has
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="bdbUniprot" about="http://vocabularies.wikipathways.org/wp#bdbUniprot" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb UniProt link</h3>
+<code>wp:bdbUniprot</code>
+<p>This property has
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div>
+
+<div id="celltypeOntologyTag" about="http://vocabularies.wikipathways.org/wp#celltypeOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">disease ontology tag</h3>
 <code>wp:celltypeOntologyTag</code>
 <p>This property has
@@ -202,7 +274,7 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
   subproperty of <a href="http://vocabularies.wikipathways.org/wp#ontologyTag" property="rdfs:subClassOf">wp:ontologyTag</a>.</p>
 </div>
 
-<div id="diseaseOntologyTag" about="http://vocabularies.wikipathways.org/wp#diseaseOntologyTag" typeof="owl:DatatypeProperty">
+<div id="diseaseOntologyTag" about="http://vocabularies.wikipathways.org/wp#diseaseOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">disease ontology tag</h3>
 <code>wp:diseaseOntologyTag</code>
 <p>This property has
@@ -212,6 +284,48 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
   as range, and is
   subproperty of <a href="http://vocabularies.wikipathways.org/wp#ontologyTag" property="rdfs:subClassOf">wp:ontologyTag</a>.</p>
 </div>
+
+<div id="participants" about="http://vocabularies.wikipathways.org/wp#participants" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">participants</h3>
+<code>wp:participants</code>
+</div>
+
+<div id="pathwayOntologyTag" about="http://vocabularies.wikipathways.org/wp#pathwayOntologyTag" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">pathway ontology tag</h3>
+<code>wp:pathwayOntologyTag</code>
+<p>This property has
+  <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
+  as domain,
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range, and is
+  subproperty of <a href="http://vocabularies.wikipathways.org/wp#ontologyTag" property="rdfs:subClassOf">wp:ontologyTag</a>.</p>
+</div>
+
+<div id="source" about="http://vocabularies.wikipathways.org/wp#source" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">source</h3>
+<code>wp:source</code>
+<p>This property has
+  <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
+  as domain and
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#DataNode">wp:DataNode</a>
+  as range and is
+  subproperty of <a href="http://vocabularies.wikipathways.org/wp#participants" property="rdfs:subClassOf">wp:participants</a>.</p>
+</div>
+
+<div id="target" about="http://vocabularies.wikipathways.org/wp#target" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">target</h3>
+<code>wp:target</code>
+<p>This property has
+  <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
+  as domain and is
+  subproperty of <a href="http://vocabularies.wikipathways.org/wp#participants" property="rdfs:subClassOf">wp:participants</a>.</p>
+</div>
+
+</section>
+
+<section id="_data_properties">
+
+<h2>Data Properties</h2>
 
 <div id="isAbout" about="http://vocabularies.wikipathways.org/wp#isAbout" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">is about</h3>
@@ -244,42 +358,6 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
-</div>
-
-<div id="participants" about="http://vocabularies.wikipathways.org/wp#participants" typeof="owl:DatatypeProperty">
-<h3 property="rdfs:label">participants</h3>
-<code>wp:participants</code>
-</div>
-
-<div id="pathwayOntologyTag" about="http://vocabularies.wikipathways.org/wp#pathwayOntologyTag" typeof="owl:DatatypeProperty">
-<h3 property="rdfs:label">pathway ontology tag</h3>
-<code>wp:pathwayOntologyTag</code>
-<p>This property has
-  <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
-  as domain,
-  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
-  as range, and is
-  subproperty of <a href="http://vocabularies.wikipathways.org/wp#ontologyTag" property="rdfs:subClassOf">wp:ontologyTag</a>.</p>
-</div>
-
-<div id="source" about="http://vocabularies.wikipathways.org/wp#source" typeof="owl:DatatypeProperty">
-<h3 property="rdfs:label">source</h3>
-<code>wp:source</code>
-<p>This property has
-  <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
-  as domain and
-  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#DataNode">wp:DataNode</a>
-  as range and is
-  subproperty of <a href="http://vocabularies.wikipathways.org/wp#participants" property="rdfs:subClassOf">wp:participants</a>.</p>
-</div>
-
-<div id="target" about="http://vocabularies.wikipathways.org/wp#target" typeof="owl:DatatypeProperty">
-<h3 property="rdfs:label">target</h3>
-<code>wp:target</code>
-<p>This property has
-  <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
-  as domain and is
-  subproperty of <a href="http://vocabularies.wikipathways.org/wp#participants" property="rdfs:subClassOf">wp:participants</a>.</p>
 </div>
 
 
