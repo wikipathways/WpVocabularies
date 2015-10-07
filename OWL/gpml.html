@@ -74,7 +74,7 @@
 
 <div class="jumbotron">
 <div about="http://vocabularies.wikipathways.org/gpml#" typeof="owl:Ontology">
-<h1>The <span property="rdfs:label">WikiPathways GPML Ontology</span> </h1>
+<h1>The <span property="rdfs:label">WikiPathways GPML Vocabulary</span> </h1>
 <p>
 This page describes the GPML ontology for WikiPathways (<code>http://vocabularies.wikipathways.org/gpml#</code>). Make sure to visit our <a rel="rdfs:seeAlso" href="http://www.wikipathways.org/">homepage</a>!
 </p>
@@ -102,11 +102,33 @@ This page describes the GPML ontology for WikiPathways (<code>http://vocabularie
 
 <h2>Classes</h2>
 
-<!-- div id="Conversion" about="http://vocabularies.wikipathways.org/gpml#Conversion" typeof="owl:Class">
-<h3 property="rdfs:label">Conversion</h3>
-<code>wp:Conversion</code>
-<p>Subclass of <a href="http://vocabularies.wikipathways.org/gpml#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
-</div -->
+<div id="Attribute" about="http://vocabularies.wikipathways.org/gpml#Attribute" typeof="owl:Class">
+<h3 property="rdfs:label">Attribute</h3>
+<code>gpml:Attribute</code>
+</div>
+
+<div id="Biopax" about="http://vocabularies.wikipathways.org/gpml#Biopax" typeof="owl:Class">
+<h3 property="rdfs:label">Biopax</h3>
+<code>gpml:Biopax</code>
+<p property="rdfs:comment">Element used to embed <a href="http://www.biopax.org/owldoc/Level3/">Biopax</a> (namespace: <a href="http://www.biopax.org/release/biopax-level3.owl">http://www.biopax.org/release/biopax-level3.owl</a>) content in a GPML document.</p>
+</div>
+
+<div id="Comment" about="http://vocabularies.wikipathways.org/gpml#Comment" typeof="owl:Class">
+<h3 property="rdfs:label">Comment</h3>
+<code>gpml:Comment</code>
+</div>
+
+<div id="Legend" about="http://vocabularies.wikipathways.org/gpml#Legend" typeof="owl:Class">
+<h3 property="rdfs:label">Legend</h3>
+<code>gpml:Legend</code>
+<p property="rdfs:comment">An explanatory list of the colors used for visualizing data on the pathway. Currently just a placeholder element -- not used.</p>
+</div>
+
+<div id="Pathway" about="http://vocabularies.wikipathways.org/gpml#Pathway" typeof="owl:Class">
+<h3 property="rdfs:label">Pathway</h3>
+<code>gpml:Pathway</code>
+<p property="rdfs:comment">A graph diagram representing a biological process. Nodes of which represent genes, proteins, metabolites etc and the edges connecting two nodes represent the relationship between them, i.e how the two nodes interact.</p>
+</div>
 
 </section>
 
@@ -116,7 +138,7 @@ This page describes the GPML ontology for WikiPathways (<code>http://vocabularie
 
 <!-- div id="bdbChEBI" about="http://vocabularies.wikipathways.org/gpml#bdbChEBI" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb ChEBI link</h3>
-<code>wp:bdbChEBI</code>
+<code>gpml:bdbChEBI</code>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Metabolite">wp:Metabolite</a>
   as domain and
@@ -132,7 +154,7 @@ This page describes the GPML ontology for WikiPathways (<code>http://vocabularie
 
 <!-- div id="isAbout" about="http://vocabularies.wikipathways.org/gpml#isAbout" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">is about</h3>
-<code>wp:isAbout</code>
+<code>gpml:isAbout</code>
 </div -->
 
 </section>
