@@ -103,15 +103,61 @@ This page describes the WP ontology for WikiPathways (<code>http://vocabularies.
 <h2>Classes</h2>
 <div id="Binding" about="http://vocabularies.wikipathways.org/wp#Binding" typeof="owl:Class">
 <h3 property="rdfs:label">Binding</h3>
-<p>Binding <a href="http://vocabularies.wikipathways.org/wp#Interaction" property="rdfs:subClassOf">URI Pattern</a>.</p>
+<code>wp:Binding</code>
+<p><span property="dc:description">A binding.</span>
 </div>
 <div id="Catalysis" about="http://vocabularies.wikipathways.org/wp#Catalysis" typeof="owl:Class">
 <h3 property="rdfs:label">Catalysis</h3>
+<code>wp:Catalysis</code>
 <p><span property="dc:description">A catalysis.</span>
+Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="Complex" about="http://vocabularies.wikipathways.org/wp#Complex" typeof="owl:Class">
 <h3 property="rdfs:label">Complex</h3>
-<p>A Complex of compounds</p>
+<code>wp:Complex</code>
+<p>A Complex of compounds. Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
+</div>
+<div id="DataNode" about="http://vocabularies.wikipathways.org/wp#DataNode" typeof="owl:Class">
+<h3 property="rdfs:label">DataNode</h3>
+<code>wp:DataNode</code>
+</div>
+<div id="DirectedInteraction" about="http://vocabularies.wikipathways.org/wp#DirectedInteraction" typeof="owl:Class">
+<h3 property="rdfs:label">DirectedInteraction</h3>
+<code>wp:DirectedInteraction</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#Interaction" property="rdfs:subClassOf">wp:Interaction</a>.</p>
+</div>
+<div id="GeneProduct" about="http://vocabularies.wikipathways.org/wp#GeneProduct" typeof="owl:Class">
+<h3 property="rdfs:label">GeneProduct</h3>
+<code>wp:GeneProduct</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
+</div>
+<div id="Inhibition" about="http://vocabularies.wikipathways.org/wp#Inhibition" typeof="owl:Class">
+<h3 property="rdfs:label">Inhibition</h3>
+<code>wp:Inhibition</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
+</div>
+<div id="Interaction" about="http://vocabularies.wikipathways.org/wp#Interaction" typeof="owl:Class">
+<h3 property="rdfs:label">Interaction</h3>
+<code>wp:Interaction</code>
+</div>
+<div id="Metabolite" about="http://vocabularies.wikipathways.org/wp#Metabolite" typeof="owl:Class">
+<h3 property="rdfs:label">Metabolite</h3>
+<code>wp:Metabolite</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
+</div>
+<div id="Pathway" about="http://vocabularies.wikipathways.org/wp#Pathway" typeof="owl:Class">
+<h3 property="rdfs:label">Pathway</h3>
+<code>wp:Pathway</code>
+</div>
+<div id="Protein" about="http://vocabularies.wikipathways.org/wp#Protein" typeof="owl:Class">
+<h3 property="rdfs:label">Protein</h3>
+<code>wp:Protein</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
+</div>
+<div id="Rna" about="http://vocabularies.wikipathways.org/wp#Rna" typeof="owl:Class">
+<h3 property="rdfs:label">Rna</h3>
+<code>wp:Rna</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
 </div>
 
 </section>
