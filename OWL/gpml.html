@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html prefix="wp: http://vocabularies.wikipathways.org/gpml# skos: http://www.w3.org/2004/02/skos/core# void: http://rdfs.org/ns/void# rdfs: http://www.w3.org/2000/01/rdf-schema# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# xsd: http://www.w3.org/2001/XMLSchema# "  lang="en">
+<head>
+  <title>WikiPathways WP Ontology</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
+
+  <!-- bootstrap stuff -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <style type="text/css">
+  <!--
+  /* Workaround for https://github.com/twbs/bootstrap/issues/1768 */
+  *[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -75px;
+    height: 75px;
+    visibility: hidden;
+  }
+
+  /* cleaner section separation */
+  section {
+    margin-top: 2em;
+  }
+  section h2 {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* For scrollspy */
+  body {
+    position: relative;
+  }
+
+  .navbar-brand img {
+    height: 1em;
+  }
+
+  -->
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#_namespaces">Namespaces</a></li>
+          <li><a href="#_classes">Classes</a></li>
+          <li><a href="#_object_properties">Object Properties</a></li>
+          <li><a href="#_data_properties">Data Properties</a></li>
+          <li><a href="#_technical">Technical</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+<div class="container" role="main">
+
+<div class="jumbotron">
+<div about="http://vocabularies.wikipathways.org/gpml#" typeof="owl:Ontology">
+<h1>The <span property="rdfs:label">WikiPathways GPML Ontology</span> </h1>
+<p>
+This page describes the GPML ontology for WikiPathways (<code>http://vocabularies.wikipathways.org/gpml#</code>). Make sure to visit our <a rel="rdfs:seeAlso" href="http://www.wikipathways.org/">homepage</a>!
+</p>
+</div>
+</div>
+
+<section id="_namespaces">
+<h2>Namespaces</h2>
+<pre>
+@prefix gpml: &lt;http://vocabularies.wikipathways.org/gpml#&gt; .
+
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd:&lt; http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+</pre>
+</section>
+
+<div about="http://vocabularies.wikipathways.org/gpml#" typeof="skos:ConceptScheme">
+<div rev="skos:inScheme">
+
+<section id="_classes">
+
+<h2>Classes</h2>
+
+<!-- div id="Conversion" about="http://vocabularies.wikipathways.org/gpml#Conversion" typeof="owl:Class">
+<h3 property="rdfs:label">Conversion</h3>
+<code>wp:Conversion</code>
+<p>Subclass of <a href="http://vocabularies.wikipathways.org/gpml#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
+</div -->
+
+</section>
+
+<section id="_object_properties">
+
+<h2>Object Properties</h2>
+
+<!-- div id="bdbChEBI" about="http://vocabularies.wikipathways.org/gpml#bdbChEBI" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">BridgeDb ChEBI link</h3>
+<code>wp:bdbChEBI</code>
+<p>This property has
+  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Metabolite">wp:Metabolite</a>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
+  as range.</p>
+</div -->
+
+</section>
+
+<section id="_data_properties">
+
+<h2>Data Properties</h2>
+
+<!-- div id="isAbout" about="http://vocabularies.wikipathways.org/gpml#isAbout" typeof="owl:DatatypeProperty">
+<h3 property="rdfs:label">is about</h3>
+<code>wp:isAbout</code>
+</div -->
+
+</section>
+
+</div>
+</div>
+
+<section id="_technical">
+<h2>Technical notes</h2>
+<p about="http://vocabularies.wikipathways.org/gpml#">
+The conversion of gpml#foo to index.html#foo is done with .htaccess and a RewriteRule.
+The source code is available from the <a href="https://github.com/wikipathways/WpVocabularies/">WpVocabularies</a>
+repository at GitHub. The OWL ontology can be extracted <a property="owl:versionIRI" 
+href="http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/gpml#">here</a>.
+</p>
+</section>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+
