@@ -62,8 +62,8 @@
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#_namespaces">Namespaces</a></li>
           <li><a href="#_classes">Classes</a></li>
-          <!--li><a href="#_object_properties">Object Properties</a></li>
-          <li><a href="#_data_properties">Data Properties</a></li -->
+          <!--li><a href="#_object_properties">Object Properties</a></li -->
+          <li><a href="#_data_properties">Data Properties</a></li>
           <li><a href="#_technical">Technical</a></li>
         </ul>
       </div><!--/.nav-collapse -->
@@ -187,28 +187,24 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
 
 </section>
 
-</div>
-</div>
+<section id="#_data_properties">
 
-<!-- example of class
-<div id="IdentifiersOrgPattern" about="http://vocabularies.bridgedb.org/ops#IdentifiersOrgPattern" typeof="owl:Class">
-<h3 property="rdfs:label">Identifiers.org Pattern</h3>
-<p>It class extends <a href="http://vocabularies.bridgedb.org/ops#UriPattern" property="rdfs:subClassOf">URI Pattern</a>.</p>
-</div>
-<div id="Lens" about="http://vocabularies.bridgedb.org/ops#Lens" typeof="owl:Class">
-<h3 property="rdfs:label">Lens</h3>
-</div> -->
+<h2>Data Properties</h2>
 
-<!-- example of property
-<div id="linksetJustification" about="http://vocabularies.bridgedb.org/ops#linksetJustification" typeof="owl:ObjectProperty">
-<h3 property="rdfs:label">Linkset Justification</h3>
-<p><span property="rdfs:comment">The reason why the Linkset claims these concepts are equivalent.</span>
-This property has
-  <a property="rdfs:domain" href="http://rdfs.org/ns/void#Linkset">VoID Linkset</a>
+<div id="organism" about="http://vocabularies.bridgedb.org/ops#organism" typeof="owl:DatatypeProperty">
+<h3 property="rdfs:label">organism</h3>
+<code>wp:organism</code>
+<p>This property has
+  <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
   as domain and
-  <a property="rdfs:range" href="http://www.w3.org/2004/02/skos/core#Concept">SKOS Concept</a>
+  <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
-</div>	-->
+</div>
+
+</section>
+
+</div>
+</div>
 
 <section id="_technical">
 <h2>Technical notes</h2>
