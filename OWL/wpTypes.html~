@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html prefix="wp: http://vocabularies.wikipathways.org/wpTypes# skos: http://www.w3.org/2004/02/skos/core# void: http://rdfs.org/ns/void# rdfs: http://www.w3.org/2000/01/rdf-schema# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# xsd: http://www.w3.org/2001/XMLSchema# "  lang="en">
+<head>
+  <title>WikiPathways WP Types Ontology</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
+
+  <!-- bootstrap stuff -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <style type="text/css">
+  <!--
+  /* Workaround for https://github.com/twbs/bootstrap/issues/1768 */
+  *[id]:before {
+    display: block;
+    content: " ";
+    margin-top: -75px;
+    height: 75px;
+    visibility: hidden;
+  }
+  /* cleaner section separation */
+  section {
+    margin-top: 2em;
+  }
+  section h2 {
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #ddd;
+  }
+  /* For scrollspy */
+  body {
+    position: relative;
+  }
+  .navbar-brand img {
+    height: 1em;
+  }
+  -->
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#_namespaces">Namespaces</a></li>
+          <li><a href="#_classes">Classes</a></li>
+          <li><a href="#_object_properties">Object Properties</a></li>
+          <li><a href="#_data_properties">Data Properties</a></li>
+          <li><a href="#_technical">Technical</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+<div class="container" role="main">
+
+<div class="jumbotron">
+<div about="http://vocabularies.wikipathways.org/wpTypes#" typeof="owl:Ontology">
+<h1>The <span property="rdfs:label">WikiPathways WP Types Ontology</span> </h1>
+<p>
+This page describes the WP Types ontology for WikiPathways (<code>http://vocabularies.wikipathways.org/wpTypes#</code>). Make sure to visit our <a rel="rdfs:seeAlso" href="http://www.wikipathways.org/">homepage</a>!
+</p>
+</div>
+</div>
+
+<section id="_namespaces">
+<h2>Namespaces</h2>
+<pre>
+@prefix wpTypes: &lt;http://vocabularies.wikipathways.org/wpTypes#&gt; .
+
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd:&lt; http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+</pre>
+</section>
+
+<div about="http://vocabularies.wikipathways.org/wpTypes#" typeof="skos:ConceptScheme">
+<div rev="skos:inScheme">
+
+<section id="_classes">
+
+<h2>Classes</h2>
+<div id="DataNode" about="http://vocabularies.wikipathways.org/wpTypes#DataNode" typeof="owl:Class">
+<h3 property="rdfs:label">Datanode</h3>
+<code>wpTypes:Datanode</code>
+<p><span property="dc:description">A DataNode on the diagram.</span></p>
+</div>
+
+<div id="Interaction" about="http://vocabularies.wikipathways.org/wpTypes#Interaction" typeof="owl:Class">
+<h3 property="rdfs:label">Interaction</h3>
+<code>wpTypes:Interaction</code>
+<p><span property="dc:description">An Interaction between DataNode(s) on the diagram.</span></p>
+</div>
+
+<h2>SubClasses</h2>
+
+<div id="GeneProduct" about="http://vocabularies.wikipathways.org/wpTypes#GeneProduct" typeof="owl:owl:Class">
+<h3 property="rdfs:label">GeneProduct node.</h3>
+<code>wpTypes:GeneProduct</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Metabolite" about="http://vocabularies.wikipathways.org/wpTypes#Metabolite" typeof="owl:Class">
+<h3 property="rdfs:label">Metabolite node.</h3>
+<code>wpTypes:Metabolite</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Pathway" about="http://vocabularies.wikipathways.org/wpTypes#Pathway" typeof="owl:owl:Class">
+<h3 property="rdfs:label">Pathway node.</h3>
+<code>wpTypes:Pathway</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Protein" about="http://vocabularies.wikipathways.org/wpTypes#Protein" typeof="owl:owl:Class">
+<h3 property="rdfs:label">Protein node.</h3>
+<code>wpTypes:Protein</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Rna" about="http://vocabularies.wikipathways.org/wpTypes#Rna" typeof="owl:Class">
+<h3 property="rdfs:label">RNA node.</h3>
+<code>wpTypes:Rna</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Unknown" about="http://vocabularies.wikipathways.org/wpTypes#Unknown" typeof="owl:Class">
+<h3 property="rdfs:label">Unknown node.</h3>
+<code>wpTypes:Unknown</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
+</div>
+
+<div id="Arrow" about="http://vocabularies.wikipathways.org/wpTypes#Arrow" typeof="owl:Class">
+<h3 property="rdfs:label">Arrow interaction.</h3>
+<code>wpTypes:Arrow</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="BrokenArrow" about="http://vocabularies.wikipathways.org/wpTypes#BrokenArrow" typeof="owl:Class">
+<h3 property="rdfs:label">Broken Arrow interaction.</h3>
+<code>wpTypes:BrokenArrow</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="BrokenLine" about="http://vocabularies.wikipathways.org/wpTypes#BrokenLine" typeof="owl:Class">
+<h3 property="rdfs:label">Broken Line interaction.</h3>
+<code>wpTypes:BrokenLine</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="Curved" about="http://vocabularies.wikipathways.org/wpTypes#Curved" typeof="owl:Class">
+<h3 property="rdfs:label">Curved interaction.</h3>
+<code>wpTypes:Curved</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="Elbow" about="http://vocabularies.wikipathways.org/wpTypes#Elbow" typeof="owl:Class">
+<h3 property="rdfs:label">Elbow interaction.</h3>
+<code>wpTypes:Elbow</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="Line" about="http://vocabularies.wikipathways.org/wpTypes#Line" typeof="owl:Class">
+<h3 property="rdfs:label">Line interaction.</h3>
+<code>wpTypes:Line</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="TBar" about="http://vocabularies.wikipathways.org/wpTypes#TBar" typeof="owl:Class">
+<h3 property="rdfs:label">TBar interaction.</h3>
+<code>wpTypes:TBar</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimBinding" about="http://vocabularies.wikipathways.org/wpTypes#MimBinding" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Binding interaction.</h3>
+<code>wpTypes:MimBinding</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimBranchingLeft" about="http://vocabularies.wikipathways.org/wpTypes#MimBranchingLeft" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Branching-Left interaction.</h3>
+<code>wpTypes:MimBranchingLeft</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimBranchingRight" about="http://vocabularies.wikipathways.org/wpTypes#MimBranchingRight" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Branching-Right interaction.</h3>
+<code>wpTypes:MimBranchingRight</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimCatalysis" about="http://vocabularies.wikipathways.org/wpTypes#MimCatalysis" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Catalysis interaction.</h3>
+<code>wpTypes:MimCatalysis</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimCleavage" about="http://vocabularies.wikipathways.org/wpTypes#MimCleavage" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Cleavage interaction.</h3>
+<code>wpTypes:MimCleavage</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimConversion" about="http://vocabularies.wikipathways.org/wpTypes#MimConversion" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Conversion interaction.</h3>
+<code>wpTypes:MimConversion</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimCovalentBond" about="http://vocabularies.wikipathways.org/wpTypes#MimCovalentBond" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Covalent-Bond interaction.</h3>
+<code>wpTypes:MimCovalentBond</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimGap" about="http://vocabularies.wikipathways.org/wpTypes#MimGap" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Gap interaction.</h3>
+<code>wpTypes:MimGap</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimInhibition" about="http://vocabularies.wikipathways.org/wpTypes#MimInhibition" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Inhibition interaction.</h3>
+<code>wpTypes:MimInhibition</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimModification" about="http://vocabularies.wikipathways.org/wpTypes#MimModification" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Modification interaction.</h3>
+<code>wpTypes:MimModification</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimNecessaryStimulation" about="http://vocabularies.wikipathways.org/wpTypes#MimNecessaryStimulation" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Necessary-Stimulation interaction.</h3>
+<code>wpTypes:MimNecessaryStimulation</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimStimulation" about="http://vocabularies.wikipathways.org/wpTypes#MimStimulation" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Stimulation interaction.</h3>
+<code>wpTypes:MimStimulation</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+<div id="MimTranscriptionTranslation" about="http://vocabularies.wikipathways.org/wpTypes#MimTranscriptionTranslation" typeof="owl:Class">
+<h3 property="rdfs:label">Mim-Transcription-Translation interaction.</h3>
+<code>wpTypes:MimTranscriptionTranslation</code>
+<p>This class is a subclass of
+  <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
+</div>
+
+
+</section>
+
+<section id="_object_properties">
+
+<h2>Object Properties</h2>
+
+
+</section>
+
+<section id="_data_properties">
+
+<h2>Data Properties</h2>
+
+
+
+
+</section>
+
+</div>
+</div>
+
+<section id="_technical">
+<h2>Technical notes</h2>
+<p about="http://vocabularies.wikipathways.org/wpTypes#">
+The conversion of wpTypes#foo to index.html#foo is done with .htaccess and a RewriteRule.
+The source code is available from the <a href="https://github.com/wikipathways/WpVocabularies/">WpTypesVocabularies</a>
+repository at GitHub. The OWL ontology can be extracted <a property="owl:versionIRI" 
+href="http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/wpTypes#">here</a>.
+</p>
+</section>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
