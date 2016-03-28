@@ -372,7 +372,7 @@ The BioPax class
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
   as domain and
-  <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a>
   as range. The property
   <span about="http://www.biopax.org/release/biopax-level3.owl#organism">
     <a href="http://www.biopax.org/release/biopax-level3.owl#organism">biopax:organism</a> is a subproperty of
@@ -385,7 +385,9 @@ The BioPax class
 <code>wp:organismName</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
-  as domain.</p>
+  as domain and
+  <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
+  as range.</p>
 </div>
 
 <div id="ontologyTag" about="http://vocabularies.wikipathways.org/wp#ontologyTag" typeof="owl:DatatypeProperty">
