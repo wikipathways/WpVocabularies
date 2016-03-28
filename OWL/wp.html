@@ -356,7 +356,11 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
-  as range.</p>
+  as range. The property
+  <div about="http://www.biopax.org/release/biopax-level3.owl#organism">
+    <a href="http://www.biopax.org/release/biopax-level3.owl#organism">biopax:organism</a> is a subproperty of
+    <a property="rdfs:subPropertyOf" href="http://vocabularies.wikipathways.org/wp#organism">wp:organism</span></div>.
+</p>
 </div>
 
 <div id="organismName" about="http://vocabularies.wikipathways.org/wp#organismName" typeof="owl:DatatypeProperty">
