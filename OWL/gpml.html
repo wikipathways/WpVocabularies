@@ -100,6 +100,8 @@ This ontology is written by (in random order)
 <pre>
 @prefix gpml: &lt;http://vocabularies.wikipathways.org/gpml#&gt; .
 
+@prefix biopax: &lt;http://www.biopax.org/release/biopax-level3.owl#&gt; .
+
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd:&lt; http://www.w3.org/2001/XMLSchema#&gt; .
@@ -451,12 +453,12 @@ This ontology is written by (in random order)
 <div id="biopaxRef" about="http://vocabularies.wikipathways.org/gpml#biopaxRef" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">biopaxRef</h3>
 <code>gpml:biopaxRef</code>
-<p property="rdfs:comment">Refers to a biopax:PublicationXref.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a> 
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
+<p>Refers to a <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#PublicationXref">biopax:PublicationXref</a>.</p>
 </div>
 
 <div id="boardHeight" about="http://vocabularies.wikipathways.org/gpml#boardHeight" typeof="owl:DatatypeProperty">
@@ -527,12 +529,12 @@ This ontology is written by (in random order)
 <div id="data-Source" about="http://vocabularies.wikipathways.org/gpml#data-Source" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">data-Source</h3>
 <code>gpml:data-Source</code>
-<p property="rdfs:comment">See http://www.biopax.org/release/biopax-level3.owl#dataSource .</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
+<p>See <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#dataSource">biopax:dataSource</a>.</p>
 </div>
 
 <div id="database" about="http://vocabularies.wikipathways.org/gpml#database" typeof="owl:DatatypeProperty">
@@ -544,6 +546,7 @@ This ontology is written by (in random order)
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
+<p>Equivalent to <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#db">biopax:db</a>.</p>
 </div>
 
 <div id="email" about="http://vocabularies.wikipathways.org/gpml#email" typeof="owl:DatatypeProperty">
@@ -706,6 +709,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
+<p>Equivalent to <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#id">biopax:id</a>.</p>
 </div>
 
 <div id="key" about="http://vocabularies.wikipathways.org/gpml#key" typeof="owl:DatatypeProperty">
