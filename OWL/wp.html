@@ -132,6 +132,8 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
 </div>
 <div id="Complex" about="http://vocabularies.wikipathways.org/wp#Complex" typeof="owl:Class">
 <h3 property="rdfs:label">Complex</h3>
+<p property="efo:definition">A physically bound combination of two or more
+biological entities.</p>
 <code>wp:Complex</code>
 <p>A Complex of compounds. Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
 </div>
@@ -142,6 +144,9 @@ Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction
 </div>
 <div id="Conversion" about="http://vocabularies.wikipathways.org/wp#Conversion" typeof="owl:Class">
 <h3 property="rdfs:label">Conversion</h3>
+<p property="efo:definition">A process in which a biological entity gets
+converted into another entity. This could be a metabolic conversion where
+compound gets chemical modified.</p>
 <code>wp:Conversion</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
@@ -191,6 +196,10 @@ The BioPax class
 </div>
 <div id="Metabolite" about="http://vocabularies.wikipathways.org/wp#Metabolite" typeof="owl:Class">
 <h3 property="rdfs:label">Metabolite</h3>
+<p property="efo:definition">Any chemical compound taking part of the compound.
+Unlike true metabolites, this
+node is also used for compounds which are not the product or substrate of a
+metabolic conversion.</p>
 <code>wp:Metabolite</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
 </div>
@@ -312,6 +321,8 @@ The BioPax class
 
 <div id="celltypeOntologyTag" about="http://vocabularies.wikipathways.org/wp#celltypeOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">cell type ontology tag</h3>
+<p property="efo:definition">A term from the Cell Type ontology available on the
+NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http://bioportal.bioontology.org/ontologies/CL</a>).</p>
 <code>wp:celltypeOntologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -323,6 +334,7 @@ The BioPax class
 
 <div id="diseaseOntologyTag" about="http://vocabularies.wikipathways.org/wp#diseaseOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">disease ontology tag</h3>
+<p property="efo:definition">A term from the Human Disease Ontology available on the NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/DOID">http://bioportal.bioontology.org/ontologies/DOID</a>).</p>
 <code>wp:diseaseOntologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -339,7 +351,7 @@ The BioPax class
 
 <div id="pathwayOntologyTag" about="http://vocabularies.wikipathways.org/wp#pathwayOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">pathway ontology tag</h3>
-<code>wp:pathwayOntologyTag</code>
+<p property="efo:definition">A term from the Pathway Ontology ontology available at NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/PW">http://bioportal.bioontology.org/ontologies/PW</a>).</p><code>wp:pathwayOntologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
   as domain,
@@ -370,6 +382,7 @@ The BioPax class
 
 <div id="ontologyTag" about="http://vocabularies.wikipathways.org/wp#ontologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">ontology tag</h3>
+<p property="efo:definition">A term from an ontology or controlled vocabulary.</p>
 <code>wp:ontologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -405,6 +418,7 @@ The BioPax class
 
 <div id="organismName" about="http://vocabularies.wikipathways.org/wp#organismName" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">organism name</h3>
+<p property="efo:definition">Latin name of the organsm in which this pathway takes place.</p>
 <code>wp:organismName</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
