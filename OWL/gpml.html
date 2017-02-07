@@ -191,6 +191,7 @@ This ontology is written by (in random order)
 <div id="Point" about="http://vocabularies.wikipathways.org/gpml#Point" typeof="owl:Class">
 <h3 property="rdfs:label">Point</h3>
 <code>gpml:Point</code>
+<p property="efo:definition">A position in 2-dimensional space defined by x and y coordinates.</p>
 </div>
 
 <div id="PublicationXref" about="http://vocabularies.wikipathways.org/gpml#PublicationXref" typeof="owl:Class">
@@ -218,6 +219,9 @@ This ontology is written by (in random order)
 <div id="Xref" about="http://vocabularies.wikipathways.org/gpml#Xref" typeof="owl:Class">
 <h3 property="rdfs:label">Xref</h3>
 <code>gpml:Xref</code>
+<p property="efo:definition">Reference to a database entry that matches the node
+in the pathway. It is a combination of an identifier of the entity and an
+identifier of the database in which the entity is found.</p>
 </div>
 
 </section>
@@ -453,6 +457,7 @@ This ontology is written by (in random order)
 <div id="biopaxRef" about="http://vocabularies.wikipathways.org/gpml#biopaxRef" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">biopaxRef</h3>
 <code>gpml:biopaxRef</code>
+<p property="efo:definition">Reuse of references defined by BioPAX.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a> 
   as domain and
@@ -508,6 +513,7 @@ This ontology is written by (in random order)
 <div id="color" about="http://vocabularies.wikipathways.org/gpml#color" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">color</h3>
 <code>gpml:color</code>
+<p property="efo:definition">The color to be used for visualization.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a> 
   as domain and
@@ -552,6 +558,7 @@ This ontology is written by (in random order)
 <div id="email" about="http://vocabularies.wikipathways.org/gpml#email" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">email</h3>
 <code>gpml:email</code>
+<p property="efo:definition">An electronic mail address. Used to reference the author or maintainer of a pathway prior to WikiPathways.</p>
 <p property="rdfs:comment">Here comes the description on: email.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
@@ -583,6 +590,7 @@ This ontology is written by (in random order)
 <div id="fontName" about="http://vocabularies.wikipathways.org/gpml#fontName" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontName</h3>
 <code>gpml:fontName</code>
+<p property="efo:definition">The name of the set of printable text characters to be used for visualization.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -614,6 +622,7 @@ This ontology is written by (in random order)
 <div id="fontStyle" about="http://vocabularies.wikipathways.org/gpml#fontStyle" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontStyle</h3>
 <code>gpml:fontStyle</code>
+<p property="efo:definition">The typographic style or font face applied to displayed text, e.g., Arial.</p>
 <p property="rdfs:comment">The font style of the pathway element (DataNode, Label, Shape).</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
@@ -748,6 +757,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="lineStyle" about="http://vocabularies.wikipathways.org/gpml#lineStyle" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">lineStyle</h3>
 <code>gpml:lineStyle</code>
+<p property="efo:definition">Describes how the line is visualized.</p>
 <p property="rdfs:comment">The line style of a GraphicalLine or Interaction as well as the line style of a border of a DataNode, Label, Shape or State.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
@@ -803,6 +813,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="position" about="http://vocabularies.wikipathways.org/gpml#position" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">position</h3>
 <code>gpml:position</code>
+<p property="efo:definition">Proportional distance of an anchor along the line it belongs to, between 0 and 1.</p>
 <p property="rdfs:comment">Position of an anchor on the line it belongs to.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Anchor">gpml:Anchor</a>
@@ -926,6 +937,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="valign" about="http://vocabularies.wikipathways.org/gpml#valign" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">valign</h3>
 <code>gpml:valign</code>
+<p property="efo:definition">Alignment of displayed text in the vertical dimension, either Top, Middle or Bottom.</p>
 <p property="rdfs:comment">Vertical alignment of a datanode, shape or label.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
