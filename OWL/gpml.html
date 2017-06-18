@@ -85,16 +85,6 @@ This page describes the GPML ontology for WikiPathways (<code>http://vocabularie
 </div>
 </div>
 
-<div about="http://vocabularies.wikipathways.org/wpTypes#" typeof="owl:Ontology">
-<p>
-This ontology is written by (in random order)
-<span property="dc:contributor">Andra Waagmeester</span>,
-<span property="dc:contributor">Martina Kutmon</span>,
-<span property="dc:contributor">Egon Willighagen</span>, and
-<span property="dc:contributor">Ryan Miller</span>.
-</p>
-</div>
-
 <section id="_namespaces">
 <h2>Namespaces</h2>
 <pre>
@@ -107,7 +97,6 @@ This ontology is written by (in random order)
 @prefix xsd:&lt; http://www.w3.org/2001/XMLSchema#&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
-@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
 </pre>
 </section>
 
@@ -1020,7 +1009,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <h2>Technical notes</h2>
 <p about="http://vocabularies.wikipathways.org/gpml#">
 The conversion of gpml#foo to index.html#foo is done with .htaccess and a RewriteRule.
-The source code is available from the <a href="https://github.com/wikipathways/WpVocabularies/">WpVocabularies</a>
+The source code and contributor history are available from the <a href="https://github.com/wikipathways/WpVocabularies/">WpVocabularies</a>
 repository at GitHub. The OWL ontology can be extracted <a property="owl:versionIRI" 
 href="http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/gpml#">here</a>.
 </p>
