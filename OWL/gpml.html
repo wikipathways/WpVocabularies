@@ -608,7 +608,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fontStrikethru" about="http://vocabularies.wikipathways.org/gpml#fontStrikethru" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontStrikethru</h3>
 <code>gpml:fontStrikethru</code>
-<p property="rdfs:comment">Font Strikethru of the objects (DataNode, Label, Shape).</p>
+<p property="rdfs:comment">Deprecated: Not in use.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -686,7 +686,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="height" about="http://vocabularies.wikipathways.org/gpml#height" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">height</h3>
 <code>gpml:height</code>
-<p property="rdfs:comment">The height of a DataNode, Label, Shape or State object.</p>
+<p property="rdfs:comment">The pixel value for the y-dimensional length of a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -697,7 +697,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="href" about="http://vocabularies.wikipathways.org/gpml#href" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">href</h3>
 <code>gpml:href</code>
-<p property="rdfs:comment">The possible hyperlink in a Label in a pathway.</p>
+<p property="rdfs:comment">The hyperlink optionally specified in a Label.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>
   as domain and
@@ -764,7 +764,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="lineThickness" about="http://vocabularies.wikipathways.org/gpml#lineThickness" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">lineThickness</h3>
 <code>gpml:lineThickness</code>
-<p property="rdfs:comment">The Thickness of a GraphicalLine or Interaction as well as the border Thickness of a DataNode, Label, Shape or State.</p>
+<p property="rdfs:comment">The pixel value for the width of a given line, interaction or border.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -797,7 +797,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="organism" about="http://vocabularies.wikipathways.org/gpml#organism" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">organism</h3>
 <code>gpml:organism</code>
-<p property="rdfs:comment">The organism of the pathway. Latin name usually provided by BridgeDb.</p>
+<p property="rdfs:comment">The scientific name (e.g., Homo sapiens) of the species being described by the pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -841,7 +841,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="rotation" about="http://vocabularies.wikipathways.org/gpml#rotation" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">rotation</h3>
 <code>gpml:rotation</code>
-<p property="rdfs:comment">Rotation of a shape.</p>
+<p property="rdfs:comment">The degree value of angular offset relative to the center of a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -852,7 +852,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="shape" about="http://vocabularies.wikipathways.org/gpml#shape" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">shape</h3>
 <code>gpml:shape</code>
-<p property="rdfs:comment">Shape of an anchor.</p>
+<p property="rdfs:comment">The visual representation of an anchor, e.g., Circle or None.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Anchor">gpml:Anchor</a>
   as domain and
@@ -887,7 +887,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="stateType" about="http://vocabularies.wikipathways.org/gpml#stateType" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">stateType</h3>
 <code>gpml:stateType</code>
-<p property="rdfs:comment">The type of a State.</p>
+<p property="rdfs:comment">A free text field to describe the nature or category of a given state.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -898,7 +898,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="style" about="http://vocabularies.wikipathways.org/gpml#style" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">style</h3>
 <code>gpml:style</code>
-<p property="rdfs:comment">The style of a group.</p>
+<p property="rdfs:comment">The type of Group, e.g., Complex.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>
   as domain and
@@ -964,7 +964,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="width" about="http://vocabularies.wikipathways.org/gpml#width" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">width</h3>
 <code>gpml:width</code>
-<p property="rdfs:comment">The width of an object (DataNode, Label, Shape, State).</p>
+<p property="rdfs:comment">The pixel value for the x-dimensional length of a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>,<a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
