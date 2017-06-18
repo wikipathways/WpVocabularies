@@ -127,6 +127,7 @@ This ontology is written by (in random order)
 <div id="Attribute" about="http://vocabularies.wikipathways.org/gpml#Attribute" typeof="owl:Class">
 <h3 property="rdfs:label">Attribute</h3>
 <code>gpml:Attribute</code>
+<p property="rdfs:comment">...</p>
 </div>
 
 <div id="Biopax" about="http://vocabularies.wikipathways.org/gpml#Biopax" typeof="owl:Class">
@@ -138,6 +139,7 @@ This ontology is written by (in random order)
 <div id="Comment" about="http://vocabularies.wikipathways.org/gpml#Comment" typeof="owl:Class">
 <h3 property="rdfs:label">Comment</h3>
 <code>gpml:Comment</code>
+<p property="rdfs:comment">...</p>
 </div>
 
 <div id="DataNode" about="http://vocabularies.wikipathways.org/gpml#DataNode" typeof="owl:Class">
@@ -197,11 +199,13 @@ This ontology is written by (in random order)
 <div id="PublicationXref" about="http://vocabularies.wikipathways.org/gpml#PublicationXref" typeof="owl:Class">
 <h3 property="rdfs:label">PublicationXref</h3>
 <code>gpml:PublicationXref</code>
+<p property="rdfs:comment">...</p>
 </div>
 
 <div id="RequiresCurationAttention" about="http://vocabularies.wikipathways.org/gpml#RequiresCurationAttention" typeof="owl:Class">
 <h3 property="rdfs:label">RequiresCurationAttention</h3>
 <code>gpml:RequiresCurationAttention</code>
+<p property="rdfs:comment">...</p>
 </div>
 
 <div id="Shape" about="http://vocabularies.wikipathways.org/gpml#Shape" typeof="owl:Class">
@@ -244,6 +248,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasAttribute" about="http://vocabularies.wikipathways.org/gpml#hasAttribute" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasAttribute</h3>
 <code>gpml:hasAttribute</code>
+<p property="rdfs:comment">...</p>
 <p property="rdfs:comment">Links the attribute to the parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State).</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
@@ -255,6 +260,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasBiopax" about="http://vocabularies.wikipathways.org/gpml#hasBiopax" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasBiopax</h3>
 <code>gpml:hasBiopax</code>
+<p property="rdfs:comment">...</p>
 <p property="rdfs:comment">A pathway linking to a BioPAX object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
@@ -410,6 +416,7 @@ identifier of the database in which the entity is found.</p>
 <!-- div id="bdbChEBI" about="http://vocabularies.wikipathways.org/gpml#bdbChEBI" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">BridgeDb ChEBI link</h3>
 <code>gpml:bdbChEBI</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Metabolite">wp:Metabolite</a>
   as domain and
@@ -426,6 +433,7 @@ identifier of the database in which the entity is found.</p>
 <div id="align" about="http://vocabularies.wikipathways.org/gpml#align" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">align</h3>
 <code>gpml:align</code>
+<p property="rdfs:comment">Horizontal alignment of displayed text, e.g., Left, Center, Right.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a> 
   as domain and
@@ -436,6 +444,7 @@ identifier of the database in which the entity is found.</p>
 <div id="arrowHead" about="http://vocabularies.wikipathways.org/gpml#arrowHead" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">arrowHead</h3>
 <code>gpml:arrowHead</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Point">gpml:Point</a>
   as domain and
@@ -524,7 +533,7 @@ identifier of the database in which the entity is found.</p>
 <div id="connectorType" about="http://vocabularies.wikipathways.org/gpml#connectorType" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">connectorType</h3>
 <code>gpml:connectorType</code>
-<p property="dc:definition">Specifies a set of rules to govern layout of Graphical Lines and Interactions.  PathVisio (Java): Line Type and GPML: ConnectorType</p>
+<p property="rdfs:comment">Specifies a set of rules to govern layout of Graphical Lines and Interactions.  PathVisio (Java): Line Type and GPML: ConnectorType</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>
   as domain and
@@ -535,6 +544,7 @@ identifier of the database in which the entity is found.</p>
 <div id="data-Source" about="http://vocabularies.wikipathways.org/gpml#data-Source" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">data-Source</h3>
 <code>gpml:data-Source</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -569,6 +579,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fillColor" about="http://vocabularies.wikipathways.org/gpml#fillColor" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fillColor</h3>
 <code>gpml:fillColor</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a> 
   as domain and
@@ -579,6 +590,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fontDecoration" about="http://vocabularies.wikipathways.org/gpml#fontDecoration" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontDecoration</h3>
 <code>gpml:fontDecoration</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -600,6 +612,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fontSize" about="http://vocabularies.wikipathways.org/gpml#fontSize" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontSize</h3>
 <code>gpml:fontSize</code>
+<p property="rdfs:comment">...</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -933,7 +946,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="valign" about="http://vocabularies.wikipathways.org/gpml#valign" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">valign</h3>
 <code>gpml:valign</code>
-<p property="rdfs:comment"> Vertical alignment of displayed text, e.g., Top, Middle or Bottom.</p>
+<p property="rdfs:comment"> Vertical alignment of displayed text, e.g., Top, Middle, Bottom.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
