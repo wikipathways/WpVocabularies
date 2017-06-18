@@ -121,13 +121,13 @@ This ontology is written by (in random order)
 <div id="Anchor" about="http://vocabularies.wikipathways.org/gpml#Anchor" typeof="owl:Class">
 <h3 property="rdfs:label">Anchor</h3>
 <code>gpml:Anchor</code>
-<p property="rdfs:comment">An anchor is a connection point on a graphical line or an interaction, where another graphical line or interaction can be connected.</p>
+<p property="rdfs:comment">A connection point on a graphical line or an interaction, where another graphical line or interaction can be connected.</p>
 </div>
 
 <div id="Attribute" about="http://vocabularies.wikipathways.org/gpml#Attribute" typeof="owl:Class">
 <h3 property="rdfs:label">Attribute</h3>
 <code>gpml:Attribute</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Element used to specify key/value paired information for a given object.</p>
 </div>
 
 <div id="Biopax" about="http://vocabularies.wikipathways.org/gpml#Biopax" typeof="owl:Class">
@@ -139,7 +139,7 @@ This ontology is written by (in random order)
 <div id="Comment" about="http://vocabularies.wikipathways.org/gpml#Comment" typeof="owl:Class">
 <h3 property="rdfs:label">Comment</h3>
 <code>gpml:Comment</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Elements used to provide descriptions and arbitrary notes for a given object.</p>
 </div>
 
 <div id="DataNode" about="http://vocabularies.wikipathways.org/gpml#DataNode" typeof="owl:Class">
@@ -151,7 +151,7 @@ This ontology is written by (in random order)
 <div id="GraphicalLine" about="http://vocabularies.wikipathways.org/gpml#GraphicalLine" typeof="owl:Class">
 <h3 property="rdfs:label">GraphicalLine</h3>
 <code>gpml:GraphicalLine</code>
-<p property="rdfs:comment">A connector between graphical shapes or between a graphical shape and a biopax:Entity.</p>
+<p property="rdfs:comment">A visual annotation, often used to partition space or connect other annotation, e.g., Shapes. An Xref can not be specified for GraphicalLines (in contrast to Interactions).</p>
 </div>
 
 <div id="InfoBox" about="http://vocabularies.wikipathways.org/gpml#InfoBox" typeof="owl:Class">
@@ -169,25 +169,25 @@ This ontology is written by (in random order)
 <div id="Interaction" about="http://vocabularies.wikipathways.org/gpml#Interaction" typeof="owl:Class">
 <h3 property="rdfs:label">Interaction</h3>
 <code>gpml:Interaction</code>
-<p property="rdfs:comment">Defines the relationship between the two entities it connects. The entities can be DataNodes or Anchors.</p>
+<p property="rdfs:comment">Defines the biochemical relationship between DataNodes or with Anchors on other Interactions. An Xref can be specified for Interactions (in contrast to GraphicalLines).</p>
 </div>
 
 <div id="Label" about="http://vocabularies.wikipathways.org/gpml#Label" typeof="owl:Class">
 <h3 property="rdfs:Label">Label</h3>
 <code>gpml:Label</code>
-<p property="rdfs:comment">A label is a text box which can be used to describe the elements of a pathway. It is mostly used as a name tag, to describe datanodes, interactions or cellular compartments in a pathway.</p>
+<p property="rdfs:comment">A text field which can be used to annotate any aspect of a pathway.</p>
 </div>
 
 <div id="Legend" about="http://vocabularies.wikipathways.org/gpml#Legend" typeof="owl:Class">
 <h3 property="rdfs:label">Legend</h3>
 <code>gpml:Legend</code>
-<p property="rdfs:comment">An explanatory list of the colors used for visualizing data on the pathway. Currently just a placeholder element -- not used.</p>
+<p property="rdfs:comment">An explanatory list of the colors used for visualizing data on the pathway. Not currently used.</p>
 </div>
 
 <div id="Pathway" about="http://vocabularies.wikipathways.org/gpml#Pathway" typeof="owl:Class">
 <h3 property="rdfs:label">Pathway</h3>
 <code>gpml:Pathway</code>
-<p property="rdfs:comment">A graph diagram representing a biological process. Nodes of which represent genes, proteins, metabolites etc and the edges connecting two nodes represent the relationship between them, i.e how the two nodes interact.</p>
+<p property="rdfs:comment">A graph diagram representing a biological process as a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms.</p>
 </div>
 
 <div id="Point" about="http://vocabularies.wikipathways.org/gpml#Point" typeof="owl:Class">
@@ -199,13 +199,13 @@ This ontology is written by (in random order)
 <div id="PublicationXref" about="http://vocabularies.wikipathways.org/gpml#PublicationXref" typeof="owl:Class">
 <h3 property="rdfs:label">PublicationXref</h3>
 <code>gpml:PublicationXref</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Defines a literature reference. Refers to a <a property="rdfs:seeAlso" href="http://www.biopax.org/owldoc/Level3/classes/PublicationXref___-1968381200.html">BioPAX definition</a>.</p>
 </div>
 
 <div id="RequiresCurationAttention" about="http://vocabularies.wikipathways.org/gpml#RequiresCurationAttention" typeof="owl:Class">
 <h3 property="rdfs:label">RequiresCurationAttention</h3>
 <code>gpml:RequiresCurationAttention</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Deprecated: Not in use.</p>
 </div>
 
 <div id="Shape" about="http://vocabularies.wikipathways.org/gpml#Shape" typeof="owl:Class">
@@ -217,7 +217,7 @@ This ontology is written by (in random order)
 <div id="State" about="http://vocabularies.wikipathways.org/gpml#State" typeof="owl:Class">
 <h3 property="rdfs:label">State</h3>
 <code>gpml:State</code>
-<p property="rdfs:comment">The particular condition that biological entity is in at a specific time, e.g a protein may be phosphorylated or not, so phosphorylation is a state that a protein may have.</p>
+<p property="rdfs:comment">A particular condition, mode or modification of an entity, e.g., phosphorylated, activated, mutated, SNP, etc.</p>
 </div>
 
 <div id="Xref" about="http://vocabularies.wikipathways.org/gpml#Xref" typeof="owl:Class">
@@ -237,7 +237,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasAnchor" about="http://vocabularies.wikipathways.org/gpml#hasAnchor" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasAnchor</h3>
 <code>gpml:hasAnchor</code>
-<p property="rdfs:comment">An interaction or graphicalLine that has an anchor.</p>
+<p property="rdfs:comment">Boolean property for the existence of an Anchor on a given line or interaction.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>
   as domain and
@@ -248,8 +248,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasAttribute" about="http://vocabularies.wikipathways.org/gpml#hasAttribute" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasAttribute</h3>
 <code>gpml:hasAttribute</code>
-<p property="rdfs:comment">...</p>
-<p property="rdfs:comment">Links the attribute to the parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State).</p>
+<p property="rdfs:comment">Boolean property for the existence of an Attribute class associated with a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -260,8 +259,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasBiopax" about="http://vocabularies.wikipathways.org/gpml#hasBiopax" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasBiopax</h3>
 <code>gpml:hasBiopax</code>
-<p property="rdfs:comment">...</p>
-<p property="rdfs:comment">A pathway linking to a BioPAX object.</p>
+<p property="rdfs:comment">Boolean property for the existence of a BioPax class associated with a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -272,7 +270,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasComment" about="http://vocabularies.wikipathways.org/gpml#hasComment" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasComment</h3>
 <code>gpml:hasComment</code>
-<p property="rdfs:comment">Links a comment to its parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State).</p>
+<p property="rdfs:comment">Boolean property for the existence of a Comment class associated with a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -283,7 +281,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasDataNode" about="http://vocabularies.wikipathways.org/gpml#hasDataNode" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasDataNode</h3>
 <code>gpml:hasDataNode</code>
-<p property="rdfs:comment">Links the dataNode to the parent pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a DataNode in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -294,7 +292,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasGraphicalLine" about="http://vocabularies.wikipathways.org/gpml#hasGraphicalLine" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasGraphicalLine</h3>
 <code>gpml:hasGraphicalLine</code>
-<p property="rdfs:comment">Links the graphicalLine to the parent pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a GraphicalLine in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -305,7 +303,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasGroup" about="http://vocabularies.wikipathways.org/gpml#hasGroup" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasGroup</h3>
 <code>gpml:hasGroup</code>
-<p property="rdfs:comment">Links the groups to the pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a Group in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -316,7 +314,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasInfoBox" about="http://vocabularies.wikipathways.org/gpml#hasInfoBox" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasInfoBox</h3>
 <code>gpml:hasInfoBox</code>
-<p property="rdfs:comment">Links an InfoBox object to a pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of an InfroBox in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -327,7 +325,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasInteraction" about="http://vocabularies.wikipathways.org/gpml#hasInteraction" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasInteraction</h3>
 <code>gpml:hasInteraction</code>
-<p property="rdfs:comment">Links the interaction to the parent pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of an Interaction in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -338,7 +336,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasLabel" about="http://vocabularies.wikipathways.org/gpml#hasLabel" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasLabel</h3>
 <code>gpml:hasLabel</code>
-<p property="rdfs:comment">Links the labels to the pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a Label in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -349,7 +347,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasLegend" about="http://vocabularies.wikipathways.org/gpml#hasLegend" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasLegend</h3>
 <code>gpml:hasLegend</code>
-<p property="rdfs:comment">Links a Legend to the pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a Legend in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -360,7 +358,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasPoint" about="http://vocabularies.wikipathways.org/gpml#hasPoint" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasPoint</h3>
 <code>gpml:hasPoint</code>
-<p property="rdfs:comment">An interaction or graphical line that has a point.</p>
+<p property="rdfs:comment">Boolean property for the existence of a Point in a given line or interaction.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>
   as domain and
@@ -371,7 +369,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasPublicationXref" about="http://vocabularies.wikipathways.org/gpml#hasPublicationXref" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasPublicationXref</h3>
 <code>gpml:hasPublicationXref</code>
-<p property="rdfs:comment">Links a publicationXref to its parent object (DataNode, GraphicalLine, Group, Interaction, Label, Pathway, Shape, State).</p>
+<p property="rdfs:comment">Boolean property for the existence of a PublicationXref associated with a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Group">gpml:Group</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -382,7 +380,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasShape" about="http://vocabularies.wikipathways.org/gpml#hasShape" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasShape</h3>
 <code>gpml:hasShape</code>
-<p property="rdfs:comment">Links a Shape to the pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a Shape in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -393,7 +391,7 @@ identifier of the database in which the entity is found.</p>
 <div id="hasState" about="http://vocabularies.wikipathways.org/gpml#hasState" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasState</h3>
 <code>gpml:hasState</code>
-<p property="rdfs:comment">Links a State to the pathway.</p>
+<p property="rdfs:comment">Boolean property for the existence of a State in a given pathway.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -404,25 +402,13 @@ identifier of the database in which the entity is found.</p>
 <div id="hasXref" about="http://vocabularies.wikipathways.org/gpml#hasXref" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">hasXref</h3>
 <code>gpml:hasXref</code>
-<p property="rdfs:comment">Links a Xref to its parent object (DataNode, Interaction, State).</p>
+<p property="rdfs:comment">Boolean property for the existence of an Xref associated with a given object.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Xref">gpml:Xref</a>
   as range.</p>
 </div>
-
-
-<!-- div id="bdbChEBI" about="http://vocabularies.wikipathways.org/gpml#bdbChEBI" typeof="owl:DatatypeProperty">
-<h3 property="rdfs:label">BridgeDb ChEBI link</h3>
-<code>gpml:bdbChEBI</code>
-<p property="rdfs:comment">...</p>
-<p>This property has
-  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Metabolite">wp:Metabolite</a>
-  as domain and
-  <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
-  as range.</p>
-</div -->
 
 </section>
 
@@ -444,7 +430,7 @@ identifier of the database in which the entity is found.</p>
 <div id="arrowHead" about="http://vocabularies.wikipathways.org/gpml#arrowHead" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">arrowHead</h3>
 <code>gpml:arrowHead</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Specifies the glyph at the ends of lines and interactions.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Point">gpml:Point</a>
   as domain and
@@ -544,25 +530,24 @@ identifier of the database in which the entity is found.</p>
 <div id="data-Source" about="http://vocabularies.wikipathways.org/gpml#data-Source" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">data-Source</h3>
 <code>gpml:data-Source</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Deprecated: Not in use.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
-<p>See <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#dataSource">biopax:dataSource</a>.</p>
 </div>
 
 <div id="database" about="http://vocabularies.wikipathways.org/gpml#database" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">database</h3>
 <code>gpml:database</code>
-<p property="rdfs:comment">Equivalent to http://www.biopax.org/release/biopax-level3.owl#db .</p>
+<p property="rdfs:comment">Specifies the datasource for the identifier provided as an Xref.  Equivalent to http://vocabularies.bridgedb.org/ops#DataSource .</p>
 <p>This property has
-  <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#PublicationXref">gpml:PublicationXref</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Xref">gpml:Xref</a>
+<a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Xref">gpml:Xref</a>
   as domain and
   <a property="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a>
   as range.</p>
-<p>Equivalent to <a property="rdfs:seeAlso" href="http://www.biopax.org/release/biopax-level3.owl#db">biopax:db</a>.</p>
+<p>Equivalent to <a property="rdfs:seeAlso" href="http://vocabularies.bridgedb.org/ops#DataSource">BridgeDb:DataSource</a>.</p>
 </div>
 
 <div id="email" about="http://vocabularies.wikipathways.org/gpml#email" typeof="owl:DatatypeProperty">
@@ -579,7 +564,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fillColor" about="http://vocabularies.wikipathways.org/gpml#fillColor" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fillColor</h3>
 <code>gpml:fillColor</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">The hexidecimal color value used to paint the area of an object, not including its border.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a> 
   as domain and
@@ -590,7 +575,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fontDecoration" about="http://vocabularies.wikipathways.org/gpml#fontDecoration" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontDecoration</h3>
 <code>gpml:fontDecoration</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">Deprecated: Not in use.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -612,7 +597,7 @@ identifier of the database in which the entity is found.</p>
 <div id="fontSize" about="http://vocabularies.wikipathways.org/gpml#fontSize" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">fontSize</h3>
 <code>gpml:fontSize</code>
-<p property="rdfs:comment">...</p>
+<p property="rdfs:comment">The point value for the size of the font.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
