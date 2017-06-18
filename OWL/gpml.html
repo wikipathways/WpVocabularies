@@ -559,7 +559,6 @@ identifier of the database in which the entity is found.</p>
 <h3 property="rdfs:label">email</h3>
 <code>gpml:email</code>
 <p property="rdfs:comment">Deprecated: An electronic mail address. Used to reference the author or maintainer of a pathway prior to WikiPathways.</p>
-<p property="rdfs:comment">Here comes the description on: email.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Pathway">gpml:Pathway</a>
   as domain and
@@ -623,7 +622,6 @@ identifier of the database in which the entity is found.</p>
 <h3 property="rdfs:label">fontStyle</h3>
 <code>gpml:fontStyle</code>
 <p property="rdfs:comment">The typographic style or font face applied to displayed text, e.g., Arial.</p>
-<p property="rdfs:comment">The font style of the pathway element (DataNode, Label, Shape).</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a> and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
@@ -757,8 +755,7 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <div id="lineStyle" about="http://vocabularies.wikipathways.org/gpml#lineStyle" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">lineStyle</h3>
 <code>gpml:lineStyle</code>
-<p property="rdfs:comment">Describes how the line is visualized.</p>
-<p property="rdfs:comment">The line style of a GraphicalLine or Interaction as well as the line style of a border of a DataNode, Label, Shape or State.</p>
+<p property="rdfs:comment">The visual appearance of a line or border, e.g., Solid or Broken.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#GraphicalLine">gpml:GraphicalLine</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Interaction">gpml:Interaction</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#State">gpml:State</a>
   as domain and
@@ -814,7 +811,6 @@ DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a gr
 <h3 property="rdfs:label">position</h3>
 <code>gpml:position</code>
 <p property="rdfs:comment">Proportional distance of an anchor along the line it belongs to, between 0 and 1.</p>
-<p property="rdfs:comment">Position of an anchor on the line it belongs to.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Anchor">gpml:Anchor</a>
   as domain and
@@ -937,8 +933,7 @@ Proposed: Expand it to also describe Anchors. It should replace the term current
 <div id="valign" about="http://vocabularies.wikipathways.org/gpml#valign" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">valign</h3>
 <code>gpml:valign</code>
-<p property="rdfs:comment">Alignment of displayed text in the vertical dimension, either Top, Middle or Bottom.</p>
-<p property="rdfs:comment">Vertical alignment of a datanode, shape or label.</p>
+<p property="rdfs:comment"> Vertical alignment of displayed text, e.g., Top, Middle or Bottom.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#DataNode">gpml:DataNode</a>, <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Label">gpml:Label</a>, and <a property="rdfs:range" href="http://vocabularies.wikipathways.org/gpml#Shape">gpml:Shape</a>
   as domain and
