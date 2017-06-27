@@ -157,6 +157,7 @@ compound gets chemical modified.</p>
 </div>
 <div id="DirectedInteraction" about="http://vocabularies.wikipathways.org/wp#DirectedInteraction" typeof="owl:Class">
 <h3 property="rdfs:label">DirectedInteraction</h3>
+  <p property="rdfs:comment">...</p>
 <code>wp:DirectedInteraction</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#Interaction" property="rdfs:subClassOf">wp:Interaction</a>.</p>
 </div>
@@ -188,12 +189,13 @@ The BioPax class
 </div>
 <div id="Inhibition" about="http://vocabularies.wikipathways.org/wp#Inhibition" typeof="owl:Class">
 <h3 property="rdfs:label">Inhibition</h3>
-  <p property="rdfs:comment">A process in which one biological entity  restrains, blocks, or suppresses another biological entity.</p>
+  <p property="rdfs:comment">A process in which one biological entity  restrains, blocks, or suppresses another biological entity or interaction.</p>
 <code>wp:Inhibition</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="Interaction" about="http://vocabularies.wikipathways.org/wp#Interaction" typeof="owl:Class">
 <h3 property="rdfs:label">Interaction</h3>
+  <p property="rdfs:comment">...</p>
 <code>wp:Interaction</code>
 </div>
 <div id="Metabolite" about="http://vocabularies.wikipathways.org/wp#Metabolite" typeof="owl:Class">
@@ -404,6 +406,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="isAbout" about="http://vocabularies.wikipathways.org/wp#isAbout" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">is about</h3>
+  <p property="rdfs:comment">It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups.</p>
 <code>wp:isAbout</code>
 </div>
 
