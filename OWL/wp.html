@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="wp: http://vocabularies.wikipathways.org/wp# skos: http://www.w3.org/2004/02/skos/core# void: http://rdfs.org/ns/void# rdfs: http://www.w3.org/2000/01/rdf-schema# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# xsd: http://www.w3.org/2001/XMLSchema# efo: http://www.ebi.ac.uk/efo/"  lang="en">
+<html prefix="wp: http://vocabularies.wikipathways.org/wp# skos: http://www.w3.org/2004/02/skos/core# void: http://rdfs.org/ns/void# rdfs: http://www.w3.org/2000/01/rdf-schema# rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# xsd: http://www.w3.org/2001/XMLSchema# efo: http://www.ebi.ac.uk/efo/ definition: http://purl.obolibrary.org/obo/IAO_0000115 obo: http://purl.obolibrary.org/obo/" lang="en">
 <head>
   <title>WikiPathways WP Ontology</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
@@ -109,6 +109,7 @@ This ontology is written by (in random order)
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
 @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix obo: &lt;http://purl.obolibrary.org/obo/&gt; .
 </pre>
 </section>
 
@@ -121,31 +122,31 @@ This ontology is written by (in random order)
 <div id="Binding" about="http://vocabularies.wikipathways.org/wp#Binding" typeof="owl:Class">
 <h3 property="rdfs:label">Binding</h3>
 <code>wp:Binding</code>
-<p><span property="rdfs:comment">A binding interaction between two physical entities resulting in the formation of an explicit complex that is reversible without an external factor (e.g. protein complexes).</span>
+<p><span property="definition:">A binding interaction between two physical entities resulting in the formation of an explicit complex that is reversible without an external factor (e.g. protein complexes).</span>
 Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="Catalysis" about="http://vocabularies.wikipathways.org/wp#Catalysis" typeof="owl:Class">
 <h3 property="rdfs:label">Catalysis</h3>
 <code>wp:Catalysis</code>
-<p property="rdfs:comment">A process where  a chemical reaction is enhanced by the action of a catalyst.</p>
+<p property="definition:">A process where  a chemical reaction is enhanced by the action of a catalyst.</p>
 Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="Complex" about="http://vocabularies.wikipathways.org/wp#Complex" typeof="owl:Class">
 <h3 property="rdfs:label">Complex</h3>
-<p property="rdfs:comment">A physically bound combination of two or more
+<p property="definition:">A physically bound combination of two or more
 biological entities.</p>
 <code>wp:Complex</code>
 <p>A Complex of compounds. Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
 </div>
 <div id="ComplexBinding" about="http://vocabularies.wikipathways.org/wp#ComplexBinding" typeof="owl:Class">
 <h3 property="rdfs:label">ComplexBinding</h3>
-<p property="rdfs:comment">A binding interaction that specifically leads to the formation of a complex.</p>
+<p property="definition:">A binding interaction that specifically leads to the formation of a complex.</p>
 <code>wp:ComplexBinding</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:Binding</a>.</p>
 </div>
 <div id="Conversion" about="http://vocabularies.wikipathways.org/wp#Conversion" typeof="owl:Class">
 <h3 property="rdfs:label">Conversion</h3>
-<p property="rdfs:comment">A process in which a biological entity gets
+<p property="definition:">A process in which a biological entity gets
 converted into another entity. This could be a metabolic conversion where
 compound gets chemical modified.</p>
 <code>wp:Conversion</code>
@@ -153,19 +154,19 @@ compound gets chemical modified.</p>
 </div>
 <div id="DataNode" about="http://vocabularies.wikipathways.org/wp#DataNode" typeof="owl:Class">
 <h3 property="rdfs:label">DataNode</h3>
-<p property="rdfs:comment">Superclass; deprecated; do not use.</p>
+<p property="definition:">Superclass; deprecated; do not use.</p>
 <code>wp:DataNode</code>
 </div>
 <div id="DirectedInteraction" about="http://vocabularies.wikipathways.org/wp#DirectedInteraction" typeof="owl:Class">
 <h3 property="rdfs:label">DirectedInteraction</h3>
-  <p property="rdfs:comment">Defines a biochemical relationship from a source biological entity to a target biological entity.</p>
+  <p property="definition:">Defines a biochemical relationship from a source biological entity to a target biological entity.</p>
 <code>wp:DirectedInteraction</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#Interaction" property="rdfs:subClassOf">wp:Interaction</a>.</p>
 </div>
 <div id="GeneProduct" about="http://vocabularies.wikipathways.org/wp#GeneProduct" typeof="owl:Class">
 <h3 property="rdfs:label">GeneProduct</h3>
 <code>wp:GeneProduct</code>
-<p property="rdfs:comment">An entity representing any product of a given gene,
+<p property="definition:">An entity representing any product of a given gene,
 including DNA, RNA and Protein. This is the most generic representation of a
 gene-based biomolecule and is useful when more than one representation might be
 useful in the given context.</p>
@@ -190,18 +191,18 @@ The BioPax class
 </div>
 <div id="Inhibition" about="http://vocabularies.wikipathways.org/wp#Inhibition" typeof="owl:Class">
 <h3 property="rdfs:label">Inhibition</h3>
-  <p property="rdfs:comment">A process in which one biological entity  restrains, blocks, or suppresses another biological entity or interaction.</p>
+  <p property="definition:">A process in which one biological entity  restrains, blocks, or suppresses another biological entity or interaction.</p>
 <code>wp:Inhibition</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="Interaction" about="http://vocabularies.wikipathways.org/wp#Interaction" typeof="owl:Class">
 <h3 property="rdfs:label">Interaction</h3>
-  <p property="rdfs:comment">Defines the biochemical relationship between biological entities.</p>
+  <p property="definition:">Defines the biochemical relationship between biological entities.</p>
 <code>wp:Interaction</code>
 </div>
 <div id="Metabolite" about="http://vocabularies.wikipathways.org/wp#Metabolite" typeof="owl:Class">
 <h3 property="rdfs:label">Metabolite</h3>
-<p property="rdfs:comment">Any chemical compound taking part in a pathway.
+<p property="definition:">Any chemical compound taking part in a pathway.
 Unlike true metabolites, this
 node is also used for compounds which are not the product or substrate of a
 metabolic conversion.</p>
@@ -210,35 +211,35 @@ metabolic conversion.</p>
 </div>
 <div id="Pathway" about="http://vocabularies.wikipathways.org/wp#Pathway" typeof="owl:Class">
 <h3 property="rdfs:label">Pathway</h3>
-<p property="rdfs:comment">A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms.</p>
+<p property="definition:">A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms.</p>
 <code>wp:Pathway</code>
 </div>
 <div id="Protein" about="http://vocabularies.wikipathways.org/wp#Protein" typeof="owl:Class">
 <h3 property="rdfs:label">Protein</h3>
-<p property="rdfs:comment">A biomolecular polymer of amino acids, translated from mRNA.</p>
+<p property="definition:">A biomolecular polymer of amino acids, translated from mRNA.</p>
 <code>wp:Protein</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:GeneProduct</a>.</p>
 </div>
 <div id="PublicationReference" about="http://vocabularies.wikipathways.org/wp#PublicationReference" typeof="owl:Class">
 <h3 property="rdfs:label">PublicationReference</h3>
 <code>wp:PublicationReference</code>
-<p property="rdfs:comment">A reference to a published article, book or other citable material. Most commonly a primary literature reference that is indexed by PubMed.</p>
+<p property="definition:">A reference to a published article, book or other citable material. Most commonly a primary literature reference that is indexed by PubMed.</p>
 </div>
 <div id="Rna" about="http://vocabularies.wikipathways.org/wp#Rna" typeof="owl:Class">
 <h3 property="rdfs:label">Rna</h3>
-<p property="rdfs:comment">A biomolecular polymer of ribonucleic acids, transcibed from DNA.</p>
+<p property="definition:">A biomolecular polymer of ribonucleic acids, transcibed from DNA.</p>
 <code>wp:Rna</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DataNode" property="rdfs:subClassOf">wp:DataNode</a>.</p>
 </div>
 <div id="Stimulation" about="http://vocabularies.wikipathways.org/wp#Stimulation" typeof="owl:Class">
 <h3 property="rdfs:label">Stimulation</h3>
-<p property="rdfs:comment">An interaction in which the source entity enhances the raate or extent of another reaction or entity.</p>
+<p property="definition:">An interaction in which the source entity enhances the raate or extent of another reaction or entity.</p>
 <code>wp:Stimulation</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
 <div id="TranscriptionTranslation" about="http://vocabularies.wikipathways.org/wp#TranscriptionTranslation" typeof="owl:Class">
 <h3 property="rdfs:label">Transcription Translation</h3>
-<p property="rdfs:comment">An interaction in which the source entity regulates or influences in the transcription or translation of a target entity. Also referred to as a Template Reaction.</p>
+<p property="definition:">An interaction in which the source entity regulates or influences in the transcription or translation of a target entity. Also referred to as a Template Reaction.</p>
 <code>wp:TranscriptionTranslation</code>
 <p>Subclass of <a href="http://vocabularies.wikipathways.org/wp#DirectedInteraction" property="rdfs:subClassOf">wp:DirectedInteraction</a>.</p>
 </div>
@@ -252,7 +253,7 @@ metabolic conversion.</p>
 <div id="bdbChEBI" about="http://vocabularies.wikipathways.org/wp#bdbChEBI" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb ChEBI link</h3>
 <code>wp:bdbChEBI</code>
-<p property="rdfs:comment">A variable URL to the ChEBI data source.</p>
+<p property="definition:">A variable URL to the ChEBI data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
   as domain and
@@ -263,7 +264,7 @@ metabolic conversion.</p>
 <div id="bdbChemspider" about="http://vocabularies.wikipathways.org/wp#bdbChemspider" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb ChemSpider link</h3>
 <code>wp:bdbChemspider</code>
-<p property="rdfs:comment">A variable URL to the Chemspider data source.</p>
+<p property="definition:">A variable URL to the Chemspider data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
   as domain and
@@ -274,7 +275,7 @@ metabolic conversion.</p>
 <div id="bdbEnsembl" about="http://vocabularies.wikipathways.org/wp#bdbEnsembl" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb Ensembl link</h3>
 <code>wp:bdbEnsembl</code>
-<p property="rdfs:comment">A variable URL to the Ensembl data source.</p>
+<p property="definition:">A variable URL to the Ensembl data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
   as range.</p>
@@ -283,7 +284,7 @@ metabolic conversion.</p>
 <div id="bdbEntrezGene" about="http://vocabularies.wikipathways.org/wp#bdbEntrezGene" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb Entrez Gene link</h3>
 <code>wp:bdbEntrezGene</code>
-<p property="rdfs:comment">A variable URL to the NCBI Gene data source.</p>
+<p property="definition:">A variable URL to the NCBI Gene data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
   as range.</p>
@@ -292,7 +293,7 @@ metabolic conversion.</p>
 <div id="bdbHmdb" about="http://vocabularies.wikipathways.org/wp#bdbHmdb" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb HMDB link</h3>
 <code>wp:bdbHmdb</code>
-<p property="rdfs:comment">A variable URL to the Human Metabolome Database (HMDB) data source.</p>
+<p property="definition:">A variable URL to the Human Metabolome Database (HMDB) data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
   as domain and
@@ -303,7 +304,7 @@ metabolic conversion.</p>
 <div id="bdbHgncSymbol" about="http://vocabularies.wikipathways.org/wp#bdbHgncSymbol" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb HGNC link</h3>
 <code>wp:bdbHgncSymbol</code>
-<p property="rdfs:comment">A variable URL to the HUGO Gene Nomenclature Committee (HGNC) data source.</p>
+<p property="definition:">A variable URL to the HUGO Gene Nomenclature Committee (HGNC) data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
   as range.</p>
@@ -312,7 +313,7 @@ metabolic conversion.</p>
 <div id="bdbPubChem" about="http://vocabularies.wikipathways.org/wp#bdbPubChem" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb PubChem link</h3>
 <code>wp:bdbPubChem</code>
-<p property="rdfs:comment">A variable URL to the PubChem data source (Compound identifiers).</p>
+<p property="definition:">A variable URL to the PubChem data source (Compound identifiers).</p>
 <p>This property has
   <a property="rdfs:range" href="http://vocabularies.wikipathways.org/wp#Metabolite">wp:Metabolite</a>
   as domain and
@@ -323,7 +324,7 @@ metabolic conversion.</p>
 <div id="bdbUniprot" about="http://vocabularies.wikipathways.org/wp#bdbUniprot" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">BridgeDb UniProt link</h3>
 <code>wp:bdbUniprot</code>
-<p property="rdfs:comment">A variable URL to the UniProt data source.</p>
+<p property="definition:">A variable URL to the UniProt data source.</p>
 <p>This property has
   <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
   as range.</p>
@@ -331,7 +332,7 @@ metabolic conversion.</p>
 
 <div id="celltypeOntologyTag" about="http://vocabularies.wikipathways.org/wp#celltypeOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">cell type ontology tag</h3>
-<p property="rdfs:comment">A term from the Cell Type ontology available on the
+<p property="definition:">A term from the Cell Type ontology available on the
 NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http://bioportal.bioontology.org/ontologies/CL</a>).</p>
 <code>wp:celltypeOntologyTag</code>
 <p>This property has
@@ -344,7 +345,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="diseaseOntologyTag" about="http://vocabularies.wikipathways.org/wp#diseaseOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">disease ontology tag</h3>
-<p property="rdfs:comment">A term from the Human Disease Ontology available on the NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/DOID">http://bioportal.bioontology.org/ontologies/DOID</a>).</p>
+<p property="definition:">A term from the Human Disease Ontology available on the NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/DOID">http://bioportal.bioontology.org/ontologies/DOID</a>).</p>
 <code>wp:diseaseOntologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -361,7 +362,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="pathwayOntologyTag" about="http://vocabularies.wikipathways.org/wp#pathwayOntologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">pathway ontology tag</h3>
-<p property="rdfs:comment">A term from the Pathway Ontology ontology available at NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/PW">http://bioportal.bioontology.org/ontologies/PW</a>).</p><code>wp:pathwayOntologyTag</code>
+<p property="definition:">A term from the Pathway Ontology ontology available at NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/PW">http://bioportal.bioontology.org/ontologies/PW</a>).</p><code>wp:pathwayOntologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
   as domain,
@@ -372,7 +373,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="source" about="http://vocabularies.wikipathways.org/wp#source" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">source</h3>
-  <p property="rdfs:comment">The beginning terminus of an interaction.</p>
+  <p property="definition:">The beginning terminus of an interaction.</p>
 <code>wp:source</code>
 <p>This property has
   <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
@@ -384,7 +385,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="target" about="http://vocabularies.wikipathways.org/wp#target" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">target</h3>
-  <p property="rdfs:comment">The ending terminus of an interaction.</p>
+  <p property="definition:">The ending terminus of an interaction.</p>
 <code>wp:target</code>
 <p>This property has
   <a property="rdfs:domain" href="http://vocabularies.wikipathways.org/wp#DirectedInteraction">wp:DirectedInteraction</a>
@@ -394,7 +395,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="ontologyTag" about="http://vocabularies.wikipathways.org/wp#ontologyTag" typeof="owl:ObjectProperty">
 <h3 property="rdfs:label">ontology tag</h3>
-<p property="rdfs:comment">A term from an ontology or controlled vocabulary.</p>
+<p property="definition:">A term from an ontology or controlled vocabulary.</p>
 <code>wp:ontologyTag</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -411,13 +412,13 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="isAbout" about="http://vocabularies.wikipathways.org/wp#isAbout" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">is about</h3>
-  <p property="rdfs:comment">It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups.</p>
+  <p property="definition:">It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups.</p>
 <code>wp:isAbout</code>
 </div>
 
 <div id="organism" about="http://vocabularies.wikipathways.org/wp#organism" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">organism</h3>
-<p property="rdfs:comment">The scientific name (e.g., Homo sapiens) of the species being described by the pathway.</p>
+<p property="definition:">The scientific name (e.g., Homo sapiens) of the species being described by the pathway.</p>
 <code>wp:organism</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
@@ -432,7 +433,7 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
 
 <div id="organismName" about="http://vocabularies.wikipathways.org/wp#organismName" typeof="owl:DatatypeProperty">
 <h3 property="rdfs:label">organism name</h3>
-<p property="rdfs:comment">Latin name of the organsm in which this pathway takes place.</p>
+<p property="definition:">Latin name of the organsm in which this pathway takes place.</p>
 <code>wp:organismName</code>
 <p>This property has
   <a property="rdfs:domain" href="http://rdfs.org/ns/void#Pathway">wp:Pathway</a>
