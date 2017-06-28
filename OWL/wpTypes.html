@@ -121,7 +121,7 @@ This ontology is written by (in random order)
 
 <div id="Interaction" about="http://vocabularies.wikipathways.org/wpTypes#Interaction" typeof="owl:Class">
 <h3 property="rdfs:label">Interaction</h3>
-<p property="rdfs:comment">Denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see subclasses of <a href="https://vocabularies.wikipathways.org/wp#DataNode">wp:DataNode</a> or the <a href="https://vocabularies.wikipathways.org/wpTypes">wpTypes vocabulary</a> defined for use in applications.</a>.</p>
+<p property="definition:">Denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see subclasses of <a href="https://vocabularies.wikipathways.org/wp#DataNode">wp:DataNode</a> or the <a href="https://vocabularies.wikipathways.org/wpTypes">wpTypes vocabulary</a> defined for use in applications.</a>.</p>
 <code>wpTypes:Interaction</code>
 <p><span property="dc:description">An Interaction between DataNode(s) on the diagram.</span></p>
 </div>
@@ -130,7 +130,7 @@ This ontology is written by (in random order)
 
 <div id="GeneProduct" about="http://vocabularies.wikipathways.org/wpTypes#GeneProduct" typeof="owl:owl:Class">
 <h3 property="rdfs:label">GeneProduct node</h3>
-  <p property="rdfs:comment">An entity representing any product of a given gene,
+  <p property="definition:">An entity representing any product of a given gene,
 including DNA, RNA and Protein. This is the most generic representation of a
 gene-based biomolecule and is useful when more than one representation might be
 useful in the given context.</p>
@@ -141,7 +141,7 @@ useful in the given context.</p>
 
 <div id="Metabolite" about="http://vocabularies.wikipathways.org/wpTypes#Metabolite" typeof="owl:Class">
 <h3 property="rdfs:label">Metabolite node</h3>
-  <p property="rdfs:comment">An entity representing a metabolite, including
+  <p property="definition:">An entity representing a metabolite, including
 chemical compounds that participate in or are produced by metabolic reactions,
 but also other chemical compounds that participate in a pathway otherwise.</p>
 <code>wpTypes:Metabolite</code>
@@ -151,7 +151,7 @@ but also other chemical compounds that participate in a pathway otherwise.</p>
 
 <div id="Pathway" about="http://vocabularies.wikipathways.org/wpTypes#Pathway" typeof="owl:owl:Class">
 <h3 property="rdfs:label">Pathway node</h3>
-    <p property="rdfs:comment">A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms.</p>
+    <p property="definition:">A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms.</p>
 <code>wpTypes:Pathway</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
@@ -159,7 +159,7 @@ but also other chemical compounds that participate in a pathway otherwise.</p>
 
 <div id="Protein" about="http://vocabularies.wikipathways.org/wpTypes#Protein" typeof="owl:owl:Class">
 <h3 property="rdfs:label">Protein node</h3>
-    <p property="rdfs:comment">A biomolecular polymer of amino acids, translated from mRNA.</p>
+    <p property="definition:">A biomolecular polymer of amino acids, translated from mRNA.</p>
 <code>wpTypes:Protein</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
@@ -167,7 +167,7 @@ but also other chemical compounds that participate in a pathway otherwise.</p>
 
 <div id="Rna" about="http://vocabularies.wikipathways.org/wpTypes#Rna" typeof="owl:Class">
 <h3 property="rdfs:label">RNA node</h3>
-  <p property="rdfs:comment">An entity representing an RNA peptide, including
+  <p property="definition:">An entity representing an RNA peptide, including
 mRNA, miRNA, etc. This is commonly used to explicitly represent mRNA transcripts
 (excluding DNA or protein forms) or other RNA species, like miRNA, exRNA,
 lncRNA, etc.</p>
@@ -178,7 +178,7 @@ lncRNA, etc.</p>
 
 <div id="Unknown" about="http://vocabularies.wikipathways.org/wpTypes#Unknown" typeof="owl:Class">
 <h3 property="rdfs:label">Unknown node</h3>
-    <p property="rdfs:comment">An unspecified biological entity or factor. Should only be used if the type is truly unknown or is different from the ones covered by other data node types.</p>
+    <p property="definition:">An unspecified biological entity or factor. Should only be used if the type is truly unknown or is different from the ones covered by other data node types.</p>
 <code>wpTypes:Unknown</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#DataNode">wpTypes:DataNode</a>.</p>
@@ -186,7 +186,7 @@ lncRNA, etc.</p>
 
 <div id="Arrow" about="http://vocabularies.wikipathways.org/wpTypes#Arrow" typeof="owl:Class">
 <h3 property="rdfs:label">Arrow interaction</h3>
-    <p property="rdfs:comment">A style of line or interaction that includes a glyph at the terminus.</p>
+    <p property="definition:">A style of line or interaction that includes a glyph at the terminus.</p>
 <code>wpTypes:Arrow</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -194,7 +194,7 @@ lncRNA, etc.</p>
 
 <div id="BrokenArrow" about="http://vocabularies.wikipathways.org/wpTypes#BrokenArrow" typeof="owl:Class">
 <h3 property="rdfs:label">Broken Arrow interaction</h3>
-    <p property="rdfs:comment">A style of line or interaction with a glyph at the terminus that allows for regular gaps in their paths.</p>
+    <p property="definition:">A style of line or interaction with a glyph at the terminus that allows for regular gaps in their paths.</p>
 <code>wpTypes:BrokenArrow</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -202,7 +202,7 @@ lncRNA, etc.</p>
 
 <div id="BrokenLine" about="http://vocabularies.wikipathways.org/wpTypes#BrokenLine" typeof="owl:Class">
 <h3 property="rdfs:label">Broken Line interaction</h3>
-    <p property="rdfs:comment">A style of line or interaction that allows for regular gaps in their paths.</p>
+    <p property="definition:">A style of line or interaction that allows for regular gaps in their paths.</p>
 <code>wpTypes:BrokenLine</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -210,7 +210,7 @@ lncRNA, etc.</p>
 
 <div id="Curved" about="http://vocabularies.wikipathways.org/wpTypes#Curved" typeof="owl:Class">
 <h3 property="rdfs:label">Curved interaction</h3>
-    <p property="rdfs:comment">A style of line or interaction that allows for smooth arcs and bends in their paths.</p>
+    <p property="definition:">A style of line or interaction that allows for smooth arcs and bends in their paths.</p>
 <code>wpTypes:Curved</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -218,7 +218,7 @@ lncRNA, etc.</p>
 
 <div id="Elbow" about="http://vocabularies.wikipathways.org/wpTypes#Elbow" typeof="owl:Class">
 <h3 property="rdfs:label">Elbow interaction</h3>
-    <p property="rdfs:comment">A style of line or interaction that allows for 90 degree bends in their paths.</p>
+    <p property="definition:">A style of line or interaction that allows for 90 degree bends in their paths.</p>
 <code>wpTypes:Elbow</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -226,7 +226,7 @@ lncRNA, etc.</p>
 
 <div id="Line" about="http://vocabularies.wikipathways.org/wpTypes#Line" typeof="owl:Class">
 <h3 property="rdfs:label">Line interaction</h3>
-    <p property="rdfs:comment">A visual annotation, often used to partition space or connect other annotations.</p>
+    <p property="definition:">A visual annotation, often used to partition space or connect other annotations.</p>
 <code>wpTypes:Line</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -234,7 +234,7 @@ lncRNA, etc.</p>
 
 <div id="TBar" about="http://vocabularies.wikipathways.org/wpTypes#TBar" typeof="owl:Class">
 <h3 property="rdfs:label">TBar interaction</h3>
-    <p property="rdfs:comment">An interaction in which the source entity has an inhibitory effect on the target entity or interaction.</p>
+    <p property="definition:">An interaction in which the source entity has an inhibitory effect on the target entity or interaction.</p>
 <code>wpTypes:TBar</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -242,7 +242,7 @@ lncRNA, etc.</p>
 
 <div id="MimBinding" about="http://vocabularies.wikipathways.org/wpTypes#MimBinding" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Binding interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimBinding</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -250,7 +250,7 @@ lncRNA, etc.</p>
 
 <div id="MimBranchingLeft" about="http://vocabularies.wikipathways.org/wpTypes#MimBranchingLeft" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Branching-Left interaction</h3>
-     <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+     <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimBranchingLeft</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -258,7 +258,7 @@ lncRNA, etc.</p>
 
 <div id="MimBranchingRight" about="http://vocabularies.wikipathways.org/wpTypes#MimBranchingRight" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Branching-Right interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimBranchingRight</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -266,7 +266,7 @@ lncRNA, etc.</p>
 
 <div id="MimCatalysis" about="http://vocabularies.wikipathways.org/wpTypes#MimCatalysis" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Catalysis interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimCatalysis</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -274,7 +274,7 @@ lncRNA, etc.</p>
 
 <div id="MimCleavage" about="http://vocabularies.wikipathways.org/wpTypes#MimCleavage" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Cleavage interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimCleavage</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -282,7 +282,7 @@ lncRNA, etc.</p>
 
 <div id="MimConversion" about="http://vocabularies.wikipathways.org/wpTypes#MimConversion" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Conversion interaction</h3>
-      <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+      <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimConversion</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -290,7 +290,7 @@ lncRNA, etc.</p>
 
 <div id="MimCovalentBond" about="http://vocabularies.wikipathways.org/wpTypes#MimCovalentBond" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Covalent-Bond interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimCovalentBond</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -298,7 +298,7 @@ lncRNA, etc.</p>
 
 <div id="MimGap" about="http://vocabularies.wikipathways.org/wpTypes#MimGap" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Gap interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimGap</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -306,7 +306,7 @@ lncRNA, etc.</p>
 
 <div id="MimInhibition" about="http://vocabularies.wikipathways.org/wpTypes#MimInhibition" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Inhibition interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimInhibition</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -314,7 +314,7 @@ lncRNA, etc.</p>
 
 <div id="MimModification" about="http://vocabularies.wikipathways.org/wpTypes#MimModification" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Modification interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimModification</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -322,7 +322,7 @@ lncRNA, etc.</p>
 
 <div id="MimNecessaryStimulation" about="http://vocabularies.wikipathways.org/wpTypes#MimNecessaryStimulation" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Necessary-Stimulation interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimNecessaryStimulation</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -330,7 +330,7 @@ lncRNA, etc.</p>
 
 <div id="MimStimulation" about="http://vocabularies.wikipathways.org/wpTypes#MimStimulation" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Stimulation interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimStimulation</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
@@ -338,7 +338,7 @@ lncRNA, etc.</p>
 
 <div id="MimTranscriptionTranslation" about="http://vocabularies.wikipathways.org/wpTypes#MimTranscriptionTranslation" typeof="owl:Class">
 <h3 property="rdfs:label">Mim-Transcription-Translation interaction</h3>
-    <p property="rdfs:comment"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
+    <p property="definition:"><a href="https://discover.nci.nih.gov/mim/formal_mim_spec.pdf">MIM Specification</a></p>
 <code>wpTypes:MimTranscriptionTranslation</code>
 <p>This class is a subclass of
   <a property="rdfs:subClassOf" href="http://vocabularies.wikipathways.org/wpTypes#Interaction">wpTypes:Interaction</a>.</p>
