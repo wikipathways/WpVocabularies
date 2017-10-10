@@ -1,7 +1,7 @@
 {
   "@context": [
-    "./display.jsonld",
-    "./organism.jsonld"
+    "https://cdn.rawgit.com/wikipathways/WpVocabularies/e63ecca03a5035e0fe1291123fde2320ecbef37d/jsonld/display.jsonld",
+    "https://cdn.rawgit.com/wikipathways/WpVocabularies/e63ecca03a5035e0fe1291123fde2320ecbef37d/jsonld/organism.jsonld"
   ]
 }
 
