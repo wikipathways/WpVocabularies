@@ -1,0 +1,588 @@
+{
+  "@context" : {
+    "interactionScore" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#interactionScore",
+      "@type" : "@id"
+    },
+    "bindsTo" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#bindsTo",
+      "@type" : "@id"
+    },
+    "ExperimentalForm" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ExperimentalForm"
+    },
+    "componentStoichiometry" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#componentStoichiometry",
+      "@type" : "@id"
+    },
+    "ionicStrength" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ionicStrength",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "PhenotypeVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary"
+    },
+    "confidence" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#confidence",
+      "@type" : "@id"
+    },
+    "ControlledVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ControlledVocabulary"
+    },
+    "PublicationXref" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#PublicationXref"
+    },
+    "Catalysis" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Catalysis"
+    },
+    "ModificationFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ModificationFeature"
+    },
+    "ExperimentalFormVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ExperimentalFormVocabulary"
+    },
+    "deltaH" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#deltaH",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "sequenceIntervalEnd" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd",
+      "@type" : "@id"
+    },
+    "Modulation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Modulation"
+    },
+    "url" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "right" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#right",
+      "@type" : "@id"
+    },
+    "TemplateReactionRegulation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation"
+    },
+    "EntityFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#EntityFeature"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "ComplexAssembly" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ComplexAssembly"
+    },
+    "memberFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#memberFeature",
+      "@type" : "@id"
+    },
+    "positionStatus" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#positionStatus"
+    },
+    "relationshipType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#relationshipType",
+      "@type" : "@id"
+    },
+    "Complex" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Complex"
+    },
+    "phenotype" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#phenotype",
+      "@type" : "@id"
+    },
+    "intraMolecular" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#intraMolecular",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "spontaneous" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#spontaneous",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "organism" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#organism",
+      "@type" : "@id"
+    },
+    "KPrime" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#KPrime"
+    },
+    "experimentalFormEntity" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#experimentalFormEntity",
+      "@type" : "@id"
+    },
+    "evidenceCode" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#evidenceCode",
+      "@type" : "@id"
+    },
+    "interactionType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#interactionType",
+      "@type" : "@id"
+    },
+    "memberPhysicalEntity" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#memberPhysicalEntity",
+      "@type" : "@id"
+    },
+    "sequenceIntervalBegin" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalBegin",
+      "@type" : "@id"
+    },
+    "DnaRegionReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#DnaRegionReference"
+    },
+    "pMg" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#pMg",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "nextStep" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#nextStep",
+      "@type" : "@id"
+    },
+    "CellularLocationVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#CellularLocationVocabulary"
+    },
+    "Pathway" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Pathway"
+    },
+    "structure" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#structure",
+      "@type" : "@id"
+    },
+    "displayName" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#displayName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SequenceLocation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SequenceLocation"
+    },
+    "term" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#term",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "author" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#author",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CovalentBindingFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature"
+    },
+    "structureData" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#structureData",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "component" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#component",
+      "@type" : "@id"
+    },
+    "ChemicalStructure" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ChemicalStructure"
+    },
+    "memberEntityReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#memberEntityReference",
+      "@type" : "@id"
+    },
+    "Evidence" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Evidence"
+    },
+    "BiochemicalPathwayStep" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#BiochemicalPathwayStep"
+    },
+    "availability" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#availability",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Transport" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Transport"
+    },
+    "EntityReferenceTypeVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#EntityReferenceTypeVocabulary"
+    },
+    "Dna" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Dna"
+    },
+    "Control" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Control"
+    },
+    "id" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "conversionDirection" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#conversionDirection"
+    },
+    "experimentalForm" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#experimentalForm",
+      "@type" : "@id"
+    },
+    "idVersion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#idVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DnaReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#DnaReference"
+    },
+    "modificationType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#modificationType",
+      "@type" : "@id"
+    },
+    "Score" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Score"
+    },
+    "RelationshipTypeVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary"
+    },
+    "TissueVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#TissueVocabulary"
+    },
+    "feature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#feature",
+      "@type" : "@id"
+    },
+    "deltaGPrime0" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#deltaGPrime0",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "product" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#product",
+      "@type" : "@id"
+    },
+    "templateDirection" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#templateDirection"
+    },
+    "controlled" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#controlled",
+      "@type" : "@id"
+    },
+    "pathwayComponent" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#pathwayComponent",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "regionType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#regionType",
+      "@type" : "@id"
+    },
+    "MolecularInteraction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction"
+    },
+    "sequence" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#sequence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "scoreSource" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#scoreSource",
+      "@type" : "@id"
+    },
+    "value" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#value",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "notFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#notFeature",
+      "@type" : "@id"
+    },
+    "patoData" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#patoData",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "kPrime" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#kPrime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "sequencePosition" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#sequencePosition",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "participant" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#participant",
+      "@type" : "@id"
+    },
+    "temperature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#temperature",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "controlType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#controlType"
+    },
+    "experimentalFormDescription" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#experimentalFormDescription",
+      "@type" : "@id"
+    },
+    "ph" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ph",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "subRegion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#subRegion",
+      "@type" : "@id"
+    },
+    "Xref" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Xref"
+    },
+    "physicalEntity" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#physicalEntity",
+      "@type" : "@id"
+    },
+    "RnaRegionReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#RnaRegionReference"
+    },
+    "BindingFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#BindingFeature"
+    },
+    "SequenceInterval" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SequenceInterval"
+    },
+    "TemplateReaction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#TemplateReaction"
+    },
+    "EntityReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#EntityReference"
+    },
+    "DeltaG" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#DeltaG"
+    },
+    "cellType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#cellType",
+      "@type" : "@id"
+    },
+    "stepDirection" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#stepDirection"
+    },
+    "UtilityClass" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#UtilityClass"
+    },
+    "Gene" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Gene"
+    },
+    "PathwayStep" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#PathwayStep"
+    },
+    "Degradation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Degradation"
+    },
+    "featureLocation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#featureLocation",
+      "@type" : "@id"
+    },
+    "dataSource" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#dataSource",
+      "@type" : "@id"
+    },
+    "Rna" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Rna"
+    },
+    "Stoichiometry" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Stoichiometry"
+    },
+    "title" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "year" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#year",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "source" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "kEQ" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#kEQ",
+      "@type" : "@id"
+    },
+    "stepProcess" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#stepProcess",
+      "@type" : "@id"
+    },
+    "DnaRegion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#DnaRegion"
+    },
+    "template" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#template",
+      "@type" : "@id"
+    },
+    "stoichiometricCoefficient" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#stoichiometricCoefficient",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "SmallMoleculeReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SmallMoleculeReference"
+    },
+    "db" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#db",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TransportWithBiochemicalReaction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction"
+    },
+    "FragmentFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#FragmentFeature"
+    },
+    "eCNumber" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#eCNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pathwayOrder" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#pathwayOrder",
+      "@type" : "@id"
+    },
+    "featureLocationType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#featureLocationType",
+      "@type" : "@id"
+    },
+    "ProteinReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#ProteinReference"
+    },
+    "absoluteRegion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#absoluteRegion",
+      "@type" : "@id"
+    },
+    "Entity" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Entity"
+    },
+    "dbVersion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#dbVersion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "catalysisDirection" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#catalysisDirection"
+    },
+    "deltaG" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#deltaG",
+      "@type" : "@id"
+    },
+    "Conversion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Conversion"
+    },
+    "UnificationXref" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#UnificationXref"
+    },
+    "SmallMolecule" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SmallMolecule"
+    },
+    "experimentalFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#experimentalFeature",
+      "@type" : "@id"
+    },
+    "chemicalFormula" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#chemicalFormula",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "molecularWeight" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#molecularWeight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "entityReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#entityReference",
+      "@type" : "@vocab"
+    },
+    "participantStoichiometry" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#participantStoichiometry",
+      "@type" : "@id"
+    },
+    "tissue" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#tissue",
+      "@type" : "@id"
+    },
+    "InteractionVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#InteractionVocabulary"
+    },
+    "EvidenceCodeVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#EvidenceCodeVocabulary"
+    },
+    "Interaction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Interaction"
+    },
+    "comment" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SequenceSite" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SequenceSite"
+    },
+    "structureFormat" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#structureFormat"
+    },
+    "BiochemicalReaction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#BiochemicalReaction"
+    },
+    "RnaReference" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#RnaReference"
+    },
+    "deltaS" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#deltaS",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "BioSource" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#BioSource"
+    },
+    "SequenceModificationVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SequenceModificationVocabulary"
+    },
+    "entityReferenceType" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#entityReferenceType",
+      "@type" : "@id"
+    },
+    "evidence" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#evidence",
+      "@type" : "@id"
+    },
+    "PhysicalEntity" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#PhysicalEntity"
+    },
+    "controller" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#controller",
+      "@type" : "@id"
+    },
+    "stepConversion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#stepConversion",
+      "@type" : "@id"
+    },
+    "cellularLocation" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#cellularLocation",
+      "@type" : "@id"
+    },
+    "SequenceRegionVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#SequenceRegionVocabulary"
+    },
+    "left" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#left",
+      "@type" : "@id"
+    },
+    "Provenance" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Provenance"
+    },
+    "RelationshipXref" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#RelationshipXref"
+    },
+    "cofactor" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#cofactor",
+      "@type" : "@id"
+    },
+    "RnaRegion" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#RnaRegion"
+    },
+    "xref" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#xref",
+      "@type" : "@id"
+    },
+    "CellVocabulary" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#CellVocabulary"
+    },
+    "standardName" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#standardName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GeneticInteraction" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#GeneticInteraction"
+    },
+    "entityFeature" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#entityFeature",
+      "@type" : "@id"
+    },
+    "Protein" : {
+      "@id" : "http://www.biopax.org/release/biopax-level3.owl#Protein"
+    }
+  }
+}

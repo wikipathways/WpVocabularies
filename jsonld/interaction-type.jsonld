@@ -1,0 +1,16 @@
+{
+  "@context": {
+    "Addition of a chemical group": "http://identifiers.org/biomodels.sbo/SBO:0000210",
+    "Catalysis": "http://identifiers.org/biomodels.sbo/SBO:0000172",
+    "Cleavage": "http://identifiers.org/biomodels.sbo/SBO:0000178",
+    "Consumption": "http://identifiers.org/biomodels.sbo/SBO:0000394",
+    "Conversion": "http://identifiers.org/biomodels.sbo/SBO:0000182",
+    "Inhibition": "http://identifiers.org/biomodels.sbo/SBO:0000169",
+    "Necessary stimulation": "http://identifiers.org/biomodels.sbo/SBO:0000171",
+    "Non-covalent binding": "http://identifiers.org/biomodels.sbo/SBO:0000177",
+    "Production": "http://identifiers.org/biomodels.sbo/SBO:0000393",
+    "Stimulation": "http://identifiers.org/biomodels.sbo/SBO:0000170",
+    "Transcription": "http://identifiers.org/biomodels.sbo/SBO:0000183",
+    "Translation": "http://identifiers.org/biomodels.sbo/SBO:0000184"
+  }
+}

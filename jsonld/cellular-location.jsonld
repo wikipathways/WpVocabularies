@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "Cell": {
+      "@id": "http://identifiers.org/go/GO:0005623",
+      "@type": "@vocab"
+    },
+    "Nucleus": {
+      "@id": "http://identifiers.org/go/GO:0005634",
+      "@type": "@vocab"
+    },
+    "Endoplasmic Reticulum": {
+      "@id": "http://identifiers.org/go/GO:0005783",
+      "@type": "@vocab"
+    },
+    "Golgi Apparatus": {
+      "@id": "http://identifiers.org/go/GO:0005794",
+      "@type": "@vocab"
+    },
+    "Sarcoplasmic Reticulum": {
+      "@id": "http://identifiers.org/go/GO:0016529",
+      "@type": "@vocab"
+    },
+    "Organelle": {
+      "@id": "http://identifiers.org/go/GO:0043226",
+      "@type": "@vocab"
+    },
+    "Vesicle": {
+      "@id": "http://identifiers.org/go/GO:0031982",
+      "@type": "@vocab"
+    },
+    "Extracellular region": {
+      "@id": "http://identifiers.org/go/GO:0005576",
+      "@type": "@vocab"
+    },
+    "Mitochondria": {
+      "@id": "http://identifiers.org/go/GO:0005739",
+      "@type": "@vocab"
+    }
+  }
+}
+
+

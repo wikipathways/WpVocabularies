@@ -1,0 +1,38 @@
+{
+	"@context": {
+		"organism": {
+			"@id": "http://www.biopax.org/release/biopax-level3.owl#organism",
+			"@type":"@vocab"
+		},
+		"Anopheles gambiae": {
+			"@id":"http://identifiers.org/taxonomy/7165",
+			"@type":"@id"
+		},
+		"Arabidopsis thaliana": "http://identifiers.org/taxonomy/3702",
+		"Bacillus subtilis": "http://identifiers.org/taxonomy/1423",
+		"Bos taurus": "http://identifiers.org/taxonomy/9913",
+		"Caenorhabditis elegans": {
+			"@id":"http://identifiers.org/taxonomy/6239",
+			"@type":"@id"
+		},
+		"Canis familiaris": "http://identifiers.org/taxonomy/9615",
+		"Danio rerio": "http://identifiers.org/taxonomy/7955",
+		"Drosophila melanogaster": "http://identifiers.org/taxonomy/7227",
+		"Escherichia coli": "http://identifiers.org/taxonomy/562",
+		"Equus caballus": "http://identifiers.org/taxonomy/9796",
+		"Gallus gallus": "http://identifiers.org/taxonomy/9031",
+		"Gibberella zeae": "http://identifiers.org/taxonomy/5518",
+		"Homo sapiens": "http://identifiers.org/taxonomy/9606",
+		"Hordeum vulgare": "http://identifiers.org/taxonomy/4513",
+		"Mus musculus": "http://identifiers.org/taxonomy/10090",
+		"Mycobacterium tuberculosis": "http://identifiers.org/taxonomy/1773",
+		"Oryza sativa": "http://identifiers.org/taxonomy/4530",
+		"Pan troglodytes": "http://identifiers.org/taxonomy/9598",
+		"Rattus norvegicus": "http://identifiers.org/taxonomy/10116",
+		"Saccharomyces cerevisiae": "http://identifiers.org/taxonomy/4932",
+		"Solanum lycopersicum": "http://identifiers.org/taxonomy/4081",
+		"Sus scrofa": "http://identifiers.org/taxonomy/9823",
+		"Zea mays": "http://identifiers.org/taxonomy/4577"
+	}
+}
+

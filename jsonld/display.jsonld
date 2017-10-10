@@ -1,0 +1,118 @@
+{
+  "@context": {
+    "id":"@id",
+    "type":"@type",
+    "@vocab": "http://www.biopax.org/release/biopax-level3.owl#",
+    "anchor": "http://jsplumbtoolkit.com/doc/anchors",
+    "backgroundColor": "css2:colors.html#propdef-background-color",
+    "backgroundImage": "css2:colors.html#propdef-background-image",
+    "borderColor": "css2:box.html#propdef-border-color",
+    "borderStyle": "css2:box.html#propdef-border-style",
+    "borderWidth": "css2:box.html#propdef-border-width",
+    "boxSizing": {
+      "@id": "css3Ui:box-sizing",
+      "@value": "border-box"
+    },
+    "biopax": {
+      "@id": "http://www.biopax.org/release/biopax-level3.owl#",
+      "@type": "@id"
+    },
+    "color": "css2:colors.html#propdef-color",
+    "contains": {
+      "@reverse": "isPartOf",
+      "@type": "@id"
+    },
+    "css2": "http://www.w3.org/TR/CSS2/",
+    "css3Ui": "http://www.w3.org/TR/css3-ui/#",
+    "cssTransform": "http://www.w3.org/TR/css-transforms-1/#",
+    "dbId": {
+      "@id": "biopax:id",
+      "@type": "xsd:string"
+    },
+    "dbName": {
+      "@id": "biopax:db",
+      "@type": "xsd:string"
+    },
+    "dcterms": "http://purl.org/dc/terms/",
+    "ex": "http://www.example.org/",
+    "fontFamily": "css2:fonts.html#font-family-prop",
+    "fontSize": "css2:fonts.html#propdef-font-size",
+    "fontStyle": "css2:fonts.html#propdef-font-style",
+    "fontWeight": "css2:fonts.html#propdef-font-weight",
+    "functionalEntity": {
+      "@id": "http://identifiers.org/biomodels.sbo/SBO:0000241",
+      "@type": "@id"
+    },
+    "gpml": "http://vocabularies.wikipathways.org/gpml#",
+    "group": {
+      "@container": "@list",
+      "@id": "gpml:Group"
+    },
+    "height": "css2:visudet.html#propdef-height",
+    "image": "schema:image",
+    "isPartOf": {
+      "@id": "dcterms:isPartOf",
+      "@type": "@id"
+    },
+    "lastModified": "gpml:Last-Modified",
+    "markerEnd": "svg:painting.html#MarkerEndProperty",
+    "markerStart": "svg:painting.html#MarkerStartProperty",
+    "media": "http://www.w3.org/TR/mediaont-10/",
+    "name": "http://xmlns.com/foaf/0.1/name",
+    "padding": "css2:box.html#propdef-padding",
+    "elements": "@graph",
+    "participants": {
+      "@id": "biopax:participant",
+      "@type": "@id"
+    },
+    "points": {
+      "@container": "@list",
+      "@id": "gpml:Point"
+    },
+    "position": "css2:visuren.html#propdef-position",
+    "isAttachedTo": {
+      "@id": "dcterms:references",
+      "@type": "@id"
+    },
+    "rotation": {
+      "@id": "cssTransform:funcdef-rotate",
+      "@type": "xsd:integer"
+    },
+    "SBO": {
+      "@id": "http://identifiers.org/biomodels.sbo/SBO:",
+      "@type": "@vocab"
+    },
+    "schema": "http://schema.org/",
+    "shape": "shape-library:shape",
+    "shape-library": "ex:shape-library/",
+    "stroke": "svg:painting.html#StrokeProperty",
+    "strokeWidth": "svg:painting.html#StrokeWidthProperty",
+    "svg": "http://www.w3.org/TR/SVG11/",
+    "textAlign": "css2:text.html#propdef-text-align",
+    "textContent": {
+      "@id": "biopax:displayName",
+      "@type": "xsd:string"
+    },
+    "verticalAlign": "css2:visudet.html#propdef-vertical-align",
+    "width": "css2:visudet.html#propdef-width",
+    "wp": "http://vocabularies.wikipathways.org/wp#",
+    "x": {
+      "@id": "css2:visuren.html#propdef-left",
+      "@type": "xsd:integer"
+    },
+    "xrefs": {
+      "@id": "biopax:xref",
+      "@type": "@id"
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "y": {
+      "@id": "css2:visuren.html#propdef-top",
+      "@type": "xsd:integer"
+    },
+    "zIndex": {
+      "@id": "css2:z-index",
+      "@type": "xsd:integer"
+    }
+  }
+}
+
