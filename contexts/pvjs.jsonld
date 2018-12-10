@@ -1,9 +1,9 @@
 {
   "@context": [
-    "https://cdn.rawgit.com/wikipathways/WpVocabularies/1a91989/contexts/biopax.jsonld",
-    "https://cdn.rawgit.com/wikipathways/WpVocabularies/1a91989/contexts/cellular-location.jsonld",
-    "https://cdn.rawgit.com/wikipathways/WpVocabularies/1a91989/contexts/display.jsonld",
-    "https://cdn.rawgit.com/wikipathways/WpVocabularies/1a91989/contexts/organism.jsonld",
-    "https://cdn.rawgit.com/bridgedb/vocabulary/ae697f02/context.jsonld"
+    "https://cdn.jsdelivr.net/gh/wikipathways/WpVocabularies@1a91989/contexts/biopax.jsonld",
+    "https://cdn.jsdelivr.net/gh/wikipathways/WpVocabularies@1a91989/contexts/cellular-location.jsonld",
+    "https://cdn.jsdelivr.net/gh/wikipathways/WpVocabularies@1a91989/contexts/display.jsonld",
+    "https://cdn.jsdelivr.net/gh/wikipathways/WpVocabularies@1a91989/contexts/organism.jsonld",
+    "https://cdn.jsdelivr.net/gh/bridgedb/vocabulary@ae697f02/context.jsonld"
   ]
 }
