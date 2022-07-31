@@ -1,0 +1,234 @@
+@prefix biopax: <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix gpml:   <http://vocabularies.wikipathways.org/gpml#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix wp:     <http://vocabularies.wikipathways.org/wp#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Pathway>
+        rdf:type         owl:owl:Class ;
+        rdfs:comment     "A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en ;
+        rdfs:label       "Pathway node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimCovalentBond>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Covalent-Bond interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#BrokenArrow>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A style of line or interaction with a glyph at the terminus that allows for regular gaps in their paths."@en ;
+        rdfs:label       "Broken Arrow interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimBranchingRight>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Branching-Right interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#BrokenLine>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A style of line or interaction that allows for regular gaps in their paths."@en ;
+        rdfs:label       "Broken Line interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Unknown>
+        rdf:type         owl:Class ;
+        rdfs:comment     "An unspecified biological entity or factor. Should only be used if the type is truly unknown or is different from the ones covered by other data node types."@en ;
+        rdfs:label       "Unknown node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes>
+        <http://purl.org/dc/terms/format>
+                "text/turtle" , "application/rdf+xml" ;
+        <http://purl.org/dc/terms/title>
+                "RDF Turtle" , "RDF/XML" .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimConversion>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Conversion interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimGap>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Gap interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimModification>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Modification interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimTranscriptionTranslation>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Transcription-Translation interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#TBar>
+        rdf:type         owl:Class ;
+        rdfs:comment     "An interaction in which the source entity has an inhibitory effect on the target entity or interaction."@en ;
+        rdfs:label       "TBar interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimCleavage>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Cleavage interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimCatalysis>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Catalysis interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimStimulation>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Stimulation interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#GeneProduct>
+        rdf:type         owl:owl:Class ;
+        rdfs:comment     "An entity representing any product of a given gene, including DNA, RNA and Protein. This is the most generic representation of a gene-based biomolecule and is useful when more than one representation might be useful in the given context."@en ;
+        rdfs:label       "GeneProduct node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Metabolite>
+        rdf:type         owl:Class ;
+        rdfs:comment     "An entity representing a metabolite, including chemical compounds that participate in or are produced by metabolic reactions, but also other chemical compounds that participate in a pathway otherwise."@en ;
+        rdfs:label       "Metabolite node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Elbow>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A style of line or interaction that allows for 90 degree bends in their paths."@en ;
+        rdfs:label       "Elbow interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Line>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A visual annotation, often used to partition space or connect other annotations."@en ;
+        rdfs:label       "Line interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Curved>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A style of line or interaction that allows for smooth arcs and bends in their paths."@en ;
+        rdfs:label       "Curved interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Rna>
+        rdf:type         owl:Class ;
+        rdfs:comment     "An entity representing an RNA peptide, including mRNA, miRNA, etc. This is commonly used to explicitly represent mRNA transcripts (excluding DNA or protein forms) or other RNA species, like miRNA, exRNA, lncRNA, etc."@en ;
+        rdfs:label       "RNA node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimNecessaryStimulation>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Necessary-Stimulation interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimInhibition>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Inhibition interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#>
+        rdf:type        skos:ConceptScheme , owl:Ontology ;
+        rdfs:label      "WikiPathways WP Types Ontology"@en ;
+        rdfs:seeAlso    <http://www.wikipathways.org/> ;
+        <http://purl.org/dc/terms/contributor>
+                "Ryan Miller"@en , "Egon Willighagen"@en , "Martina Kutmon"@en , "Andra Waagmeester"@en ;
+        owl:versionIRI  <http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Interaction>
+        rdf:type       owl:Class ;
+        rdfs:comment   "Denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see subclasses of wp:DataNode or the wpTypes vocabulary defined for use in applications.."@en ;
+        rdfs:label     "Interaction"@en ;
+        <http://purl.org/dc/terms/description>
+                "An Interaction between DataNode(s) on the diagram."@en ;
+        skos:inScheme  <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimBranchingLeft>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Branching-Left interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<https://vocabularies.wikipathways.org/wpTypes>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Types Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <http://vocabularies.wikipathways.org/wpTypes> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
+
+<http://vocabularies.wikipathways.org/wpTypes#MimBinding>
+        rdf:type         owl:Class ;
+        rdfs:comment     "MIM Specification"@en ;
+        rdfs:label       "Mim-Binding interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Protein>
+        rdf:type         owl:owl:Class ;
+        rdfs:comment     "A biomolecular polymer of amino acids, translated from mRNA."@en ;
+        rdfs:label       "Protein node"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#DataNode> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#DataNode>
+        rdf:type       owl:Class ;
+        rdfs:label     "Datanode"@en ;
+        <http://purl.org/dc/terms/description>
+                "A DataNode on the diagram."@en ;
+        skos:inScheme  <http://vocabularies.wikipathways.org/wpTypes#> .
+
+<http://vocabularies.wikipathways.org/wpTypes#Arrow>
+        rdf:type         owl:Class ;
+        rdfs:comment     "A style of line or interaction that includes a glyph at the terminus."@en ;
+        rdfs:label       "Arrow interaction"@en ;
+        rdfs:subClassOf  <http://vocabularies.wikipathways.org/wpTypes#Interaction> ;
+        skos:inScheme    <http://vocabularies.wikipathways.org/wpTypes#> .
+
