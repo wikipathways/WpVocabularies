@@ -34,6 +34,7 @@ rdf.addPrefix(kb, "owl",    "http://www.w3.org/2002/07/owl#")
 rdf.addPrefix(kb, "rdf",    "http://www.w3.org/1999/02/22-rdf-syntax-ns#")
 rdf.addPrefix(kb, "rdfs",   "http://www.w3.org/2000/01/rdf-schema#")
 rdf.addPrefix(kb, "skos",   "http://www.w3.org/2004/02/skos/core#")
+rdf.addPrefix(kb, "void",   "http://rdfs.org/ns/void#")
 rdf.addPrefix(kb, "wp",     "http://vocabularies.wikipathways.org/wp#")
 rdf.addPrefix(kb, "xsd",    "http://www.w3.org/2001/XMLSchema#")
 
