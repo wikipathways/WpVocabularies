@@ -1,156 +1,345 @@
-@prefix biopax: <http://www.biopax.org/release/biopax-level3.owl#> .
-@prefix gpml:   <http://vocabularies.wikipathways.org/gpml#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix wp:     <http://vocabularies.wikipathways.org/wp#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix biopax:  <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix gpml:    <http://vocabularies.wikipathways.org/gpml#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
+@prefix wpTypes: <http://vocabularies.wikipathways.org/wpTypes#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 gpml:shapeType  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Currently: Specifies the glyph (graphical representation) to use for GPML elements (DataNode, Label, Shape, State). Proposed: Expand it to also describe Anchors. It should replace the term currently used to specify the graphical representation of an Anchor. The current term is \"Shape,\" which conflicts with the GPML element named \"Shape.\" See details for term \"Shape.\""@en ;
-        rdfs:label     "shapeType"@en ;
-        rdfs:range     xsd:string , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "shapeType"@en ;
+        rdfs:range       xsd:string , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "Currently: Specifies the glyph (graphical representation) to use for GPML elements (DataNode, Label, Shape, State). Proposed: Expand it to also describe Anchors. It should replace the term currently used to specify the graphical representation of an Anchor. The current term is \"Shape,\" which conflicts with the GPML element named \"Shape.\" See details for term \"Shape.\""@en ;
+        skos:inScheme    gpml: .
 
-gpml:Shape  rdf:type   owl:Class ;
-        rdfs:comment   "Shape can refer to two different things in GPML, both of which are associated with graphical elements."@en ;
-        rdfs:label     "Shape"@en ;
-        skos:inScheme  gpml: .
+gpml:Shape  rdf:type     owl:Class ;
+        rdfs:label       "Shape"@en ;
+        obo:IAO_0000115  "Shape can refer to two different things in GPML, both of which are associated with graphical elements."@en ;
+        skos:inScheme    gpml: .
 
 gpml:database  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Specifies the datasource for the identifier provided as an Xref. Equivalent to http://vocabularies.bridgedb.org/ops#DataSource conventional name ."@en ;
-        rdfs:label     "database"@en ;
-        rdfs:range     xsd:string , gpml:Xref ;
-        rdfs:seeAlso   <http://vocabularies.bridgedb.org/ops#DataSource> ;
-        skos:inScheme  gpml: .
+        rdfs:label       "database"@en ;
+        rdfs:range       xsd:string , gpml:Xref ;
+        rdfs:seeAlso     <http://vocabularies.bridgedb.org/ops#DataSource> ;
+        obo:IAO_0000115  "Specifies the datasource for the identifier provided as an Xref. Equivalent to http://vocabularies.bridgedb.org/ops#DataSource conventional name ."@en ;
+        skos:inScheme    gpml: .
 
 gpml:groupRef  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "A GroupRef indicates that its element is part of the gpml:Group with the specified GroupId. DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a group."@en ;
-        rdfs:label     "groupRef"@en ;
-        rdfs:range     gpml:GraphicalLine , xsd:string , gpml:Shape , gpml:Interaction , gpml:Label , gpml:Group , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "groupRef"@en ;
+        rdfs:range       gpml:GraphicalLine , xsd:string , gpml:Shape , gpml:Interaction , gpml:Label , gpml:Group , gpml:DataNode ;
+        obo:IAO_0000115  "A GroupRef indicates that its element is part of the gpml:Group with the specified GroupId. DataNode, GraphicalLine, Group, Interaction, Label and Shape can be part of a group."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasGroup  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Group in a given pathway."@en ;
-        rdfs:label     "hasGroup"@en ;
-        rdfs:range     gpml:Group , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasGroup"@en ;
+        rdfs:range       gpml:Group , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a Group in a given pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:color  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "The color to be used for visualization."@en ;
-        rdfs:label     "color"@en ;
-        rdfs:range     gpml:Label , gpml:State , gpml:DataNode , gpml:Shape , xsd:hexBinary , gpml:GraphicalLine , gpml:Interaction ;
-        skos:inScheme  gpml: .
+gpml:color  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "color"@en ;
+        rdfs:range       gpml:Label , gpml:State , gpml:DataNode , gpml:Shape , xsd:hexBinary , gpml:GraphicalLine , gpml:Interaction ;
+        obo:IAO_0000115  "The color to be used for visualization."@en ;
+        skos:inScheme    gpml: .
 
-gpml:shape  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "The visual representation of an anchor, e.g., Circle or None."@en ;
-        rdfs:label     "shape"@en ;
-        rdfs:range     xsd:string , gpml:Anchor ;
-        skos:inScheme  gpml: .
+gpml:shape  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "shape"@en ;
+        rdfs:range       xsd:string , gpml:Anchor ;
+        obo:IAO_0000115  "The visual representation of an anchor, e.g., Circle or None."@en ;
+        skos:inScheme    gpml: .
 
-gpml:zorder  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Indicates the zorder of the object in the pathway."@en ;
-        rdfs:label     "zorder"@en ;
-        rdfs:range     gpml:Interaction , gpml:DataNode , gpml:Label , gpml:Shape , gpml:State , xsd:integer , gpml:GraphicalLine ;
-        skos:inScheme  gpml: .
+gpml:zorder  rdf:type    owl:DatatypeProperty ;
+        rdfs:label       "zorder"@en ;
+        rdfs:range       gpml:Interaction , gpml:DataNode , gpml:Label , gpml:Shape , gpml:State , xsd:integer , gpml:GraphicalLine ;
+        obo:IAO_0000115  "Indicates the zorder of the object in the pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:type  rdf:type    owl:DatatypeProperty ;
-        rdfs:comment   "Specifies the type of an object (DataNode, GraphicalLine, Interaction)."@en ;
-        rdfs:label     "type"@en ;
-        rdfs:range     xsd:string , gpml:Interaction , gpml:GraphicalLine , gpml:DataNode ;
-        skos:inScheme  gpml: .
+gpml:type  rdf:type      owl:DatatypeProperty ;
+        rdfs:label       "type"@en ;
+        rdfs:range       xsd:string , gpml:Interaction , gpml:GraphicalLine , gpml:DataNode ;
+        obo:IAO_0000115  "Specifies the type of an object (DataNode, GraphicalLine, Interaction)."@en ;
+        skos:inScheme    gpml: .
 
-gpml:groupId  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Uniquely identifies a gpml:Group in a gpml:Pathway."@en ;
-        rdfs:label     "groupId"@en ;
-        rdfs:range     xsd:string , gpml:Group ;
-        skos:inScheme  gpml: .
+gpml:groupId  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "groupId"@en ;
+        rdfs:range       xsd:string , gpml:Group ;
+        obo:IAO_0000115  "Uniquely identifies a gpml:Group in a gpml:Pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:relX  rdf:type    owl:DatatypeProperty ;
-        rdfs:comment   "RelX is the x-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)."@en ;
-        rdfs:label     "relX"@en ;
-        rdfs:range     xsd:float , gpml:State , gpml:Point ;
-        skos:inScheme  gpml: .
+gpml:relX  rdf:type      owl:DatatypeProperty ;
+        rdfs:label       "relX"@en ;
+        rdfs:range       xsd:float , gpml:State , gpml:Point ;
+        obo:IAO_0000115  "RelX is the x-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)."@en ;
+        skos:inScheme    gpml: .
 
 gpml:arrowHead  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Specifies the glyph at the ends of lines and interactions."@en ;
-        rdfs:label     "arrowHead"@en ;
-        rdfs:range     xsd:string , gpml:Point ;
-        skos:inScheme  gpml: .
+        rdfs:label       "arrowHead"@en ;
+        rdfs:range       xsd:string , gpml:Point ;
+        obo:IAO_0000115  "Specifies the glyph at the ends of lines and interactions."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasLegend  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Legend in a given pathway."@en ;
-        rdfs:label     "hasLegend"@en ;
-        rdfs:range     gpml:Legend , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasLegend"@en ;
+        rdfs:range       gpml:Legend , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a Legend in a given pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:version  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The version of a Pathway (currently not used in WP)."@en ;
-        rdfs:label     "version"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
+gpml:version  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "version"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The version of a Pathway (currently not used in WP)."@en ;
+        skos:inScheme    gpml: .
 
 gpml:position  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Proportional distance of an anchor along the line it belongs to, between 0 and 1."@en ;
-        rdfs:label     "position"@en ;
-        rdfs:range     xsd:float , gpml:Anchor ;
-        skos:inScheme  gpml: .
+        rdfs:label       "position"@en ;
+        rdfs:range       xsd:float , gpml:Anchor ;
+        obo:IAO_0000115  "Proportional distance of an anchor along the line it belongs to, between 0 and 1."@en ;
+        skos:inScheme    gpml: .
 
 gpml:organism  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The scientific name (e.g., Homo sapiens) of the species being described by the pathway."@en ;
-        rdfs:label     "organism"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "organism"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The scientific name (e.g., Homo sapiens) of the species being described by the pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:value  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "Value of the key/value pair in the Attribute class."@en ;
-        rdfs:label     "value"@en ;
-        rdfs:range     xsd:string , gpml:Attribute ;
-        skos:inScheme  gpml: .
+gpml:value  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "value"@en ;
+        rdfs:range       xsd:string , gpml:Attribute ;
+        obo:IAO_0000115  "Value of the key/value pair in the Attribute class."@en ;
+        skos:inScheme    gpml: .
 
-<http://vocabularies.wikipathways.org/gpml>
-        <http://purl.org/dc/terms/format>
-                "text/turtle" , "application/rdf+xml" ;
-        <http://purl.org/dc/terms/title>
-                "RDF Turtle" , "RDF/XML" .
+gpml:Legend  rdf:type    owl:Class ;
+        rdfs:label       "Legend"@en ;
+        obo:IAO_0000115  "An explanatory list of the colors used for visualizing data on the pathway. Not currently used."@en ;
+        skos:inScheme    gpml: .
 
-gpml:Legend  rdf:type  owl:Class ;
-        rdfs:comment   "An explanatory list of the colors used for visualizing data on the pathway. Not currently used."@en ;
-        rdfs:label     "Legend"@en ;
-        skos:inScheme  gpml: .
-
-gpml:href  rdf:type    owl:DatatypeProperty ;
-        rdfs:comment   "The hyperlink optionally specified in a Label."@en ;
-        rdfs:label     "href"@en ;
-        rdfs:range     xsd:string , gpml:Label ;
-        skos:inScheme  gpml: .
+gpml:href  rdf:type      owl:DatatypeProperty ;
+        rdfs:label       "href"@en ;
+        rdfs:range       xsd:string , gpml:Label ;
+        obo:IAO_0000115  "The hyperlink optionally specified in a Label."@en ;
+        skos:inScheme    gpml: .
 
 gpml:fontStyle  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The typographic style or font face applied to displayed text, e.g., Arial."@en ;
-        rdfs:label     "fontStyle"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "fontStyle"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "The typographic style or font face applied to displayed text, e.g., Arial."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasPublicationXref
-        rdf:type       owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a PublicationXref associated with a given object."@en ;
-        rdfs:label     "hasPublicationXref"@en ;
-        rdfs:range     gpml:State , gpml:Label , gpml:Group , gpml:Pathway , gpml:Shape , gpml:DataNode , gpml:GraphicalLine , gpml:Interaction , gpml:PublicationXref ;
-        skos:inScheme  gpml: .
+        rdf:type         owl:ObjectProperty ;
+        rdfs:label       "hasPublicationXref"@en ;
+        rdfs:range       gpml:State , gpml:Label , gpml:Group , gpml:Pathway , gpml:Shape , gpml:DataNode , gpml:GraphicalLine , gpml:Interaction , gpml:PublicationXref ;
+        obo:IAO_0000115  "Boolean property for the existence of a PublicationXref associated with a given object."@en ;
+        skos:inScheme    gpml: .
 
 gpml:stateType  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "A free text field to describe the nature or category of a given state."@en ;
-        rdfs:label     "stateType"@en ;
-        rdfs:range     xsd:string , gpml:State ;
-        skos:inScheme  gpml: .
+        rdfs:label       "stateType"@en ;
+        rdfs:range       xsd:string , gpml:State ;
+        obo:IAO_0000115  "A free text field to describe the nature or category of a given state."@en ;
+        skos:inScheme    gpml: .
 
 gpml:Attribute  rdf:type  owl:Class ;
-        rdfs:comment   "Element used to specify key/value paired information for a given object."@en ;
-        rdfs:label     "Attribute"@en ;
-        skos:inScheme  gpml: .
+        rdfs:label       "Attribute"@en ;
+        obo:IAO_0000115  "Element used to specify key/value paired information for a given object."@en ;
+        skos:inScheme    gpml: .
 
-<https://vocabularies.wikipathways.org/gpml>
+gpml:Point  rdf:type     owl:Class ;
+        rdfs:label       "Point"@en ;
+        obo:IAO_0000115  "A location in 2-dimensional space defined by x and y coordinates."@en ;
+        skos:inScheme    gpml: .
+
+gpml:DataNode  rdf:type  owl:Class ;
+        rdfs:label       "DataNode"@en ;
+        obo:IAO_0000115  "Denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see subclasses of wp:DataNode or the wpTypes vocabulary defined for use in applications."@en ;
+        skos:inScheme    gpml: .
+
+gpml:Group  rdf:type     owl:Class ;
+        rdfs:label       "Group"@en ;
+        obo:IAO_0000115  "A collection of structurally or functionally similar or related pathway elements."@en ;
+        skos:inScheme    gpml: .
+
+gpml:last-Modified  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "last-Modified"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The date of the last modification of the pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:fontSize  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "fontSize"@en ;
+        rdfs:range       xsd:nonNegativeInteger , gpml:Shape , gpml:Label ;
+        obo:IAO_0000115  "The point value for the size of the font."@en ;
+        skos:inScheme    gpml: .
+
+gpml:lineStyle  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "lineStyle"@en ;
+        rdfs:range       gpml:Interaction , gpml:Shape , gpml:Label , xsd:string , gpml:GraphicalLine , gpml:DataNode , gpml:State ;
+        obo:IAO_0000115  "The visual appearance of a line or border, e.g., Solid or Broken."@en ;
+        skos:inScheme    gpml: .
+
+gpml:biopaxRef  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "biopaxRef"@en ;
+        rdfs:range       xsd:string , gpml:Pathway , gpml:State , gpml:Shape , gpml:GraphicalLine , gpml:Label , gpml:DataNode , gpml:Group , gpml:Interaction ;
+        rdfs:seeAlso     biopax:PublicationXref ;
+        obo:IAO_0000115  "Reuse of references defined by BioPAX."@en ;
+        skos:inScheme    gpml: .
+
+gpml:key  rdf:type       owl:DatatypeProperty ;
+        rdfs:label       "key"@en ;
+        rdfs:range       xsd:string , gpml:Attribute ;
+        obo:IAO_0000115  "Key of the key/value pair in the Attribute class."@en ;
+        skos:inScheme    gpml: .
+
+gpml:data-Source  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "data-Source"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "Deprecated: Not in use."@en ;
+        skos:inScheme    gpml: .
+
+gpml:id  rdf:type        owl:DatatypeProperty ;
+        rdfs:label       "id"@en ;
+        rdfs:range       xsd:string , gpml:Xref , gpml:PublicationXref ;
+        rdfs:seeAlso     biopax:id ;
+        obo:IAO_0000115  "The identifier of a PublicationXref or Xref object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasInteraction  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasInteraction"@en ;
+        rdfs:range       gpml:Interaction , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of an Interaction in a given pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:Label  rdf:type     owl:Class ;
+        rdfs:Label       "Label"@en ;
+        obo:IAO_0000115  "A text field which can be used to annotate any aspect of a pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:PublicationXref  rdf:type  owl:Class ;
+        rdfs:label       "PublicationXref"@en ;
+        rdfs:seeAlso     <http://www.biopax.org/owldoc/Level3/classes/PublicationXref___-1968381200.html> ;
+        obo:IAO_0000115  "Defines a literature reference. Refers to a BioPAX definition."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasBiopax  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasBiopax"@en ;
+        rdfs:range       gpml:Biopax , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a BioPax class associated with a given pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:y  rdf:type         owl:DatatypeProperty ;
+        rdfs:label       "y"@en ;
+        rdfs:range       xsd:float , gpml:Point ;
+        obo:IAO_0000115  "The y-coordinate of a point in the 2-dimensional plane in which a pathway is drawn."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasAnchor  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasAnchor"@en ;
+        rdfs:range       gpml:Anchor , gpml:Interaction , gpml:GraphicalLine ;
+        obo:IAO_0000115  "Boolean property for the existence of an Anchor on a given line or interaction."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasGraphicalLine
+        rdf:type         owl:ObjectProperty ;
+        rdfs:label       "hasGraphicalLine"@en ;
+        rdfs:range       gpml:GraphicalLine , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a GraphicalLine in a given pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:InfoBox  rdf:type   owl:Class ;
+        rdfs:label       "InfoBox"@en ;
+        obo:IAO_0000115  "Currently just a placeholder -- not used."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasAttribute  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasAttribute"@en ;
+        rdfs:range       gpml:Label , gpml:State , gpml:Shape , gpml:Pathway , gpml:Attribute , gpml:Group , gpml:Interaction , gpml:DataNode , gpml:GraphicalLine ;
+        obo:IAO_0000115  "Boolean property for the existence of an Attribute class associated with a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:author  rdf:type    owl:DatatypeProperty ;
+        rdfs:label       "author"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The person who created or edited the pathway in question."@en ;
+        skos:inScheme    gpml: .
+
+gpml:Biopax  rdf:type    owl:Class ;
+        rdfs:label       "Biopax"@en ;
+        obo:IAO_0000115  "Element used to embed Biopax (namespace: http://www.biopax.org/release/biopax-level3.owl) content in a GPML document."@en ;
+        skos:inScheme    gpml: .
+
+gpml:Anchor  rdf:type    owl:Class ;
+        rdfs:label       "Anchor"@en ;
+        obo:IAO_0000115  "A connection point on a graphical line or an interaction, where another graphical line or interaction can be connected."@en ;
+        skos:inScheme    gpml: .
+
+gpml:width  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "width"@en ;
+        rdfs:range       xsd:float , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "The pixel value for the x-dimensional length of a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasInfoBox  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasInfoBox"@en ;
+        rdfs:range       gpml:InfoBox , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of an InfroBox in a given pathway."@en ;
+        skos:inScheme    gpml: .
+
+gpml:fontDecoration  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "fontDecoration"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label ;
+        obo:IAO_0000115  "Deprecated: Not in use."@en ;
+        skos:inScheme    gpml: .
+
+gpml:email  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "email"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "Deprecated: An electronic mail address. Used to reference the author or maintainer of a pathway prior to WikiPathways."@en ;
+        skos:inScheme    gpml: .
+
+gpml:Comment  rdf:type   owl:Class ;
+        rdfs:label       "Comment"@en ;
+        obo:IAO_0000115  "Elements used to provide descriptions and arbitrary notes for a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:centerY  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "centerY"@en ;
+        rdfs:range       gpml:Label , gpml:InfoBox , gpml:Shape , xsd:float , gpml:DataNode , gpml:Legend ;
+        obo:IAO_0000115  "Middle of a pathway element in the y-direction."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasComment  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasComment"@en ;
+        rdfs:range       gpml:DataNode , gpml:Group , gpml:GraphicalLine , gpml:Pathway , gpml:State , gpml:Comment , gpml:Label , gpml:Shape , gpml:Interaction ;
+        obo:IAO_0000115  "Boolean property for the existence of a Comment class associated with a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:rotation  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "rotation"@en ;
+        rdfs:range       xsd:float , gpml:Shape ;
+        obo:IAO_0000115  "The degree value of angular offset relative to the center of a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:x  rdf:type         owl:DatatypeProperty ;
+        rdfs:label       "x"@en ;
+        rdfs:range       xsd:float , gpml:Point ;
+        obo:IAO_0000115  "The x-coordinate of a point in the 2-dimensional plane in which a pathway is drawn."@en ;
+        skos:inScheme    gpml: .
+
+gpml:graphRef  rdf:type  owl:DatatypeProperty ;
+        rdfs:label       "graphRef"@en ;
+        rdfs:range       xsd:string , gpml:State , gpml:Point ;
+        obo:IAO_0000115  "A GraphRef indicates a \"depends on\" or child/parent relationship between two Pathway elements. The element with the GraphRef is the child, and the element referred to by the GraphRef is the parent. The parent's GraphId will be specified by the child's GraphRef."@en ;
+        skos:inScheme    gpml: .
+
+gpml:hasState  rdf:type  owl:ObjectProperty ;
+        rdfs:label       "hasState"@en ;
+        rdfs:range       gpml:State , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a State in a given pathway."@en ;
+        skos:inScheme    gpml: .
+
+<file:///home/egonw/var/Projects/hub/WpVocabularies/OWL/gpml.html>
         <http://purl.org/dc/terms/title>
                 "WikiPathways GPML Ontology" ;
         <http://vocab.sindice.net/any23#Content-Type>
@@ -160,386 +349,199 @@ gpml:Attribute  rdf:type  owl:Class ;
         <http://vocab.sindice.net/any23#viewport>
                 "width=device-width, initial-scale=1"@en ;
         <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <http://vocabularies.wikipathways.org/gpml> ;
+                <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> ;
         <http://www.w3.org/1999/xhtml/vocab#stylesheet>
                 <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
-gpml:Point  rdf:type   owl:Class ;
-        rdfs:comment   "A location in 2-dimensional space defined by x and y coordinates."@en ;
-        rdfs:label     "Point"@en ;
-        skos:inScheme  gpml: .
-
-gpml:DataNode  rdf:type  owl:Class ;
-        rdfs:comment   "Denotes a biological entity that forms a node in a pathway and has some biological meaning associated with it. For a list of the gpml:DataNode types supported at WikiPathways, see subclasses of wp:DataNode or the wpTypes vocabulary defined for use in applications.."@en ;
-        rdfs:label     "DataNode"@en ;
-        skos:inScheme  gpml: .
-
-gpml:Group  rdf:type   owl:Class ;
-        rdfs:comment   "A collection of structurally or functionally similar or related pathway elements."@en ;
-        rdfs:label     "Group"@en ;
-        skos:inScheme  gpml: .
-
-gpml:last-Modified  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The date of the last modification of the pathway."@en ;
-        rdfs:label     "last-Modified"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:fontSize  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The point value for the size of the font."@en ;
-        rdfs:label     "fontSize"@en ;
-        rdfs:range     xsd:nonNegativeInteger , gpml:Shape , gpml:Label ;
-        skos:inScheme  gpml: .
-
-gpml:lineStyle  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The visual appearance of a line or border, e.g., Solid or Broken."@en ;
-        rdfs:label     "lineStyle"@en ;
-        rdfs:range     gpml:Interaction , gpml:Shape , gpml:Label , xsd:string , gpml:GraphicalLine , gpml:State , gpml:DataNode ;
-        skos:inScheme  gpml: .
-
-gpml:biopaxRef  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Reuse of references defined by BioPAX."@en ;
-        rdfs:label     "biopaxRef"@en ;
-        rdfs:range     xsd:string , gpml:Pathway , gpml:State , gpml:Shape , gpml:GraphicalLine , gpml:Label , gpml:DataNode , gpml:Group , gpml:Interaction ;
-        rdfs:seeAlso   biopax:PublicationXref ;
-        skos:inScheme  gpml: .
-
-gpml:key  rdf:type     owl:DatatypeProperty ;
-        rdfs:comment   "Key of the key/value pair in the Attribute class."@en ;
-        rdfs:label     "key"@en ;
-        rdfs:range     xsd:string , gpml:Attribute ;
-        skos:inScheme  gpml: .
-
-gpml:data-Source  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Deprecated: Not in use."@en ;
-        rdfs:label     "data-Source"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:id  rdf:type      owl:DatatypeProperty ;
-        rdfs:comment   "The identifier of a PublicationXref or Xref object."@en ;
-        rdfs:label     "id"@en ;
-        rdfs:range     xsd:string , gpml:Xref , gpml:PublicationXref ;
-        rdfs:seeAlso   biopax:id ;
-        skos:inScheme  gpml: .
-
-gpml:hasInteraction  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of an Interaction in a given pathway."@en ;
-        rdfs:label     "hasInteraction"@en ;
-        rdfs:range     gpml:Interaction , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:Label  rdf:type   owl:Class ;
-        rdfs:Label     "Label"@en ;
-        rdfs:comment   "A text field which can be used to annotate any aspect of a pathway."@en ;
-        skos:inScheme  gpml: .
-
-gpml:PublicationXref  rdf:type  owl:Class ;
-        rdfs:comment   "Defines a literature reference. Refers to a BioPAX definition."@en ;
-        rdfs:label     "PublicationXref"@en ;
-        rdfs:seeAlso   <http://www.biopax.org/owldoc/Level3/classes/PublicationXref___-1968381200.html> ;
-        skos:inScheme  gpml: .
-
-gpml:hasBiopax  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a BioPax class associated with a given pathway."@en ;
-        rdfs:label     "hasBiopax"@en ;
-        rdfs:range     gpml:Biopax , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:y  rdf:type       owl:DatatypeProperty ;
-        rdfs:comment   "The y-coordinate of a point in the 2-dimensional plane in which a pathway is drawn."@en ;
-        rdfs:label     "y"@en ;
-        rdfs:range     xsd:float , gpml:Point ;
-        skos:inScheme  gpml: .
-
-gpml:hasAnchor  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of an Anchor on a given line or interaction."@en ;
-        rdfs:label     "hasAnchor"@en ;
-        rdfs:range     gpml:Anchor , gpml:Interaction , gpml:GraphicalLine ;
-        skos:inScheme  gpml: .
-
-gpml:hasGraphicalLine
-        rdf:type       owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a GraphicalLine in a given pathway."@en ;
-        rdfs:label     "hasGraphicalLine"@en ;
-        rdfs:range     gpml:GraphicalLine , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:InfoBox  rdf:type  owl:Class ;
-        rdfs:comment   "Currently just a placeholder -- not used."@en ;
-        rdfs:label     "InfoBox"@en ;
-        skos:inScheme  gpml: .
-
-gpml:hasAttribute  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of an Attribute class associated with a given object."@en ;
-        rdfs:label     "hasAttribute"@en ;
-        rdfs:range     gpml:Label , gpml:State , gpml:Shape , gpml:Pathway , gpml:Attribute , gpml:Group , gpml:Interaction , gpml:DataNode , gpml:GraphicalLine ;
-        skos:inScheme  gpml: .
-
-gpml:author  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The person who created or edited the pathway in question."@en ;
-        rdfs:label     "author"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:Biopax  rdf:type  owl:Class ;
-        rdfs:comment   "Element used to embed Biopax (namespace: http://www.biopax.org/release/biopax-level3.owl) content in a GPML document."@en ;
-        rdfs:label     "Biopax"@en ;
-        skos:inScheme  gpml: .
-
-gpml:Anchor  rdf:type  owl:Class ;
-        rdfs:comment   "A connection point on a graphical line or an interaction, where another graphical line or interaction can be connected."@en ;
-        rdfs:label     "Anchor"@en ;
-        skos:inScheme  gpml: .
-
-gpml:width  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "The pixel value for the x-dimensional length of a given object."@en ;
-        rdfs:label     "width"@en ;
-        rdfs:range     xsd:float , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
-
-gpml:hasInfoBox  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of an InfroBox in a given pathway."@en ;
-        rdfs:label     "hasInfoBox"@en ;
-        rdfs:range     gpml:InfoBox , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:fontDecoration  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Deprecated: Not in use."@en ;
-        rdfs:label     "fontDecoration"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label ;
-        skos:inScheme  gpml: .
-
-gpml:email  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "Deprecated: An electronic mail address. Used to reference the author or maintainer of a pathway prior to WikiPathways."@en ;
-        rdfs:label     "email"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
-gpml:Comment  rdf:type  owl:Class ;
-        rdfs:comment   "Elements used to provide descriptions and arbitrary notes for a given object."@en ;
-        rdfs:label     "Comment"@en ;
-        skos:inScheme  gpml: .
-
-gpml:centerY  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Middle of a pathway element in the y-direction."@en ;
-        rdfs:label     "centerY"@en ;
-        rdfs:range     gpml:Label , gpml:InfoBox , gpml:Shape , xsd:float , gpml:DataNode , gpml:Legend ;
-        skos:inScheme  gpml: .
-
-gpml:hasComment  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Comment class associated with a given object."@en ;
-        rdfs:label     "hasComment"@en ;
-        rdfs:range     gpml:DataNode , gpml:Group , gpml:GraphicalLine , gpml:Pathway , gpml:State , gpml:Comment , gpml:Label , gpml:Shape , gpml:Interaction ;
-        skos:inScheme  gpml: .
-
-gpml:rotation  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The degree value of angular offset relative to the center of a given object."@en ;
-        rdfs:label     "rotation"@en ;
-        rdfs:range     xsd:float , gpml:Shape ;
-        skos:inScheme  gpml: .
-
-gpml:x  rdf:type       owl:DatatypeProperty ;
-        rdfs:comment   "The x-coordinate of a point in the 2-dimensional plane in which a pathway is drawn."@en ;
-        rdfs:label     "x"@en ;
-        rdfs:range     xsd:float , gpml:Point ;
-        skos:inScheme  gpml: .
-
-gpml:graphRef  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "A GraphRef indicates a \"depends on\" or child/parent relationship between two Pathway elements. The element with the GraphRef is the child, and the element referred to by the GraphRef is the parent. The parent's GraphId will be specified by the child's GraphRef."@en ;
-        rdfs:label     "graphRef"@en ;
-        rdfs:range     xsd:string , gpml:State , gpml:Point ;
-        skos:inScheme  gpml: .
-
-gpml:hasState  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a State in a given pathway."@en ;
-        rdfs:label     "hasState"@en ;
-        rdfs:range     gpml:State , gpml:Pathway ;
-        skos:inScheme  gpml: .
-
 gpml:fillColor  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The hexidecimal color value used to paint the area of an object, not including its border."@en ;
-        rdfs:label     "fillColor"@en ;
-        rdfs:range     xsd:hexBinary , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "fillColor"@en ;
+        rdfs:range       xsd:hexBinary , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "The hexidecimal color value used to paint the area of an object, not including its border."@en ;
+        skos:inScheme    gpml: .
 
-gpml:license  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The license of a pathway."@en ;
-        rdfs:label     "license"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
+gpml:license  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "license"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The license of a pathway."@en ;
+        skos:inScheme    gpml: .
 
 gpml:fontStrikethru  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Deprecated: Not in use."@en ;
-        rdfs:label     "fontStrikethru"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "fontStrikethru"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "Deprecated: Not in use."@en ;
+        skos:inScheme    gpml: .
 
-gpml:Xref  rdf:type    owl:Class ;
-        rdfs:comment   "Reference to a database entry that matches the node in the pathway. It is a combination of an identifier of the entity and an identifier of the database in which the entity is found."@en ;
-        rdfs:label     "Xref"@en ;
-        skos:inScheme  gpml: .
+gpml:Xref  rdf:type      owl:Class ;
+        rdfs:label       "Xref"@en ;
+        obo:IAO_0000115  "Reference to a database entry that matches the node in the pathway. It is a combination of an identifier of the entity and an identifier of the database in which the entity is found."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasDataNode  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a DataNode in a given pathway."@en ;
-        rdfs:label     "hasDataNode"@en ;
-        rdfs:range     gpml:DataNode , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasDataNode"@en ;
+        rdfs:range       gpml:DataNode , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a DataNode in a given pathway."@en ;
+        skos:inScheme    gpml: .
 
 gpml:Interaction  rdf:type  owl:Class ;
-        rdfs:comment   "Defines the biochemical relationship between DataNodes or with Anchors on other Interactions. An Xref can be specified for Interactions (in contrast to GraphicalLines)."@en ;
-        rdfs:label     "Interaction"@en ;
-        skos:inScheme  gpml: .
+        rdfs:label       "Interaction"@en ;
+        obo:IAO_0000115  "Defines the biochemical relationship between DataNodes or with Anchors on other Interactions. An Xref can be specified for Interactions (in contrast to GraphicalLines)."@en ;
+        skos:inScheme    gpml: .
 
 gpml:fontName  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The name of the set of printable text characters to be used for visualization."@en ;
-        rdfs:label     "fontName"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label ;
-        skos:inScheme  gpml: .
+        rdfs:label       "fontName"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label ;
+        obo:IAO_0000115  "The name of the set of printable text characters to be used for visualization."@en ;
+        skos:inScheme    gpml: .
 
 gpml:boardHeight  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Range minimum is zero."@en ;
-        rdfs:label     "boardHeight"@en ;
-        rdfs:range     xsd:float , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "boardHeight"@en ;
+        rdfs:range       xsd:float , gpml:Pathway ;
+        obo:IAO_0000115  "Range minimum is zero."@en ;
+        skos:inScheme    gpml: .
 
-gpml:height  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The pixel value for the y-dimensional length of a given object."@en ;
-        rdfs:label     "height"@en ;
-        rdfs:range     xsd:float , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+<https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl>
+        <http://purl.org/dc/terms/format>
+                "text/turtle" ;
+        <http://purl.org/dc/terms/title>
+                "RDF Turtle" .
 
-gpml:centerX  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Middle of a pathway element in the x-direction."@en ;
-        rdfs:label     "centerX"@en ;
-        rdfs:range     gpml:DataNode , gpml:Label , gpml:Shape , xsd:float , gpml:Legend , gpml:InfoBox ;
-        skos:inScheme  gpml: .
+gpml:height  rdf:type    owl:DatatypeProperty ;
+        rdfs:label       "height"@en ;
+        rdfs:range       xsd:float , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "The pixel value for the y-dimensional length of a given object."@en ;
+        skos:inScheme    gpml: .
+
+gpml:centerX  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "centerX"@en ;
+        rdfs:range       gpml:DataNode , gpml:Label , gpml:Shape , xsd:float , gpml:Legend , gpml:InfoBox ;
+        obo:IAO_0000115  "Middle of a pathway element in the x-direction."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasShape  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Shape in a given pathway."@en ;
-        rdfs:label     "hasShape"@en ;
-        rdfs:range     gpml:Shape , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasShape"@en ;
+        rdfs:range       gpml:Shape , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a Shape in a given pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:graphId  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "A GraphId is a unique (per Pathway) identifier for a pathway element, such as DataNode, Interaction, GraphicalLine, Label, Point, Group, Shape, State and Anchor."@en ;
-        rdfs:label     "graphId"@en ;
-        rdfs:range     gpml:State , xsd:string , gpml:GraphicalLine , gpml:Group , gpml:DataNode , gpml:Interaction , gpml:Point , gpml:Anchor , gpml:Label , gpml:Shape ;
-        skos:inScheme  gpml: .
+gpml:graphId  rdf:type   owl:DatatypeProperty ;
+        rdfs:label       "graphId"@en ;
+        rdfs:range       gpml:State , xsd:string , gpml:GraphicalLine , gpml:Group , gpml:DataNode , gpml:Interaction , gpml:Point , gpml:Anchor , gpml:Label , gpml:Shape ;
+        obo:IAO_0000115  "A GraphId is a unique (per Pathway) identifier for a pathway element, such as DataNode, Interaction, GraphicalLine, Label, Point, Group, Shape, State and Anchor."@en ;
+        skos:inScheme    gpml: .
 
 gpml:fontWeight  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Thickness of the font used, e.g a bold font would have more weight. Used for DataNodes, Labels and Shapes."@en ;
-        rdfs:label     "fontWeight"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+        rdfs:label       "fontWeight"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "Thickness of the font used, e.g a bold font would have more weight. Used for DataNodes, Labels and Shapes."@en ;
+        skos:inScheme    gpml: .
 
 gpml:connectorType  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Specifies a set of rules to govern layout of Graphical Lines and Interactions. PathVisio (Java): Line Type and GPML: ConnectorType"@en ;
-        rdfs:label     "connectorType"@en ;
-        rdfs:range     xsd:string , gpml:Interaction , gpml:GraphicalLine ;
-        skos:inScheme  gpml: .
+        rdfs:label       "connectorType"@en ;
+        rdfs:range       xsd:string , gpml:Interaction , gpml:GraphicalLine ;
+        obo:IAO_0000115  "Specifies a set of rules to govern layout of Graphical Lines and Interactions. PathVisio (Java): Line Type and GPML: ConnectorType"@en ;
+        skos:inScheme    gpml: .
 
 gpml:   rdf:type        skos:ConceptScheme , owl:Ontology ;
         rdfs:label      "WikiPathways GPML Vocabulary"@en ;
         rdfs:seeAlso    <http://www.wikipathways.org/> ;
-        owl:versionIRI  <http://www.w3.org/2012/pyRdfa/extract?uri=http://vocabularies.wikipathways.org/gpml#> .
+        owl:versionIRI  <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> .
 
 gpml:textlabel  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "TextLabel of an object (DataNode, Group, Label, Shape, State)."@en ;
-        rdfs:label     "textlabel"@en ;
-        rdfs:range     xsd:string , gpml:Label , gpml:DataNode , gpml:Shape , gpml:Group , gpml:State ;
-        skos:inScheme  gpml: .
+        rdfs:label       "textlabel"@en ;
+        rdfs:range       xsd:string , gpml:Label , gpml:DataNode , gpml:Shape , gpml:Group , gpml:State ;
+        obo:IAO_0000115  "TextLabel of an object (DataNode, Group, Label, Shape, State)."@en ;
+        skos:inScheme    gpml: .
 
-gpml:hasXref  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of an Xref associated with a given object."@en ;
-        rdfs:label     "hasXref"@en ;
-        rdfs:range     gpml:Xref , gpml:State , gpml:Interaction , gpml:DataNode ;
-        skos:inScheme  gpml: .
+gpml:hasXref  rdf:type   owl:ObjectProperty ;
+        rdfs:label       "hasXref"@en ;
+        rdfs:range       gpml:Xref , gpml:State , gpml:Interaction , gpml:DataNode ;
+        obo:IAO_0000115  "Boolean property for the existence of an Xref associated with a given object."@en ;
+        skos:inScheme    gpml: .
 
-gpml:State  rdf:type   owl:Class ;
-        rdfs:comment   "A particular condition, mode or modification of an entity, e.g., phosphorylated, activated, mutated, SNP, etc."@en ;
-        rdfs:label     "State"@en ;
-        skos:inScheme  gpml: .
+gpml:State  rdf:type     owl:Class ;
+        rdfs:label       "State"@en ;
+        obo:IAO_0000115  "A particular condition, mode or modification of an entity, e.g., phosphorylated, activated, mutated, SNP, etc."@en ;
+        skos:inScheme    gpml: .
 
 gpml:boardWidth  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "Range minimum is zero."@en ;
-        rdfs:label     "boardWidth"@en ;
-        rdfs:range     xsd:float , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "boardWidth"@en ;
+        rdfs:range       xsd:float , gpml:Pathway ;
+        obo:IAO_0000115  "Range minimum is zero."@en ;
+        skos:inScheme    gpml: .
 
 gpml:GraphicalLine  rdf:type  owl:Class ;
-        rdfs:comment   "A visual annotation, often used to partition space or connect other annotation, e.g., Shapes. An Xref can not be specified for GraphicalLines (in contrast to Interactions)."@en ;
-        rdfs:label     "GraphicalLine"@en ;
-        skos:inScheme  gpml: .
+        rdfs:label       "GraphicalLine"@en ;
+        obo:IAO_0000115  "A visual annotation, often used to partition space or connect other annotation, e.g., Shapes. An Xref can not be specified for GraphicalLines (in contrast to Interactions)."@en ;
+        skos:inScheme    gpml: .
 
-gpml:align  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "Horizontal alignment of displayed text, e.g., Left, Center, Right."@en ;
-        rdfs:label     "align"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+gpml:align  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "align"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  "Horizontal alignment of displayed text, e.g., Left, Center, Right."@en ;
+        skos:inScheme    gpml: .
 
 gpml:maintainer  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The maintainer of the pathway. Currently not used in WP."@en ;
-        rdfs:label     "maintainer"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "maintainer"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The maintainer of the pathway. Currently not used in WP."@en ;
+        skos:inScheme    gpml: .
 
-gpml:valign  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   " Vertical alignment of displayed text, e.g., Top, Middle, Bottom."@en ;
-        rdfs:label     "valign"@en ;
-        rdfs:range     xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
-        skos:inScheme  gpml: .
+gpml:valign  rdf:type    owl:DatatypeProperty ;
+        rdfs:label       "valign"@en ;
+        rdfs:range       xsd:string , gpml:Shape , gpml:Label , gpml:DataNode ;
+        obo:IAO_0000115  " Vertical alignment of displayed text, e.g., Top, Middle, Bottom."@en ;
+        skos:inScheme    gpml: .
 
 gpml:lineThickness  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The pixel value for the width of a given line, interaction or border."@en ;
-        rdfs:label     "lineThickness"@en ;
-        rdfs:range     gpml:Label , gpml:GraphicalLine , xsd:string , gpml:DataNode , gpml:State , gpml:Shape , gpml:Interaction ;
-        skos:inScheme  gpml: .
+        rdfs:label       "lineThickness"@en ;
+        rdfs:range       gpml:Label , gpml:GraphicalLine , xsd:string , gpml:DataNode , gpml:State , gpml:Shape , gpml:Interaction ;
+        obo:IAO_0000115  "The pixel value for the width of a given line, interaction or border."@en ;
+        skos:inScheme    gpml: .
 
-gpml:relY  rdf:type    owl:DatatypeProperty ;
-        rdfs:comment   "RelY is the y-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)."@en ;
-        rdfs:label     "relY"@en ;
-        rdfs:range     xsd:float , gpml:State , gpml:Point ;
-        skos:inScheme  gpml: .
+gpml:relY  rdf:type      owl:DatatypeProperty ;
+        rdfs:label       "relY"@en ;
+        rdfs:range       xsd:float , gpml:State , gpml:Point ;
+        obo:IAO_0000115  "RelY is the y-coordinate used when a point or state is linked to a another object - relative coordinate to the object that it is linked to (0,0 - center, 1,1 - bottom-right)."@en ;
+        skos:inScheme    gpml: .
 
-gpml:style  rdf:type   owl:DatatypeProperty ;
-        rdfs:comment   "The type of Group, e.g., Complex."@en ;
-        rdfs:label     "style"@en ;
-        rdfs:range     xsd:string , gpml:Group ;
-        skos:inScheme  gpml: .
+gpml:style  rdf:type     owl:DatatypeProperty ;
+        rdfs:label       "style"@en ;
+        rdfs:range       xsd:string , gpml:Group ;
+        obo:IAO_0000115  "The type of Group, e.g., Complex."@en ;
+        skos:inScheme    gpml: .
 
-gpml:Pathway  rdf:type  owl:Class ;
-        rdfs:comment   "A graph diagram representing a biological process as a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en ;
-        rdfs:label     "Pathway"@en ;
-        skos:inScheme  gpml: .
+gpml:Pathway  rdf:type   owl:Class ;
+        rdfs:label       "Pathway"@en ;
+        obo:IAO_0000115  "A graph diagram representing a biological process as a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en ;
+        skos:inScheme    gpml: .
 
-gpml:name  rdf:type    owl:DatatypeProperty ;
-        rdfs:comment   "The name of a pathway."@en ;
-        rdfs:label     "name"@en ;
-        rdfs:range     xsd:string , gpml:Pathway ;
-        skos:inScheme  gpml: .
+gpml:name  rdf:type      owl:DatatypeProperty ;
+        rdfs:label       "name"@en ;
+        rdfs:range       xsd:string , gpml:Pathway ;
+        obo:IAO_0000115  "The name of a pathway."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasLabel  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Label in a given pathway."@en ;
-        rdfs:label     "hasLabel"@en ;
-        rdfs:range     gpml:Label , gpml:Pathway ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasLabel"@en ;
+        rdfs:range       gpml:Label , gpml:Pathway ;
+        obo:IAO_0000115  "Boolean property for the existence of a Label in a given pathway."@en ;
+        skos:inScheme    gpml: .
 
-gpml:source  rdf:type  owl:DatatypeProperty ;
-        rdfs:comment   "The author, reference or category of a comment. Used to help parse pathway-level comments, e.g., the descriptions displayed at WikiPathways.org are comments with source=\"WikiPathways-description\"."@en ;
-        rdfs:label     "source"@en ;
-        rdfs:range     xsd:string , gpml:Commnet ;
-        skos:inScheme  gpml: .
+gpml:source  rdf:type    owl:DatatypeProperty ;
+        rdfs:label       "source"@en ;
+        rdfs:range       xsd:string , gpml:Commnet ;
+        obo:IAO_0000115  "The author, reference or category of a comment. Used to help parse pathway-level comments, e.g., the descriptions displayed at WikiPathways.org are comments with source=\"WikiPathways-description\"."@en ;
+        skos:inScheme    gpml: .
 
 gpml:RequiresCurationAttention
-        rdf:type       owl:Class ;
-        rdfs:comment   "Deprecated: Not in use."@en ;
-        rdfs:label     "RequiresCurationAttention"@en ;
-        skos:inScheme  gpml: .
+        rdf:type         owl:Class ;
+        rdfs:label       "RequiresCurationAttention"@en ;
+        obo:IAO_0000115  "Deprecated: Not in use."@en ;
+        skos:inScheme    gpml: .
 
 gpml:hasPoint  rdf:type  owl:ObjectProperty ;
-        rdfs:comment   "Boolean property for the existence of a Point in a given line or interaction."@en ;
-        rdfs:label     "hasPoint"@en ;
-        rdfs:range     gpml:Point , gpml:Interaction , gpml:GraphicalLine ;
-        skos:inScheme  gpml: .
+        rdfs:label       "hasPoint"@en ;
+        rdfs:range       gpml:Point , gpml:Interaction , gpml:GraphicalLine ;
+        obo:IAO_0000115  "Boolean property for the existence of a Point in a given line or interaction."@en ;
+        skos:inScheme    gpml: .
 
