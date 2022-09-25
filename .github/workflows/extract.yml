@@ -2,7 +2,7 @@ name: extract-owl
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - OWL/*.html
 
