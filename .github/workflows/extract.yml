@@ -1,0 +1,37 @@
+name: extract-owl
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - OWL/*.html
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'adopt'
+      - name: Install dependencies
+        run: sudo apt install groovy
+      - name: Extract gpml OWL
+        run: groovy extractOWL.groovy gpml | tee OWL/gpml.owl
+      - name: Extract wp OWL
+        run: groovy extractOWL.groovy wp | tee OWL/wp.owl
+      - name: Extract wpTypes OWL
+        run: groovy extractOWL.groovy wpTypes | tee OWL/wpTypes.owl
+      - name: Commit OWL file
+        run: |
+          git add OWL/*.owl
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Updated OWL" OWL/*.owl
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
