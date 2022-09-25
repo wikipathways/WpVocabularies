@@ -5,6 +5,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
 @prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
 @prefix wpTypes: <http://vocabularies.wikipathways.org/wpTypes#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -339,20 +340,6 @@ gpml:hasState  rdf:type  owl:ObjectProperty ;
         obo:IAO_0000115  "Boolean property for the existence of a State in a given pathway."@en ;
         skos:inScheme    gpml: .
 
-<file:///home/egonw/var/Projects/hub/WpVocabularies/OWL/gpml.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways GPML Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
 gpml:fillColor  rdf:type  owl:DatatypeProperty ;
         rdfs:label       "fillColor"@en ;
         rdfs:range       xsd:hexBinary , gpml:State , gpml:Shape , gpml:Label , gpml:DataNode ;
@@ -386,6 +373,20 @@ gpml:Interaction  rdf:type  owl:Class ;
         rdfs:label       "Interaction"@en ;
         obo:IAO_0000115  "Defines the biochemical relationship between DataNodes or with Anchors on other Interactions. An Xref can be specified for Interactions (in contrast to GraphicalLines)."@en ;
         skos:inScheme    gpml: .
+
+<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/gpml.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways GPML Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
 gpml:fontName  rdf:type  owl:DatatypeProperty ;
         rdfs:label       "fontName"@en ;
@@ -529,7 +530,7 @@ gpml:hasLabel  rdf:type  owl:ObjectProperty ;
 
 gpml:source  rdf:type    owl:DatatypeProperty ;
         rdfs:label       "source"@en ;
-        rdfs:range       xsd:string , gpml:Commnet ;
+        rdfs:range       xsd:string , gpml:Comment ;
         obo:IAO_0000115  "The author, reference or category of a comment. Used to help parse pathway-level comments, e.g., the descriptions displayed at WikiPathways.org are comments with source=\"WikiPathways-description\"."@en ;
         skos:inScheme    gpml: .
 

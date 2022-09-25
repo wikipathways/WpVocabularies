@@ -1,12 +1,14 @@
-@prefix biopax: <http://www.biopax.org/release/biopax-level3.owl#> .
-@prefix gpml:   <http://vocabularies.wikipathways.org/gpml#> .
-@prefix obo:    <http://purl.obolibrary.org/obo/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix wp:     <http://vocabularies.wikipathways.org/wp#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix biopax:  <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix gpml:    <http://vocabularies.wikipathways.org/gpml#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
+@prefix wpTypes: <http://vocabularies.wikipathways.org/wpTypes#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 biopax:organism  rdfs:subPropertyOf  wp:organism .
 
@@ -16,7 +18,7 @@ wp:Interaction  rdf:type  owl:Class ;
         skos:inScheme    wp: .
 
 wp:organismName  rdf:type  owl:DatatypeProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "organism name"@en ;
         rdfs:range       xsd:string ;
         obo:IAO_0000115  "Latin name of the organsm in which this pathway takes place."@en ;
@@ -35,7 +37,7 @@ wp:Complex  rdf:type     owl:Class ;
         skos:inScheme    wp: .
 
 wp:ontologyTag  rdf:type  owl:ObjectProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "ontology tag"@en ;
         rdfs:range       xsd:string ;
         obo:IAO_0000115  "A term from an ontology or controlled vocabulary."@en ;
@@ -55,20 +57,6 @@ wp:source  rdf:type      owl:ObjectProperty ;
         obo:IAO_0000115  "The beginning terminus of an interaction."@en ;
         skos:inScheme    wp: .
 
-<file:///home/egonw/var/Projects/hub/WpVocabularies/OWL/wp.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways WP Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
 wp:Rna  rdf:type         owl:Class ;
         rdfs:label       "Rna"@en ;
         rdfs:subClassOf  wp:DataNode ;
@@ -77,7 +65,7 @@ wp:Rna  rdf:type         owl:Class ;
 
 wp:celltypeOntologyTag
         rdf:type         owl:ObjectProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "cell type ontology tag"@en ;
         rdfs:range       rdfs:Resource ;
         rdfs:subClassOf  wp:ontologyTag ;
@@ -189,6 +177,20 @@ wp:bdbRhea  rdf:type     owl:ObjectProperty ;
         obo:IAO_0000115  "A variable URL to the Rhea data source."@en ;
         skos:inScheme    wp: .
 
+<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/wp.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
+
 wp:isAbout  rdf:type     owl:DatatypeProperty ;
         rdfs:label       "is about"@en ;
         obo:IAO_0000115  "It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups."@en ;
@@ -213,15 +215,14 @@ wp:Conversion  rdf:type  owl:Class ;
         obo:IAO_0000115  "A process in which a biological entity gets converted into another entity. This could be a metabolic conversion where compound gets chemical modified."@en ;
         skos:inScheme    wp: .
 
-<http://vocabularies.wikipathways.org/wpTypes#>
-        rdf:type  owl:Ontology ;
+wpTypes:  rdf:type  owl:Ontology ;
         <http://purl.org/dc/terms/contributor>
                 "Ryan Miller"@en , "Egon Willighagen"@en , "Anwesha Bohler"@en , "Susan Coort"@en , "Martina Kutmon"@en , "Alexander Pico"@en , "Andra Waagmeester"@en .
 
 wp:Metabolite  rdf:type  owl:Class ;
         rdfs:label       "Metabolite"@en ;
         rdfs:subClassOf  wp:DataNode ;
-        obo:IAO_0000115  "Any chemical compound taking part in a pathway. Unlike true metabolites, this node is also used for compounds which are not the product or substrate of a metabolic conversion."@en ;
+        obo:IAO_0000115  "Any chemical compound taking part in a pathway. Unlike true metabolites, this node is also used for chemical compounds which are not the product or substrate of a metabolic conversion."@en ;
         skos:inScheme    wp: .
 
 wp:Protein  rdf:type     owl:Class ;
@@ -232,7 +233,7 @@ wp:Protein  rdf:type     owl:Class ;
 
 wp:diseaseOntologyTag
         rdf:type         owl:ObjectProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "disease ontology tag"@en ;
         rdfs:range       rdfs:Resource ;
         rdfs:subClassOf  wp:ontologyTag ;
@@ -265,7 +266,7 @@ wp:Pathway  rdf:type     owl:Class ;
 
 wp:pathwayOntologyTag
         rdf:type         owl:ObjectProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "pathway ontology tag"@en ;
         rdfs:range       rdfs:Resource ;
         rdfs:subClassOf  wp:ontologyTag ;
@@ -281,7 +282,7 @@ wp:bdbChemspider  rdf:type  owl:ObjectProperty ;
         skos:inScheme    wp: .
 
 wp:organism  rdf:type    owl:DatatypeProperty ;
-        rdfs:domain      <http://rdfs.org/ns/void#Pathway> ;
+        rdfs:domain      void:Pathway ;
         rdfs:label       "organism"@en ;
         rdfs:range       rdfs:Class ;
         obo:IAO_0000115  "The scientific name (e.g., Homo sapiens) of the species being described by the pathway."@en ;

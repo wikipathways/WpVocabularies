@@ -5,6 +5,7 @@
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
 @prefix wp:      <http://vocabularies.wikipathways.org/wp#> .
 @prefix wpTypes: <http://vocabularies.wikipathways.org/wpTypes#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -27,20 +28,6 @@ wpTypes:BrokenArrow  rdf:type  owl:Class ;
         rdfs:subClassOf  wpTypes:Interaction ;
         obo:IAO_0000115  "A style of line or interaction with a glyph at the terminus that allows for regular gaps in their paths."@en ;
         skos:inScheme    wpTypes: .
-
-<file:///home/egonw/var/Projects/hub/WpVocabularies/OWL/wpTypes.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways WP Types Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/wpTypes.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
 wpTypes:MimBranchingRight
         rdf:type         owl:Class ;
@@ -93,6 +80,20 @@ wpTypes:TBar  rdf:type   owl:Class ;
         rdfs:subClassOf  wpTypes:Interaction ;
         obo:IAO_0000115  "An interaction in which the source entity has an inhibitory effect on the target entity or interaction."@en ;
         skos:inScheme    wpTypes: .
+
+<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/wpTypes.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Types Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/wpTypes.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
 wpTypes:MimCleavage  rdf:type  owl:Class ;
         rdfs:label       "Mim-Cleavage interaction"@en ;
