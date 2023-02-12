@@ -12,7 +12,7 @@ workspaceRoot = "../ws"
 rdf = new net.bioclipse.managers.RDFManager(workspaceRoot);
 
 ontology = args[0]
-file = "OWL/${ontology}.html"
+file = "docs/${ontology}.html"
 
 Any23 runner = new Any23();
 

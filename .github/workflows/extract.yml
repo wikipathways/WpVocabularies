@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - OWL/*.html
+      - docs/*.html
 
 jobs:
   build:
@@ -19,17 +19,17 @@ jobs:
       - name: Install dependencies
         run: sudo apt install groovy
       - name: Extract gpml OWL
-        run: groovy extractOWL.groovy gpml | tee OWL/gpml.owl
+        run: groovy extractOWL.groovy gpml | tee docs/gpml.owl
       - name: Extract wp OWL
-        run: groovy extractOWL.groovy wp | tee OWL/wp.owl
+        run: groovy extractOWL.groovy wp | tee docs/wp.owl
       - name: Extract wpTypes OWL
-        run: groovy extractOWL.groovy wpTypes | tee OWL/wpTypes.owl
+        run: groovy extractOWL.groovy wpTypes | tee docs/wpTypes.owl
       - name: Commit OWL file
         run: |
           git add OWL/*.owl
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "Updated OWL" OWL/*.owl
+          git commit -m "Updated OWL" docs/*.owl
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
