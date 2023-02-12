@@ -91,7 +91,7 @@ wp:bdbHgncSymbol  rdf:type  owl:ObjectProperty ;
 wp:     rdf:type        skos:ConceptScheme , owl:Ontology ;
         rdfs:label      "WikiPathways WP Ontology"@en ;
         rdfs:seeAlso    <http://www.wikipathways.org/> ;
-        owl:versionIRI  <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> .
+        owl:versionIRI  <https://vocabularies.wikipathways.org/wp.owl> .
 
 wp:DataNode  rdf:type    owl:Class ;
         rdfs:label       "DataNode"@en ;
@@ -177,20 +177,6 @@ wp:bdbRhea  rdf:type     owl:ObjectProperty ;
         obo:IAO_0000115  "A variable URL to the Rhea data source."@en ;
         skos:inScheme    wp: .
 
-<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/wp.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways WP Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
 wp:isAbout  rdf:type     owl:DatatypeProperty ;
         rdfs:label       "is about"@en ;
         obo:IAO_0000115  "It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups."@en ;
@@ -214,6 +200,20 @@ wp:Conversion  rdf:type  owl:Class ;
         rdfs:subClassOf  wp:DirectedInteraction ;
         obo:IAO_0000115  "A process in which a biological entity gets converted into another entity. This could be a metabolic conversion where compound gets chemical modified."@en ;
         skos:inScheme    wp: .
+
+<file:///home/runner/work/WpVocabularies/WpVocabularies/docs/wp.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
 wpTypes:  rdf:type  owl:Ontology ;
         <http://purl.org/dc/terms/contributor>

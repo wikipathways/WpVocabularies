@@ -81,20 +81,6 @@ wpTypes:TBar  rdf:type   owl:Class ;
         obo:IAO_0000115  "An interaction in which the source entity has an inhibitory effect on the target entity or interaction."@en ;
         skos:inScheme    wpTypes: .
 
-<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/wpTypes.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways WP Types Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/wpTypes.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
 wpTypes:MimCleavage  rdf:type  owl:Class ;
         rdfs:label       "Mim-Cleavage interaction"@en ;
         rdfs:subClassOf  wpTypes:Interaction ;
@@ -175,7 +161,21 @@ wpTypes:  rdf:type      skos:ConceptScheme , owl:Ontology ;
         rdfs:seeAlso    <http://www.wikipathways.org/> ;
         <http://purl.org/dc/terms/contributor>
                 "Ryan Miller"@en , "Egon Willighagen"@en , "Martina Kutmon"@en , "Andra Waagmeester"@en ;
-        owl:versionIRI  <https://wikipathways.github.io/WpVocabularies/OWL/wpTypes.owl> .
+        owl:versionIRI  <https://vocabularies.wikipathways.org/wpTypes.owl> .
+
+<file:///home/runner/work/WpVocabularies/WpVocabularies/docs/wpTypes.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Types Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/wpTypes.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
 
 wpTypes:Interaction  rdf:type  owl:Class ;
         rdfs:label       "Interaction"@en ;

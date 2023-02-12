@@ -199,6 +199,20 @@ gpml:data-Source  rdf:type  owl:DatatypeProperty ;
         obo:IAO_0000115  "Deprecated: Not in use."@en ;
         skos:inScheme    gpml: .
 
+<file:///home/runner/work/WpVocabularies/WpVocabularies/docs/gpml.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways GPML Ontology" ;
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en ;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en ;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en ;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> ;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
+
 gpml:id  rdf:type        owl:DatatypeProperty ;
         rdfs:label       "id"@en ;
         rdfs:range       xsd:string , gpml:Xref , gpml:PublicationXref ;
@@ -374,20 +388,6 @@ gpml:Interaction  rdf:type  owl:Class ;
         obo:IAO_0000115  "Defines the biochemical relationship between DataNodes or with Anchors on other Interactions. An Xref can be specified for Interactions (in contrast to GraphicalLines)."@en ;
         skos:inScheme    gpml: .
 
-<file:///home/runner/work/WpVocabularies/WpVocabularies/OWL/gpml.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways GPML Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
 gpml:fontName  rdf:type  owl:DatatypeProperty ;
         rdfs:label       "fontName"@en ;
         rdfs:range       xsd:string , gpml:Shape , gpml:Label ;
@@ -445,7 +445,7 @@ gpml:connectorType  rdf:type  owl:DatatypeProperty ;
 gpml:   rdf:type        skos:ConceptScheme , owl:Ontology ;
         rdfs:label      "WikiPathways GPML Vocabulary"@en ;
         rdfs:seeAlso    <http://www.wikipathways.org/> ;
-        owl:versionIRI  <https://wikipathways.github.io/WpVocabularies/OWL/gpml.owl> .
+        owl:versionIRI  <https://vocabularies.wikipathways.org/gpml.owl> .
 
 gpml:textlabel  rdf:type  owl:DatatypeProperty ;
         rdfs:label       "textlabel"@en ;
