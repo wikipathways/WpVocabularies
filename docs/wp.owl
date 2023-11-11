@@ -10,281 +10,281 @@
 @prefix wpTypes: <http://vocabularies.wikipathways.org/wpTypes#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-biopax:organism  rdfs:subPropertyOf  wp:organism .
-
-wp:Interaction  rdf:type  owl:Class ;
-        rdfs:label       "Interaction"@en ;
-        obo:IAO_0000115  "Defines the biochemical relationship between biological entities."@en ;
+wp:organism  rdf:type    owl:DatatypeProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "organism"@en;
+        rdfs:range       rdfs:Class;
+        obo:IAO_0000115  "The scientific name (e.g., Homo sapiens) of the species being described by the pathway."@en;
         skos:inScheme    wp: .
 
-wp:organismName  rdf:type  owl:DatatypeProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "organism name"@en ;
-        rdfs:range       xsd:string ;
-        obo:IAO_0000115  "Latin name of the organsm in which this pathway takes place."@en ;
-        skos:inScheme    wp: .
-
-wp:PublicationReference
-        rdf:type         owl:Class ;
-        rdfs:label       "PublicationReference"@en ;
-        obo:IAO_0000115  "A reference to a published article, book or other citable material. Most commonly a primary literature reference that is indexed by PubMed."@en ;
-        skos:inScheme    wp: .
-
-wp:Complex  rdf:type     owl:Class ;
-        rdfs:label       "Complex"@en ;
-        rdfs:subClassOf  wp:DataNode ;
-        obo:IAO_0000115  "A physically bound combination of two or more biological entities."@en ;
-        skos:inScheme    wp: .
-
-wp:ontologyTag  rdf:type  owl:ObjectProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "ontology tag"@en ;
-        rdfs:range       xsd:string ;
-        obo:IAO_0000115  "A term from an ontology or controlled vocabulary."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbEntrezGene  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb Entrez Gene link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the NCBI Gene data source."@en ;
-        skos:inScheme    wp: .
-
-wp:source  rdf:type      owl:ObjectProperty ;
-        rdfs:domain      wp:DirectedInteraction ;
-        rdfs:label       "source"@en ;
-        rdfs:range       wp:DataNode ;
-        rdfs:subClassOf  wp:participants ;
-        obo:IAO_0000115  "The beginning terminus of an interaction."@en ;
-        skos:inScheme    wp: .
-
-wp:Rna  rdf:type         owl:Class ;
-        rdfs:label       "Rna"@en ;
-        rdfs:subClassOf  wp:DataNode ;
-        obo:IAO_0000115  "A biomolecular polymer of ribonucleic acids, transcibed from DNA."@en ;
-        skos:inScheme    wp: .
-
-wp:celltypeOntologyTag
-        rdf:type         owl:ObjectProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "cell type ontology tag"@en ;
-        rdfs:range       rdfs:Resource ;
-        rdfs:subClassOf  wp:ontologyTag ;
-        obo:IAO_0000115  "A term from the Cell Type ontology available on the NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/CL)."@en ;
-        skos:inScheme    wp: .
-
-biopax:Rna  rdfs:subClassOf  wp:GeneProduct .
-
-biopax:Gene  rdfs:subClassOf  wp:GeneProduct .
-
-wp:Translocation  rdf:type  owl:Class ;
-        rdfs:label       "Translocation"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "A process in which a biological entity moves from one cellular location to another."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbHgncSymbol  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb HGNC link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the HUGO Gene Nomenclature Committee (HGNC) data source."@en ;
-        skos:inScheme    wp: .
-
-wp:     rdf:type        skos:ConceptScheme , owl:Ontology ;
-        rdfs:label      "WikiPathways WP Ontology"@en ;
-        rdfs:seeAlso    <http://www.wikipathways.org/> ;
-        owl:versionIRI  <https://vocabularies.wikipathways.org/wp.owl> .
-
-wp:DataNode  rdf:type    owl:Class ;
-        rdfs:label       "DataNode"@en ;
-        obo:IAO_0000115  "Superclass; deprecated; do not use."@en ;
-        skos:inScheme    wp: .
-
-wp:target  rdf:type      owl:ObjectProperty ;
-        rdfs:domain      wp:DirectedInteraction ;
-        rdfs:label       "target"@en ;
-        rdfs:subClassOf  wp:participants ;
-        obo:IAO_0000115  "The ending terminus of an interaction."@en ;
-        skos:inScheme    wp: .
-
-wp:GeneProduct  rdf:type  owl:Class ;
-        rdfs:label       "GeneProduct"@en ;
-        rdfs:subClassOf  wp:DataNode ;
-        obo:IAO_0000115  "An entity representing any product of a given gene, including DNA, RNA and Protein. This is the most generic representation of a gene-based biomolecule and is useful when more than one representation might be useful in the given context."@en ;
-        skos:inScheme    wp: .
-
-wp:participants  rdf:type  owl:ObjectProperty ;
-        rdfs:label     "participants"@en ;
-        skos:inScheme  wp: .
-
-wp:bdbEnsembl  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb Ensembl link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the Ensembl data source."@en ;
-        skos:inScheme    wp: .
-
-wp:Binding  rdf:type     owl:Class ;
-        rdfs:label       "Binding"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "A binding interaction between two physical entities resulting in the formation of an explicit complex that is reversible without an external factor (e.g. protein complexes)."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbUniprot  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb UniProt link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the UniProt data source."@en ;
-        skos:inScheme    wp: .
-
-<https://wikipathways.github.io/WpVocabularies/OWL/wp.owl>
-        <http://purl.org/dc/terms/format>
-                "text/turtle" ;
-        <http://purl.org/dc/terms/title>
-                "RDF Turtle" .
-
-wp:bdbWikidata  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb Wikidata link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the Wikidata data source."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbHmdb  rdf:type     owl:ObjectProperty ;
-        rdfs:label       "BridgeDb HMDB link"@en ;
-        rdfs:range       rdfs:Resource , wp:Metabolite ;
-        obo:IAO_0000115  "A variable URL to the Human Metabolome Database (HMDB) data source."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbChEBI  rdf:type    owl:ObjectProperty ;
-        rdfs:label       "BridgeDb ChEBI link"@en ;
-        rdfs:range       rdfs:Resource , wp:Metabolite ;
-        obo:IAO_0000115  "A variable URL to the ChEBI data source."@en ;
-        skos:inScheme    wp: .
-
-wp:Inhibition  rdf:type  owl:Class ;
-        rdfs:label       "Inhibition"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "A process in which one biological entity restrains, blocks, or suppresses another biological entity or interaction."@en ;
-        skos:inScheme    wp: .
-
-biopax:Dna  rdfs:subClassOf  wp:GeneProduct .
-
-wp:Catalysis  rdf:type   owl:Class ;
-        rdfs:label       "Catalysis"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "A process where a chemical reaction is enhanced by the action of a catalyst."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbRhea  rdf:type     owl:ObjectProperty ;
-        rdfs:label       "BridgeDb Rhea link"@en ;
-        rdfs:range       rdfs:Resource ;
-        obo:IAO_0000115  "A variable URL to the Rhea data source."@en ;
-        skos:inScheme    wp: .
-
-wp:isAbout  rdf:type     owl:DatatypeProperty ;
-        rdfs:label       "is about"@en ;
-        obo:IAO_0000115  "It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups."@en ;
-        skos:inScheme    wp: .
-
-wp:bdbPubChem  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb PubChem link"@en ;
-        rdfs:range       rdfs:Resource , wp:Metabolite ;
-        obo:IAO_0000115  "A variable URL to the PubChem data source (Compound identifiers)."@en ;
-        skos:inScheme    wp: .
-
-wp:DirectedInteraction
-        rdf:type         owl:Class ;
-        rdfs:label       "DirectedInteraction"@en ;
-        rdfs:subClassOf  wp:Interaction ;
-        obo:IAO_0000115  "Defines a biochemical relationship from a source biological entity to a target biological entity."@en ;
-        skos:inScheme    wp: .
-
-wp:Conversion  rdf:type  owl:Class ;
-        rdfs:label       "Conversion"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "A process in which a biological entity gets converted into another entity. This could be a metabolic conversion where compound gets chemical modified."@en ;
-        skos:inScheme    wp: .
-
-<file:///home/runner/work/WpVocabularies/WpVocabularies/docs/wp.html>
-        <http://purl.org/dc/terms/title>
-                "WikiPathways WP Ontology" ;
-        <http://vocab.sindice.net/any23#Content-Type>
-                "text/html;charset=UTF-8"@en ;
-        <http://vocab.sindice.net/any23#X-UA-Compatible>
-                "IE=edge"@en ;
-        <http://vocab.sindice.net/any23#viewport>
-                "width=device-width, initial-scale=1"@en ;
-        <http://www.w3.org/1999/xhtml/vocab#alternate>
-                <https://wikipathways.github.io/WpVocabularies/OWL/wp.owl> ;
-        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
-                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
-
-wpTypes:  rdf:type  owl:Ontology ;
-        <http://purl.org/dc/terms/contributor>
-                "Ryan Miller"@en , "Egon Willighagen"@en , "Anwesha Bohler"@en , "Susan Coort"@en , "Martina Kutmon"@en , "Alexander Pico"@en , "Andra Waagmeester"@en .
-
-wp:Metabolite  rdf:type  owl:Class ;
-        rdfs:label       "Metabolite"@en ;
-        rdfs:subClassOf  wp:DataNode ;
-        obo:IAO_0000115  "Any chemical compound taking part in a pathway. Unlike true metabolites, this node is also used for chemical compounds which are not the product or substrate of a metabolic conversion."@en ;
-        skos:inScheme    wp: .
-
-wp:Protein  rdf:type     owl:Class ;
-        rdfs:label       "Protein"@en ;
-        rdfs:subClassOf  wp:GeneProduct ;
-        obo:IAO_0000115  "A biomolecular polymer of amino acids, translated from mRNA."@en ;
-        skos:inScheme    wp: .
-
-wp:diseaseOntologyTag
-        rdf:type         owl:ObjectProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "disease ontology tag"@en ;
-        rdfs:range       rdfs:Resource ;
-        rdfs:subClassOf  wp:ontologyTag ;
-        obo:IAO_0000115  "A term from the Human Disease Ontology available on the NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/DOID)."@en ;
-        skos:inScheme    wp: .
-
-wp:Stimulation  rdf:type  owl:Class ;
-        rdfs:label       "Stimulation"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "An interaction in which the source entity enhances the raate or extent of another reaction or entity."@en ;
-        skos:inScheme    wp: .
-
-wp:TranscriptionTranslation
-        rdf:type         owl:Class ;
-        rdfs:label       "Transcription Translation"@en ;
-        rdfs:subClassOf  wp:DirectedInteraction ;
-        obo:IAO_0000115  "An interaction in which the source entity regulates or influences in the transcription or translation of a target entity. Also referred to as a Template Reaction."@en ;
-        skos:inScheme    wp: .
-
-wp:ComplexBinding  rdf:type  owl:Class ;
-        rdfs:label       "ComplexBinding"@en ;
-        rdfs:subClassOf  wp:Binding ;
-        obo:IAO_0000115  "A binding interaction that specifically leads to the formation of a complex."@en ;
-        skos:inScheme    wp: .
-
-wp:Pathway  rdf:type     owl:Class ;
-        rdfs:label       "Pathway"@en ;
-        obo:IAO_0000115  "A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en ;
-        skos:inScheme    wp: .
-
-wp:pathwayOntologyTag
-        rdf:type         owl:ObjectProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "pathway ontology tag"@en ;
-        rdfs:range       rdfs:Resource ;
-        rdfs:subClassOf  wp:ontologyTag ;
-        obo:IAO_0000115  "A term from the Pathway Ontology ontology available at NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/PW)."@en ;
+wp:bdbChemspider  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb ChemSpider link"@en;
+        rdfs:range       rdfs:Resource , wp:Metabolite;
+        obo:IAO_0000115  "A variable URL to the Chemspider data source."@en;
         skos:inScheme    wp: .
 
 biopax:Protein  rdfs:subClassOf  wp:GeneProduct .
 
-wp:bdbChemspider  rdf:type  owl:ObjectProperty ;
-        rdfs:label       "BridgeDb ChemSpider link"@en ;
-        rdfs:range       rdfs:Resource , wp:Metabolite ;
-        obo:IAO_0000115  "A variable URL to the Chemspider data source."@en ;
+wp:pathwayOntologyTag
+        rdf:type         owl:ObjectProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "pathway ontology tag"@en;
+        rdfs:range       rdfs:Resource;
+        rdfs:subClassOf  wp:ontologyTag;
+        obo:IAO_0000115  "A term from the Pathway Ontology ontology available at NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/PW)."@en;
         skos:inScheme    wp: .
 
-wp:organism  rdf:type    owl:DatatypeProperty ;
-        rdfs:domain      void:Pathway ;
-        rdfs:label       "organism"@en ;
-        rdfs:range       rdfs:Class ;
-        obo:IAO_0000115  "The scientific name (e.g., Homo sapiens) of the species being described by the pathway."@en ;
+wp:Pathway  rdf:type     owl:Class;
+        rdfs:label       "Pathway"@en;
+        obo:IAO_0000115  "A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en;
         skos:inScheme    wp: .
+
+wp:ComplexBinding  rdf:type  owl:Class;
+        rdfs:label       "ComplexBinding"@en;
+        rdfs:subClassOf  wp:Binding;
+        obo:IAO_0000115  "A binding interaction that specifically leads to the formation of a complex."@en;
+        skos:inScheme    wp: .
+
+wp:TranscriptionTranslation
+        rdf:type         owl:Class;
+        rdfs:label       "Transcription Translation"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "An interaction in which the source entity regulates or influences in the transcription or translation of a target entity. Also referred to as a Template Reaction."@en;
+        skos:inScheme    wp: .
+
+wp:Stimulation  rdf:type  owl:Class;
+        rdfs:label       "Stimulation"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "An interaction in which the source entity enhances the raate or extent of another reaction or entity."@en;
+        skos:inScheme    wp: .
+
+wp:diseaseOntologyTag
+        rdf:type         owl:ObjectProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "disease ontology tag"@en;
+        rdfs:range       rdfs:Resource;
+        rdfs:subClassOf  wp:ontologyTag;
+        obo:IAO_0000115  "A term from the Human Disease Ontology available on the NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/DOID)."@en;
+        skos:inScheme    wp: .
+
+wp:Protein  rdf:type     owl:Class;
+        rdfs:label       "Protein"@en;
+        rdfs:subClassOf  wp:GeneProduct;
+        obo:IAO_0000115  "A biomolecular polymer of amino acids, translated from mRNA."@en;
+        skos:inScheme    wp: .
+
+wp:Metabolite  rdf:type  owl:Class;
+        rdfs:label       "Metabolite"@en;
+        rdfs:subClassOf  wp:DataNode;
+        obo:IAO_0000115  "Any chemical compound taking part in a pathway. Unlike true metabolites, this node is also used for chemical compounds which are not the product or substrate of a metabolic conversion."@en;
+        skos:inScheme    wp: .
+
+wpTypes:  rdf:type  owl:Ontology;
+        <http://purl.org/dc/terms/contributor>
+                "Ryan Miller"@en , "Egon Willighagen"@en , "Anwesha Bohler"@en , "Susan Coort"@en , "Martina Kutmon"@en , "Alexander Pico"@en , "Andra Waagmeester"@en .
+
+<file:///home/runner/work/WpVocabularies/WpVocabularies/docs/wp.html>
+        <http://purl.org/dc/terms/title>
+                "WikiPathways WP Ontology";
+        <http://vocab.sindice.net/any23#Content-Type>
+                "text/html;charset=UTF-8"@en;
+        <http://vocab.sindice.net/any23#X-UA-Compatible>
+                "IE=edge"@en;
+        <http://vocab.sindice.net/any23#viewport>
+                "width=device-width, initial-scale=1"@en;
+        <http://www.w3.org/1999/xhtml/vocab#alternate>
+                <https://vocabularies.wikipathways.org/wp.owl>;
+        <http://www.w3.org/1999/xhtml/vocab#stylesheet>
+                <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css> , <https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css> .
+
+wp:Conversion  rdf:type  owl:Class;
+        rdfs:label       "Conversion"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "A process in which a biological entity gets converted into another entity. This could be a metabolic conversion where compound gets chemical modified."@en;
+        skos:inScheme    wp: .
+
+wp:DirectedInteraction
+        rdf:type         owl:Class;
+        rdfs:label       "DirectedInteraction"@en;
+        rdfs:subClassOf  wp:Interaction;
+        obo:IAO_0000115  "Defines a biochemical relationship from a source biological entity to a target biological entity."@en;
+        skos:inScheme    wp: .
+
+wp:bdbPubChem  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb PubChem link"@en;
+        rdfs:range       rdfs:Resource , wp:Metabolite;
+        obo:IAO_0000115  "A variable URL to the PubChem data source (Compound identifiers)."@en;
+        skos:inScheme    wp: .
+
+wp:isAbout  rdf:type     owl:DatatypeProperty;
+        rdfs:label       "is about"@en;
+        obo:IAO_0000115  "It is the link between the biological entity and the gpml entity. Used in cases of interactions, complexes and groups."@en;
+        skos:inScheme    wp: .
+
+wp:bdbRhea  rdf:type     owl:ObjectProperty;
+        rdfs:label       "BridgeDb Rhea link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the Rhea data source."@en;
+        skos:inScheme    wp: .
+
+wp:Catalysis  rdf:type   owl:Class;
+        rdfs:label       "Catalysis"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "A process where a chemical reaction is enhanced by the action of a catalyst."@en;
+        skos:inScheme    wp: .
+
+biopax:Dna  rdfs:subClassOf  wp:GeneProduct .
+
+wp:Inhibition  rdf:type  owl:Class;
+        rdfs:label       "Inhibition"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "A process in which one biological entity restrains, blocks, or suppresses another biological entity or interaction."@en;
+        skos:inScheme    wp: .
+
+wp:bdbChEBI  rdf:type    owl:ObjectProperty;
+        rdfs:label       "BridgeDb ChEBI link"@en;
+        rdfs:range       rdfs:Resource , wp:Metabolite;
+        obo:IAO_0000115  "A variable URL to the ChEBI data source."@en;
+        skos:inScheme    wp: .
+
+wp:bdbHmdb  rdf:type     owl:ObjectProperty;
+        rdfs:label       "BridgeDb HMDB link"@en;
+        rdfs:range       rdfs:Resource , wp:Metabolite;
+        obo:IAO_0000115  "A variable URL to the Human Metabolome Database (HMDB) data source."@en;
+        skos:inScheme    wp: .
+
+wp:bdbWikidata  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb Wikidata link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the Wikidata data source."@en;
+        skos:inScheme    wp: .
+
+wp:bdbUniprot  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb UniProt link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the UniProt data source."@en;
+        skos:inScheme    wp: .
+
+wp:Binding  rdf:type     owl:Class;
+        rdfs:label       "Binding"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "A binding interaction between two physical entities resulting in the formation of an explicit complex that is reversible without an external factor (e.g. protein complexes)."@en;
+        skos:inScheme    wp: .
+
+wp:bdbEnsembl  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb Ensembl link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the Ensembl data source."@en;
+        skos:inScheme    wp: .
+
+wp:participants  rdf:type  owl:ObjectProperty;
+        rdfs:label     "participants"@en;
+        skos:inScheme  wp: .
+
+wp:GeneProduct  rdf:type  owl:Class;
+        rdfs:label       "GeneProduct"@en;
+        rdfs:subClassOf  wp:DataNode;
+        obo:IAO_0000115  "An entity representing any product of a given gene, including DNA, RNA and Protein. This is the most generic representation of a gene-based biomolecule and is useful when more than one representation might be useful in the given context."@en;
+        skos:inScheme    wp: .
+
+wp:target  rdf:type      owl:ObjectProperty;
+        rdfs:domain      wp:DirectedInteraction;
+        rdfs:label       "target"@en;
+        rdfs:subClassOf  wp:participants;
+        obo:IAO_0000115  "The ending terminus of an interaction."@en;
+        skos:inScheme    wp: .
+
+wp:DataNode  rdf:type    owl:Class;
+        rdfs:label       "DataNode"@en;
+        obo:IAO_0000115  "Superclass; deprecated; do not use."@en;
+        skos:inScheme    wp: .
+
+wp:     rdf:type        skos:ConceptScheme , owl:Ontology;
+        rdfs:label      "WikiPathways WP Ontology"@en;
+        rdfs:seeAlso    <http://www.wikipathways.org/>;
+        owl:versionIRI  <https://vocabularies.wikipathways.org/wp.owl> .
+
+wp:bdbHgncSymbol  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb HGNC link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the HUGO Gene Nomenclature Committee (HGNC) data source."@en;
+        skos:inScheme    wp: .
+
+wp:Translocation  rdf:type  owl:Class;
+        rdfs:label       "Translocation"@en;
+        rdfs:subClassOf  wp:DirectedInteraction;
+        obo:IAO_0000115  "A process in which a biological entity moves from one cellular location to another."@en;
+        skos:inScheme    wp: .
+
+biopax:Gene  rdfs:subClassOf  wp:GeneProduct .
+
+biopax:Rna  rdfs:subClassOf  wp:GeneProduct .
+
+wp:celltypeOntologyTag
+        rdf:type         owl:ObjectProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "cell type ontology tag"@en;
+        rdfs:range       rdfs:Resource;
+        rdfs:subClassOf  wp:ontologyTag;
+        obo:IAO_0000115  "A term from the Cell Type ontology available on the NCBO's BioPortal (http://bioportal.bioontology.org/ontologies/CL)."@en;
+        skos:inScheme    wp: .
+
+<https://vocabularies.wikipathways.org/wp.owl>
+        <http://purl.org/dc/terms/format>
+                "text/turtle";
+        <http://purl.org/dc/terms/title>
+                "RDF Turtle" .
+
+wp:Rna  rdf:type         owl:Class;
+        rdfs:label       "Rna"@en;
+        rdfs:subClassOf  wp:DataNode;
+        obo:IAO_0000115  "A biomolecular polymer of ribonucleic acids, transcibed from DNA."@en;
+        skos:inScheme    wp: .
+
+wp:source  rdf:type      owl:ObjectProperty;
+        rdfs:domain      wp:DirectedInteraction;
+        rdfs:label       "source"@en;
+        rdfs:range       wp:DataNode;
+        rdfs:subClassOf  wp:participants;
+        obo:IAO_0000115  "The beginning terminus of an interaction."@en;
+        skos:inScheme    wp: .
+
+wp:bdbEntrezGene  rdf:type  owl:ObjectProperty;
+        rdfs:label       "BridgeDb Entrez Gene link"@en;
+        rdfs:range       rdfs:Resource;
+        obo:IAO_0000115  "A variable URL to the NCBI Gene data source."@en;
+        skos:inScheme    wp: .
+
+wp:ontologyTag  rdf:type  owl:ObjectProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "ontology tag"@en;
+        rdfs:range       xsd:string;
+        obo:IAO_0000115  "A term from an ontology or controlled vocabulary."@en;
+        skos:inScheme    wp: .
+
+wp:Complex  rdf:type     owl:Class;
+        rdfs:label       "Complex"@en;
+        rdfs:subClassOf  wp:DataNode;
+        obo:IAO_0000115  "A physically bound combination of two or more biological entities."@en;
+        skos:inScheme    wp: .
+
+wp:PublicationReference
+        rdf:type         owl:Class;
+        rdfs:label       "PublicationReference"@en;
+        obo:IAO_0000115  "A reference to a published article, book or other citable material. Most commonly a primary literature reference that is indexed by PubMed."@en;
+        skos:inScheme    wp: .
+
+wp:organismName  rdf:type  owl:DatatypeProperty;
+        rdfs:domain      void:Pathway;
+        rdfs:label       "organism name"@en;
+        rdfs:range       xsd:string;
+        obo:IAO_0000115  "Latin name of the organsm in which this pathway takes place."@en;
+        skos:inScheme    wp: .
+
+wp:Interaction  rdf:type  owl:Class;
+        rdfs:label       "Interaction"@en;
+        obo:IAO_0000115  "Defines the biochemical relationship between biological entities."@en;
+        skos:inScheme    wp: .
+
+biopax:organism  rdfs:subPropertyOf  wp:organism .
 
