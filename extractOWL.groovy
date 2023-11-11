@@ -2,7 +2,7 @@
 // Author: Egon Willighagen
 
 @Grab(group='org.apache.any23', module='apache-any23-core', version='2.7')
-@Grab(group='io.github.egonw.bacting', module='managers-rdf', version='0.1.0')
+@Grab(group='io.github.egonw.bacting', module='managers-rdf', version='0.4.0')
 
 import org.apache.any23.Any23
 import org.apache.any23.source.HTTPDocumentSource
