@@ -55,7 +55,7 @@ wp:TranscriptionTranslation
 wp:Stimulation  rdf:type  owl:Class;
         rdfs:label       "Stimulation"@en;
         rdfs:subClassOf  wp:DirectedInteraction;
-        obo:IAO_0000115  "An interaction in which the source entity enhances the raate or extent of another reaction or entity."@en;
+        obo:IAO_0000115  "An interaction in which the source entity enhances the rate or extent of another reaction or entity."@en;
         skos:inScheme    wp: .
 
 wp:diseaseOntologyTag
