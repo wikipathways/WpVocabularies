@@ -326,7 +326,7 @@ gpml:PublicationXref  rdf:type  owl:Class;
         skos:inScheme    gpml: .
 
 gpml:Label  rdf:type     owl:Class;
-        rdfs:Label       "Label"@en;
+        rdfs:label       "Label"@en;
         obo:IAO_0000115  "A text field which can be used to annotate any aspect of a pathway."@en;
         skos:inScheme    gpml: .
 
