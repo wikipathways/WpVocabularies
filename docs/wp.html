@@ -117,6 +117,11 @@ This ontology is written by (in random order)
 <section id="_classes">
 
 <h2>Classes</h2>
+<div id="Authorship" about="http://vocabularies.wikipathways.org/wp#Authorship" typeof="owl:Class">
+<h3 property="rdfs:label">Authorship</h3>
+<code>wp:Authorship</code>
+<p><span property="definition:">The state or act of writing or creating of a WikiPathways pathway.</span>
+</div>
 <div id="Binding" about="http://vocabularies.wikipathways.org/wp#Binding" typeof="owl:Class">
 <h3 property="rdfs:label">Binding</h3>
 <code>wp:Binding</code>
@@ -375,6 +380,12 @@ NCBO's BioPortal (<a href="http://bioportal.bioontology.org/ontologies/CL">http:
   <a property="rdfs:range" href="http://www.w3.org/2000/01/rdf-schema#Resource">rdfs:Resource</a>
   as range, and is
   subproperty of <a href="http://vocabularies.wikipathways.org/wp#ontologyTag" property="rdfs:subClassOf">wp:ontologyTag</a>.</p>
+</div>
+
+<div id="hasAuthorship" about="http://vocabularies.wikipathways.org/wp#hasAuthorship" typeof="owl:ObjectProperty">
+<h3 property="rdfs:label">hasAuthorship</h3>
+<p property="definition:">Links a specific version of a pathway with the authorships for that version.</p>
+<code>wp:hasAuthorship</code>
 </div>
 
 <div id="participants" about="http://vocabularies.wikipathways.org/wp#participants" typeof="owl:ObjectProperty">
