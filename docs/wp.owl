@@ -25,6 +25,11 @@ wp:bdbChemspider  rdf:type  owl:ObjectProperty;
 
 biopax:Protein  rdfs:subClassOf  wp:GeneProduct .
 
+wp:hasAuthorship  rdf:type  owl:ObjectProperty;
+        rdfs:label       "hasAuthorship"@en;
+        obo:IAO_0000115  "Links a specific version of a pathway with the authorships for that version."@en;
+        skos:inScheme    wp: .
+
 wp:pathwayOntologyTag
         rdf:type         owl:ObjectProperty;
         rdfs:domain      void:Pathway;
@@ -37,6 +42,11 @@ wp:pathwayOntologyTag
 wp:Pathway  rdf:type     owl:Class;
         rdfs:label       "Pathway"@en;
         obo:IAO_0000115  "A biological process representing a set of interactions and relationships among genes, proteins, metabolites, and other factors in the context of cellular compartments, tissues and organisms."@en;
+        skos:inScheme    wp: .
+
+wp:Authorship  rdf:type  owl:Class;
+        rdfs:label       "Authorship"@en;
+        obo:IAO_0000115  "The state or act of writing or creating of a WikiPathways pathway."@en;
         skos:inScheme    wp: .
 
 wp:ComplexBinding  rdf:type  owl:Class;
