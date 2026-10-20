@@ -2,11 +2,13 @@
 // Author: Egon Willighagen
 
 @Grab(group='org.apache.any23', module='apache-any23-core', version='2.7')
-@Grab(group='io.github.egonw.bacting', module='managers-rdf', version='0.4.0')
+@Grab(group='io.github.egonw.bacting', module='managers-rdf', version='1.0.14-SNAPSHOT')
 
 import org.apache.any23.Any23
 import org.apache.any23.source.HTTPDocumentSource
 import org.apache.any23.writer.NTriplesWriter
+
+import net.bioclipse.core.domain.IStringMatrix;
 
 workspaceRoot = "../ws"
 rdf = new net.bioclipse.managers.RDFManager(workspaceRoot);
@@ -39,5 +41,12 @@ rdf.addPrefix(kb, "wp",     "http://vocabularies.wikipathways.org/wp#")
 rdf.addPrefix(kb, "xsd",    "http://www.w3.org/2001/XMLSchema#")
 
 rdf.importFromStream(kb, n3Stream, "N3")
+
+IStringMatrix results = rdf.sparql(kb,
+  "SELECT DISTINCT ?s WHERE { ?s <http://www.w3.org/1999/xhtml/vocab#stylesheet> [] }"
+);
+for (resource in results.getColumn("s")) {
+  rdf.removeResource(kb, resource)
+}
 
 println rdf.asRDFN3(kb)
