@@ -1,6 +1,8 @@
 // MIT license
 // Author: Egon Willighagen
 
+@GrabResolver(name='sonatype', root='https://central.sonatype.com/repository/maven-snapshots/')
+
 @Grab(group='org.apache.any23', module='apache-any23-core', version='2.7')
 @Grab(group='io.github.egonw.bacting', module='managers-rdf', version='1.0.14-SNAPSHOT')
 
